@@ -9,14 +9,25 @@ $('form').submit(
 			$(this).find("#techDiv").removeClass("has-error");
 			
 			var ing1qual	= parseFloat($(this).find("#Ing1_Quality").val().replace(',', '.'));
-			var ing2qual	= parseFloat($(this).find("#Ing2_Quality").val().replace(',', '.'));
-			var ing3qual	= parseFloat($(this).find("#Ing3_Quality").val().replace(',', '.'));
-			var ing4qual	= parseFloat($(this).find("#Ing4_Quality").val().replace(',', '.'));	
+			if ( $(this).find("#Ing2_Quality").val() ) {var ing2qual = parseFloat($(this).find("#Ing2_Quality").val().replace(',', '.'));} else { var ing2qual = 0}
+			if ( $(this).find("#Ing3_Quality").val() ) {var ing3qual = parseFloat($(this).find("#Ing3_Quality").val().replace(',', '.'));} else { var ing3qual = 0}
+			if ( $(this).find("#Ing4_Quality").val() ) {var ing4qual = parseFloat($(this).find("#Ing4_Quality").val().replace(',', '.'));} else { var ing4qual = 0}
+			if ( $(this).find("#Ing5_Quality").val() ) {var ing5qual = parseFloat($(this).find("#Ing5_Quality").val().replace(',', '.'));} else { var ing5qual = 0}
+			if ( $(this).find("#Ing6_Quality").val() ) {var ing6qual = parseFloat($(this).find("#Ing6_Quality").val().replace(',', '.'));} else { var ing6qual = 0}
+			if ( $(this).find("#Ing7_Quality").val() ) {var ing7qual = parseFloat($(this).find("#Ing7_Quality").val().replace(',', '.'));} else { var ing7qual = 0}
+			if ( $(this).find("#Ing8_Quality").val() ) {var ing8qual = parseFloat($(this).find("#Ing8_Quality").val().replace(',', '.'));} else { var ing8qual = 0}
+			if ( $(this).find("#Ing9_Quality").val() ) {var ing9qual = parseFloat($(this).find("#Ing9_Quality").val().replace(',', '.'));} else { var ing9qual = 0}
 			
 			var ing1price	= parseFloat($(this).find("#Ing1_Price").val().replace(',', '.'));
-			var ing2price	= parseFloat($(this).find("#Ing2_Price").val().replace(',', '.'));
-			var ing3price	= parseFloat($(this).find("#Ing3_Price").val().replace(',', '.'));
-			var ing4price	= parseFloat($(this).find("#Ing4_Price").val().replace(',', '.'));
+			if ( $(this).find("#Ing2_Price").val() ) { var ing2price = parseFloat($(this).find("#Ing2_Price").val().replace(',', '.'));} else { var ing2price = 0}
+			if ( $(this).find("#Ing3_Price").val() ) { var ing3price = parseFloat($(this).find("#Ing3_Price").val().replace(',', '.'));} else { var ing3price = 0}
+			if ( $(this).find("#Ing4_Price").val() ) { var ing4price = parseFloat($(this).find("#Ing4_Price").val().replace(',', '.'));} else { var ing4price = 0}
+			if ( $(this).find("#Ing5_Price").val() ) { var ing5price = parseFloat($(this).find("#Ing5_Price").val().replace(',', '.'));} else { var ing5price = 0}
+			if ( $(this).find("#Ing6_Price").val() ) { var ing6price = parseFloat($(this).find("#Ing6_Price").val().replace(',', '.'));} else { var ing6price = 0}
+			if ( $(this).find("#Ing7_Price").val() ) { var ing7price = parseFloat($(this).find("#Ing7_Price").val().replace(',', '.'));} else { var ing7price = 0}
+			if ( $(this).find("#Ing8_Price").val() ) { var ing8price = parseFloat($(this).find("#Ing8_Price").val().replace(',', '.'));} else { var ing8price = 0}
+			if ( $(this).find("#Ing9_Price").val() ) { var ing9price = parseFloat($(this).find("#Ing9_Price").val().replace(',', '.'));} else { var ing9price = 0}
+			
 			
 			var eff			= parseFloat($(this).find("#Eff").val().replace('%', '')) / 100;
 			
@@ -24,9 +35,38 @@ $('form').submit(
 			
 			
 			if (typeof ing1base_quan == "undefined"){ ing1base_quan = parseFloat($(this).find("#Ing1_Quantity").text().replace(' ед.', '')); }
-			if (typeof ing2base_quan == "undefined"){ ing2base_quan = parseFloat($(this).find("#Ing2_Quantity").text().replace(' ед.', '')); }
-			if (typeof ing3base_quan == "undefined"){ ing3base_quan = parseFloat($(this).find("#Ing3_Quantity").text().replace(' ед.', '')); }
-			if (typeof ing4base_quan == "undefined"){ ing4base_quan = parseFloat($(this).find("#Ing4_Quantity").text().replace(' ед.', '')); }
+			if (typeof window.ing2base_quan == "undefined") { 
+				if ( $(this).find("#Ing2_Quantity").text() ) { window.ing2base_quan = parseFloat($(this).find("#Ing2_Quantity").text().replace(' ед.', '')); } 
+				else { window.ing2base_quan = 0}
+			} 
+			if (typeof window.ing3base_quan == "undefined") { 
+				if ( $(this).find("#Ing3_Quantity").text() ) { window.ing3base_quan = parseFloat($(this).find("#Ing3_Quantity").text().replace(' ед.', '')); } 
+				else { window.ing3base_quan = 0}
+			} 
+			if (typeof window.ing4base_quan == "undefined") { 
+				if ( $(this).find("#Ing4_Quantity").text() ) { window.ing4base_quan = parseFloat($(this).find("#Ing4_Quantity").text().replace(' ед.', '')); } 
+				else { window.ing4base_quan = 0}
+			} 
+			if (typeof window.ing5base_quan == "undefined") { 
+				if ( $(this).find("#Ing5_Quantity").text() ) { window.ing5base_quan = parseFloat($(this).find("#Ing5_Quantity").text().replace(' ед.', '')); } 
+				else { window.ing5base_quan = 0}
+			} 
+			if (typeof window.ing6base_quan == "undefined") { 
+				if ( $(this).find("#Ing6_Quantity").text() ) { window.ing6base_quan = parseFloat($(this).find("#Ing6_Quantity").text().replace(' ед.', '')); } 
+				else { window.ing6base_quan = 0}
+			} 
+			if (typeof window.ing7base_quan == "undefined") { 
+				if ( $(this).find("#Ing7_Quantity").text() ) { window.ing7base_quan = parseFloat($(this).find("#Ing7_Quantity").text().replace(' ед.', '')); } 
+				else { window.ing7base_quan = 0}
+			} 
+			if (typeof window.ing8base_quan == "undefined") { 
+				if ( $(this).find("#Ing8_Quantity").text() ) { window.ing8base_quan = parseFloat($(this).find("#Ing8_Quantity").text().replace(' ед.', '')); } 
+				else { window.ing8base_quan = 0}
+			} 
+			if (typeof window.ing9base_quan == "undefined") { 
+				if ( $(this).find("#Ing9_Quantity").text() ) { window.ing9base_quan = parseFloat($(this).find("#Ing9_Quantity").text().replace(' ед.', '')); } 
+				else { window.ing9base_quan = 0}
+			} 
 			
 			//количество товаров производимых 1 человеком
 			if (typeof prodbase_quan == "undefined"){ prodbase_quan = parseFloat($(this).find("#Prod_Quantity").text().replace(' ед.', '')); }
@@ -44,26 +84,48 @@ $('form').submit(
 			
 			//количество ингридиентов
 			var Ing1_Quantity = ing1base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing2_Quantity = ing2base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing3_Quantity = ing3base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing4_Quantity = ing4base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing2_Quantity = window.ing2base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing3_Quantity = window.ing3base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing4_Quantity = window.ing4base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing5_Quantity = window.ing5base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing6_Quantity = window.ing6base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing7_Quantity = window.ing7base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing8_Quantity = window.ing8base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing9_Quantity = window.ing9base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
 			$(this).find("#Ing1_Quantity").text(Ing1_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing2_Quantity").text(Ing2_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing3_Quantity").text(Ing3_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing4_Quantity").text(Ing4_Quantity.toFixed(2) + " ед.");
+			$(this).find("#Ing5_Quantity").text(Ing5_Quantity.toFixed(2) + " ед.");
+			$(this).find("#Ing6_Quantity").text(Ing6_Quantity.toFixed(2) + " ед.");
+			$(this).find("#Ing7_Quantity").text(Ing7_Quantity.toFixed(2) + " ед.");
+			$(this).find("#Ing8_Quantity").text(Ing8_Quantity.toFixed(2) + " ед.");
+			$(this).find("#Ing9_Quantity").text(Ing9_Quantity.toFixed(2) + " ед.");
 			
 			//цена ингридиентов
-			var Ing1_TotalPrice = Ing1_Quantity * ing1price;
-			var Ing2_TotalPrice = Ing2_Quantity * ing2price;	
-			var Ing3_TotalPrice = Ing3_Quantity * ing3price;		
-			var Ing4_TotalPrice = Ing4_Quantity * ing4price;					
+			var Ing1_TotalPrice = Ing1_Quantity * ing1price;	
+			if (ing2price > 0) {var Ing2_TotalPrice = Ing2_Quantity * ing2price;} else { var Ing2_TotalPrice = 0}
+			if (ing3price > 0) {var Ing3_TotalPrice = Ing3_Quantity * ing3price;} else { var Ing3_TotalPrice = 0}
+			if (ing4price > 0) {var Ing4_TotalPrice = Ing4_Quantity * ing4price;} else { var Ing4_TotalPrice = 0}
+			if (ing5price > 0) {var Ing5_TotalPrice = Ing5_Quantity * ing5price;} else { var Ing5_TotalPrice = 0}
+			if (ing6price > 0) {var Ing6_TotalPrice = Ing6_Quantity * ing6price;} else { var Ing6_TotalPrice = 0}
+			if (ing7price > 0) {var Ing7_TotalPrice = Ing7_Quantity * ing7price;} else { var Ing7_TotalPrice = 0}
+			if (ing8price > 0) {var Ing8_TotalPrice = Ing8_Quantity * ing8price;} else { var Ing8_TotalPrice = 0}
+			if (ing9price > 0) {var Ing9_TotalPrice = Ing9_Quantity * ing9price;} else { var Ing9_TotalPrice = 0}
+		
 			$(this).find("#Ing1_TotalPrice").text( "$" + Ing1_TotalPrice.toFixed(2) );
 			$(this).find("#Ing2_TotalPrice").text( "$" + Ing2_TotalPrice.toFixed(2) );
 			$(this).find("#Ing3_TotalPrice").text( "$" + Ing3_TotalPrice.toFixed(2) );
 			$(this).find("#Ing4_TotalPrice").text( "$" + Ing4_TotalPrice.toFixed(2) );
+			$(this).find("#Ing5_TotalPrice").text( "$" + Ing5_TotalPrice.toFixed(2) );
+			$(this).find("#Ing6_TotalPrice").text( "$" + Ing6_TotalPrice.toFixed(2) );
+			$(this).find("#Ing7_TotalPrice").text( "$" + Ing7_TotalPrice.toFixed(2) );
+			$(this).find("#Ing8_TotalPrice").text( "$" + Ing8_TotalPrice.toFixed(2) );
+			$(this).find("#Ing9_TotalPrice").text( "$" + Ing9_TotalPrice.toFixed(2) );
 			
 			//общая цена ингрдиентов
-			var IngTotalPrice = Ing1_TotalPrice + Ing2_TotalPrice + Ing3_TotalPrice + Ing4_TotalPrice;
+			var IngTotalPrice = Ing1_TotalPrice + Ing2_TotalPrice + Ing3_TotalPrice + Ing4_TotalPrice + 
+								Ing5_TotalPrice + Ing6_TotalPrice + Ing7_TotalPrice +Ing8_TotalPrice + Ing9_TotalPrice;
 			$(this).find("#IngTotalPrice").text( "$" + IngTotalPrice.toFixed(2) );					
 			
 			//объем выпускаемой продукции
@@ -71,14 +133,15 @@ $('form').submit(
 			$(this).find("#Prod_Quantity").text( Math.round (Prod_Quantity) + " ед." );			
 			
 			//итоговое качество ингридиентов
-			var IngTotalQual = ( ing1base_quan * ing1qual + ing2base_quan * ing2qual + ing3base_quan * ing3qual + ing4base_quan * ing4qual )/
-			( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan );
+			var IngTotalQual = ( ing1base_quan * ing1qual + ing2base_quan * ing2qual + ing3base_quan * ing3qual + ing4base_quan * ing4qual +
+								ing5base_quan * ing5qual + ing6base_quan * ing6qual + ing7base_quan * ing7qual +ing8base_quan * ing8qual + ing9base_quan * ing9qual)/
+			( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan + ing5base_quan + ing6base_quan + ing7base_quan + ing8base_quan + ing9base_quan);
 			
 			//качество товара
 			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65) ;
 			//ограничение качества (по технологии)
 			if (ProdQual > Math.pow(tech, 1.3) ) {ProdQual = Math.pow(tech, 1.3)}
-			$(this).find("#ProdQual").text( ProdQual.toFixed(2) );
+			$(this).find("#ProdQual").text( (ProdQual * ( 1 + $(this).find("#Bonus").val().replace('%', '') / 100 )).toFixed(2) );
 			
 			//себестоимость
 			var exps = IngTotalPrice + work_salary * work_qaunt;
@@ -105,10 +168,20 @@ $('form').submit(
 			var ing2cost = Ing2_TotalPrice / IngTotalPrice * 100;
 			var ing3cost = Ing3_TotalPrice / IngTotalPrice * 100;
 			var ing4cost = Ing4_TotalPrice / IngTotalPrice * 100;
+			var ing5cost = Ing5_TotalPrice / IngTotalPrice * 100;
+			var ing6cost = Ing6_TotalPrice / IngTotalPrice * 100;
+			var ing7cost = Ing7_TotalPrice / IngTotalPrice * 100;
+			var ing8cost = Ing8_TotalPrice / IngTotalPrice * 100;
+			var ing9cost = Ing9_TotalPrice / IngTotalPrice * 100;
 			$(this).find("#ing1").width( ing1cost.toFixed(2) + "%" );
 			$(this).find("#ing2").width( ing2cost.toFixed(2) + "%" );
 			$(this).find("#ing3").width( ing3cost.toFixed(2) + "%" );
 			$(this).find("#ing4").width( ing4cost.toFixed(2) + "%" );
+			$(this).find("#ing5").width( ing5cost.toFixed(2) + "%" );
+			$(this).find("#ing6").width( ing6cost.toFixed(2) + "%" );
+			$(this).find("#ing7").width( ing7cost.toFixed(2) + "%" );
+			$(this).find("#ing8").width( ing8cost.toFixed(2) + "%" );
+			$(this).find("#ing9").width( ing9cost.toFixed(2) + "%" );
 		}
 		else {$(this).find("#techDiv").addClass("has-error");};
 	}
