@@ -18,6 +18,8 @@ $('form').submit(
 			var ing3price	= parseFloat($(this).find("#Ing3_Price").val().replace(',', '.'));
 			var ing4price	= parseFloat($(this).find("#Ing4_Price").val().replace(',', '.'));
 			
+			var eff			= parseFloat($(this).find("#Eff").val().replace('%', '')) / 100;
+			
 			var Sale_Price	= $(this).find("#Sale_Price").val();
 			
 			
@@ -41,10 +43,10 @@ $('form').submit(
 			$(this).find("#EquipQuan").text(EquipQuan.toFixed(2));
 			
 			//количество ингридиентов
-			var Ing1_Quantity = ing1base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 );
-			var Ing2_Quantity = ing2base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 );
-			var Ing3_Quantity = ing3base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 );
-			var Ing4_Quantity = ing4base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 );
+			var Ing1_Quantity = ing1base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing2_Quantity = ing2base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing3_Quantity = ing3base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing4_Quantity = ing4base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
 			$(this).find("#Ing1_Quantity").text(Ing1_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing2_Quantity").text(Ing2_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing3_Quantity").text(Ing3_Quantity.toFixed(2) + " ед.");
@@ -65,7 +67,7 @@ $('form').submit(
 			$(this).find("#IngTotalPrice").text( "$" + IngTotalPrice.toFixed(2) );					
 			
 			//объем выпускаемой продукции
-			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1);
+			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
 			$(this).find("#Prod_Quantity").text( Math.round (Prod_Quantity) + " ед." );			
 			
 			//итоговое качество ингридиентов
