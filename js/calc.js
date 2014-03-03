@@ -28,7 +28,13 @@ $('form').submit(
 			if ( $(this).find("#Ing8_Price").val() ) { var ing8price = parseFloat($(this).find("#Ing8_Price").val().replace(',', '.'));} else { var ing8price = 0}
 			if ( $(this).find("#Ing9_Price").val() ) { var ing9price = parseFloat($(this).find("#Ing9_Price").val().replace(',', '.'));} else { var ing9price = 0}
 			
+			var animal_Qual = parseFloat($(this).find("#animal_Quality").val().replace(',', '.'));
 			
+			if (typeof window.animal_Quan == "undefined") {
+				if ( $(this).find("#animal_Quantity").text() ) { window.animal_Quan = parseFloat($(this).find("#animal_Quantity").text().replace(',', '.'));} 
+				else { window.animal_Quan = 0}
+			}
+						
 			var eff			= parseFloat($(this).find("#Eff").val().replace('%', '')) / 100;
 			
 			var Sale_Price	= $(this).find("#Sale_Price").val();
@@ -92,6 +98,10 @@ $('form').submit(
 			var Ing7_Quantity = window.ing7base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
 			var Ing8_Quantity = window.ing8base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
 			var Ing9_Quantity = window.ing9base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+				//ферма
+				if ( $(this).find("#animal_Quantity").text() ) {var Ing1_Quantity = ing1base_quan * window.animal_Quan * work_qaunt;}
+				$(this).find("#animal_Quantity").text(window.animal_Quan * work_qaunt + " ед.")
+			
 			$(this).find("#Ing1_Quantity").text(Ing1_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing2_Quantity").text(Ing2_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing3_Quantity").text(Ing3_Quantity.toFixed(2) + " ед.");
@@ -101,7 +111,7 @@ $('form').submit(
 			$(this).find("#Ing7_Quantity").text(Ing7_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing8_Quantity").text(Ing8_Quantity.toFixed(2) + " ед.");
 			$(this).find("#Ing9_Quantity").text(Ing9_Quantity.toFixed(2) + " ед.");
-			
+						
 			//цена ингридиентов
 			var Ing1_TotalPrice = Ing1_Quantity * ing1price;	
 			if (ing2price > 0) {var Ing2_TotalPrice = Ing2_Quantity * ing2price;} else { var Ing2_TotalPrice = 0}
@@ -137,6 +147,9 @@ $('form').submit(
 								ing5base_quan * ing5qual + ing6base_quan * ing6qual + ing7base_quan * ing7qual +ing8base_quan * ing8qual + ing9base_quan * ing9qual)/
 			( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan + ing5base_quan + ing6base_quan + ing7base_quan + ing8base_quan + ing9base_quan);
 			
+					//ферма
+					var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 );
+
 			//качество товара
 			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65) ;
 			//ограничение качества (по технологии)
