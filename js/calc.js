@@ -1,3 +1,10 @@
+function commaSeparateNumber(val){
+while (/(\d+)(\d{3})/.test(val.toString())){
+  val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+}
+return val;
+}
+
 $('form').submit(
 	function(e) {
 		// stop form submission
@@ -28,7 +35,7 @@ $('form').submit(
 			if ( $(this).find("#Ing8_Price").val() ) { var ing8price = parseFloat($(this).find("#Ing8_Price").val().replace(',', '.'));} else { var ing8price = 0}
 			if ( $(this).find("#Ing9_Price").val() ) { var ing9price = parseFloat($(this).find("#Ing9_Price").val().replace(',', '.'));} else { var ing9price = 0}
 			
-			var animal_Qual = parseFloat($(this).find("#animal_Quality").val().replace(',', '.'));
+			if ( $(this).find("#animal_Quality").val() ) { var animal_Qual = parseFloat($(this).find("#animal_Quality").val().replace(',', '.'));}
 			
 			if (typeof window.animal_Quan == "undefined") {
 				if ( $(this).find("#animal_Quantity").text() ) { window.animal_Quan = parseFloat($(this).find("#animal_Quantity").text().replace(',', '.'));} 
@@ -136,7 +143,7 @@ $('form').submit(
 			//общая цена ингрдиентов
 			var IngTotalPrice = Ing1_TotalPrice + Ing2_TotalPrice + Ing3_TotalPrice + Ing4_TotalPrice + 
 								Ing5_TotalPrice + Ing6_TotalPrice + Ing7_TotalPrice +Ing8_TotalPrice + Ing9_TotalPrice;
-			$(this).find("#IngTotalPrice").text( "$" + IngTotalPrice.toFixed(2) );					
+			$(this).find("#IngTotalPrice").text( "$" + commaSeparateNumber(IngTotalPrice) );					
 			
 			//объем выпускаемой продукции
 			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
@@ -148,7 +155,7 @@ $('form').submit(
 			( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan + ing5base_quan + ing6base_quan + ing7base_quan + ing8base_quan + ing9base_quan);
 			
 					//ферма
-					var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 );
+					if ( $(this).find("#animal_Quality").val() ) { var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 ); }
 
 			//качество товара
 			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65) ;
