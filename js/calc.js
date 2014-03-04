@@ -143,7 +143,7 @@ $('form').submit(
 			//общая цена ингрдиентов
 			var IngTotalPrice = Ing1_TotalPrice + Ing2_TotalPrice + Ing3_TotalPrice + Ing4_TotalPrice + 
 								Ing5_TotalPrice + Ing6_TotalPrice + Ing7_TotalPrice +Ing8_TotalPrice + Ing9_TotalPrice;
-			$(this).find("#IngTotalPrice").text( "$" + commaSeparateNumber(IngTotalPrice) );					
+			$(this).find("#IngTotalPrice").text( "$" + commaSeparateNumber(IngTotalPrice.toFixed(2)) );					
 			
 			//объем выпускаемой продукции
 			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
@@ -193,15 +193,15 @@ $('form').submit(
 			var ing7cost = Ing7_TotalPrice / IngTotalPrice * 100;
 			var ing8cost = Ing8_TotalPrice / IngTotalPrice * 100;
 			var ing9cost = Ing9_TotalPrice / IngTotalPrice * 100;
-			$(this).find("#ing1").width( ing1cost.toFixed(2) + "%" );
-			$(this).find("#ing2").width( ing2cost.toFixed(2) + "%" );
-			$(this).find("#ing3").width( ing3cost.toFixed(2) + "%" );
-			$(this).find("#ing4").width( ing4cost.toFixed(2) + "%" );
-			$(this).find("#ing5").width( ing5cost.toFixed(2) + "%" );
-			$(this).find("#ing6").width( ing6cost.toFixed(2) + "%" );
-			$(this).find("#ing7").width( ing7cost.toFixed(2) + "%" );
-			$(this).find("#ing8").width( ing8cost.toFixed(2) + "%" );
-			$(this).find("#ing9").width( ing9cost.toFixed(2) + "%" );
+			$(this).find("#ing1").width( ing1cost + "%" );
+			$(this).find("#ing2").width( ing2cost + "%" );
+			$(this).find("#ing3").width( ing3cost + "%" );
+			$(this).find("#ing4").width( ing4cost + "%" );
+			$(this).find("#ing5").width( ing5cost + "%" );
+			$(this).find("#ing6").width( ing6cost + "%" );
+			$(this).find("#ing7").width( ing7cost + "%" );
+			$(this).find("#ing8").width( ing8cost + "%" );
+			$(this).find("#ing9").width( ing9cost + "%" );
 		}
 		else {$(this).find("#techDiv").addClass("has-error");};
 	}
