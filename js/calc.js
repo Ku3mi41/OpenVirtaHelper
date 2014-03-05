@@ -150,18 +150,20 @@ $('form').submit(
 			$(this).find("#Prod_Quantity").text( Math.round (Prod_Quantity) + " ед." );			
 			
 			//итоговое качество ингридиентов
-			var IngTotalQual = ( ing1base_quan * ing1qual + ing2base_quan * ing2qual + ing3base_quan * ing3qual + ing4base_quan * ing4qual +
+			var IngTotalQual = ( ( ing1base_quan * ing1qual + ing2base_quan * ing2qual + ing3base_quan * ing3qual + ing4base_quan * ing4qual +
 								ing5base_quan * ing5qual + ing6base_quan * ing6qual + ing7base_quan * ing7qual +ing8base_quan * ing8qual + ing9base_quan * ing9qual)/
-			( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan + ing5base_quan + ing6base_quan + ing7base_quan + ing8base_quan + ing9base_quan);
-			
+			( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan + ing5base_quan + ing6base_quan + ing7base_quan + ing8base_quan + ing9base_quan) ) * eff;
+	
 					//ферма
-					if ( $(this).find("#animal_Quality").val() ) { var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 ); }
-
+					if ( $(this).find("#animal_Quality").val() ) { var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 ) * eff; }
+					
 			//качество товара
-			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65) ;
+			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65)  * ( 1 + $(this).find("#Bonus").val().replace('%', '') / 100 );
+
 			//ограничение качества (по технологии)
 			if (ProdQual > Math.pow(tech, 1.3) ) {ProdQual = Math.pow(tech, 1.3)}
-			$(this).find("#ProdQual").text( (ProdQual * ( 1 + $(this).find("#Bonus").val().replace('%', '') / 100 )).toFixed(2) );
+			if ( ProdQual < 1 ) { ProdQual = 1 }
+			$(this).find("#ProdQual").text( ProdQual.toFixed(2) ) ;
 			
 			//себестоимость
 			var exps = IngTotalPrice + work_salary * work_qaunt;
