@@ -1,0 +1,17 @@
+.vertical-mid td{vertical-align: middle !important;} .inline{display: inline-block;}
+	
+.spoiler a{
+ font-size: 20px;
+ color: #000000;
+ text-decoration: none;
+}
+ 
+.spoiler:hover {
+     cursor: pointer;
+}
+ 
+.spoiler {
+     margin: 10px 0;
+}
+
+.footer p{font-size: 10px;}

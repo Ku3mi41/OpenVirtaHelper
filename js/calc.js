@@ -1,3 +1,10 @@
+jQuery(document).ready(function(){
+	jQuery('.spoiler-text').hide()
+	jQuery('.spoiler').click(function(){
+		jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle()
+	})
+})
+
 function commaSeparateNumber(val){
 while (/(\d+)(\d{3})/.test(val.toString())){
   val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
