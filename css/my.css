@@ -15,3 +15,14 @@
 }
 
 .footer p{font-size: 10px;}
+
+#right_menu {
+	position: fixed;
+	display: block;
+	top: 50px;
+	right: 20px;
+}
+
+#all_spoilers, #calc_all {
+	width: 100%;
+}

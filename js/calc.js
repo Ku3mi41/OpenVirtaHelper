@@ -1,10 +1,31 @@
-jQuery(document).ready(function(){
-	jQuery('.spoiler-text').hide()
-	jQuery('.spoiler').click(function(){
-		jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle()
+//все спойлеры
+$( "#all_spoilers" ).click(function() {
+		var all_spoilers = document.querySelectorAll(".spoiler");
+		for (var i=0; i<all_spoilers.length; i++) 
+		all_spoilers[i].click();
+		if ( $("#all_spoilers").html() == "<span class=\"glyphicon glyphicon-plus\"></span> Развернуть все" ) 
+		{ $("#all_spoilers").html( "<span class=\"glyphicon glyphicon-minus\"></span> Свернуть все" ) } 
+		else { $("#all_spoilers").html( "<span class=\"glyphicon glyphicon-plus\"></span> Развернуть все" ) }
+		
+});
+
+//рассчитать все формы
+$( "#calc_all" ).click(function() {
+		var calc_buttons = document.querySelectorAll("#DoCalc");
+		for (var i=0; i<calc_buttons.length; i++) 
+		calc_buttons[i].click();
+});
+
+
+//спойлеры
+$(document).ready(function(){
+	$('.spoiler-text').hide()
+	$('.spoiler').click(function(){
+		$(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle()
 	})
 })
 
+//резделитель разрядов
 function commaSeparateNumber(val){
 while (/(\d+)(\d{3})/.test(val.toString())){
   val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
