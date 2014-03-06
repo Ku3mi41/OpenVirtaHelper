@@ -64,7 +64,6 @@
 						</td>
 						
 						<td class="col-xs-2">
-							Бройлерная птицеферма <br/>
 							<div id="techDiv" class="input-group input-group-sm">
 								<span class="input-group-addon">Техна</span>
 								<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
@@ -209,6 +208,356 @@
 		</div>
 	</div>	
 	<div class="spoiler-wrapper">
+		<div class="spoiler folded alert alert-info"><a href="#">Птицеферма (комбикорм)</a>&nbsp;<img src="../img/meat.gif" alt="Мясо" title="Мясо"/>&nbsp;<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/></div>
+		<div class="spoiler-text">
+			<form class="form-horizontal">
+			<table class="table table-bordered text-center vertical-mid">
+				<tbody>
+					<tr class="warning">
+						<th class="text-center">Тип предприятия</th>
+						<th class="text-center">Специализация</th>
+						<th class="text-center">Сырьё<br/>
+						<h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5>
+						</th>
+						<th class="text-center">Выпускаемая продукция</th>
+						<th class="text-center">Прибыль</th>
+					</tr>
+
+					<tr class="even">
+						<td class="col-xs-2">
+							<img src="../img/animalfarm.gif" title="Ферма"/><br/>
+							<p>Работники</p>
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">#</span>
+								<input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+							</div>					
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">$</span>
+								<input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+							</div>					
+							<h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>						
+						</td>
+						
+						<td class="col-xs-2">
+							<div id="techDiv" class="input-group input-group-sm">
+								<span class="input-group-addon">Техна</span>
+								<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+							</div>
+							<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+						</td>
+
+						<td class="col-xs-5">
+							<table class="inline">
+								<tbody>
+									<tr>
+										<td>
+											<table>
+												<tbody>
+													<tr><td>
+														<div class="input-group input-group-sm">
+															<span class="input-group-addon">#</span>
+															<input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+														</div>
+													</td></tr>
+													<tr><td>
+														<div class="input-group input-group-sm">
+															<span class="input-group-addon">$</span>
+															<input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+														</div>
+													</td></tr>
+													<tr>
+														<td><br/>
+														<a href="http://belyan.in/ovc/product/15746.html"><img src="../img/feedstuff.gif" alt="Комбикорм" title="Комбикорм"/></a>
+														</td>
+													</tr>
+													<tr><td><span id="Ing1_Quantity">6 ед.</span><input type="hidden" id="Ing1_Q" value="6"/></td></tr>
+													<tr><td><span id="Ing1_TotalPrice">$1</span></td></tr>
+												</tbody>
+											</table>
+										</td>
+										<td>
+											<table>
+												<tbody>
+													<tr><td>
+														<div class="input-group input-group-sm">
+															<span class="input-group-addon">#</span>
+															<input class="form-control " type="text" id="animal_Quality" placeholder="Качество"/>
+														</div>
+													</td></tr>
+													<tr><td>
+														<fieldset disabled><div class="input-group input-group-sm">
+															<span class="input-group-addon">$</span>
+															<input class="form-control" type="text" />
+														</div></fieldset>
+													</td></tr>
+													<tr>
+														<td><br/>
+														<a href="http://belyan.in/ovc/product/2556.html"><img src="../img/chicken.gif" alt="Курица" title="Курица"/></a>
+														</td>
+													</tr>
+													<tr><td><span id="animal_Quantity">50 ед.</span><input type="hidden" id="animals" value="50"/></td></tr>
+													<tr><td>&nbsp;</td></tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>						
+								</tbody>
+							</table>
+						</td>
+						
+						<td class="col-xs-2">
+							<table class="container-fluid">
+								<tbody>
+									<tr><td colspan="2">
+										<div class="input-group input-group-sm">
+											<span class="input-group-addon" title="Эффективность">Эфф., %</span>
+											<input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+										</div>
+									</td><td></td></tr>			
+									<tr><td  colspan="2">
+										<fieldset disabled>
+										<div class="input-group input-group-sm">
+											<span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+											<input class="form-control " type="text" id="Bonus" value="0%"/>
+											<input class="form-control " type="text" id="Bonus2" value="0%"/>											
+										</div></fieldset><br/>
+									</td><td></td></tr>	
+									<tr>
+										<td>
+										<img src="../img/meat.gif" alt="Мясо" title="Мясо"/>
+										</td>
+										<td><span id="Prod_Quantity">50 ед.</span><input type="hidden" id="Prod1_Quantity" value="50"/></td>
+									</tr>
+									<tr>
+									<td>
+										<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+									</td>
+									<td>
+										<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+									</td>									
+									</tr>									
+									<tr>
+										<td>
+										<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/>
+										</td>	
+										<td><span id="Prod_Quantity2">125 ед.</span><input type="hidden" id="Prod2_Quantity" value="125"/></td>
+									</tr>
+									<tr>
+									<td>
+										<h4><span class="label label-primary">Кач-во <span id="ProdQual2" class="badge">0</span></span></h4>
+									</td>
+									<td>
+										<h4><span class="label label-primary">C/c <span id="Cost2" class="badge">0</span></span></h4>
+									</td>									
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						
+						<td class="col-xs-1">
+							<table>
+								<tbody>
+									<tr><td>
+										<div class="input-group input-group-sm">
+											<span class="input-group-addon">$</span>
+											<input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+											<input class="form-control" type="text" id="Sale_Price2" placeholder="Цена"/>
+										</div>									
+									</td></tr>
+
+									<tr>
+										<td>
+										<h4><span class="label label-default" id="profit">$0</span></h4>
+										</td>
+									</tr>
+									<tr>
+										<td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</form>
+		</div>
+	</div>			
+	<div class="spoiler-wrapper">
+		<div class="spoiler folded alert alert-info"><a href="#">Птицеферма (картофель)</a>&nbsp;<img src="../img/meat.gif" alt="Мясо" title="Мясо"/>+10%&nbsp;<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/>+10%</div>
+		<div class="spoiler-text">
+			<form class="form-horizontal">
+			<table class="table table-bordered text-center vertical-mid">
+				<tbody>
+					<tr class="warning">
+						<th class="text-center">Тип предприятия</th>
+						<th class="text-center">Специализация</th>
+						<th class="text-center">Сырьё<br/>
+						<h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5>
+						</th>
+						<th class="text-center">Выпускаемая продукция</th>
+						<th class="text-center">Прибыль</th>
+					</tr>
+
+					<tr class="even">
+						<td class="col-xs-2">
+							<img src="../img/animalfarm.gif" title="Ферма"/><br/>
+							<p>Работники</p>
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">#</span>
+								<input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+							</div>					
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon">$</span>
+								<input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+							</div>					
+							<h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>						
+						</td>
+						
+						<td class="col-xs-2">
+							<div id="techDiv" class="input-group input-group-sm">
+								<span class="input-group-addon">Техна</span>
+								<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+							</div>
+							<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+						</td>
+
+						<td class="col-xs-5">
+							<table class="inline">
+								<tbody>
+									<tr>
+										<td>
+											<table>
+												<tbody>
+													<tr><td>
+														<div class="input-group input-group-sm">
+															<span class="input-group-addon">#</span>
+															<input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+														</div>
+													</td></tr>
+													<tr><td>
+														<div class="input-group input-group-sm">
+															<span class="input-group-addon">$</span>
+															<input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+														</div>
+													</td></tr>
+													<tr>
+														<td><br/>
+														<a href="http://belyan.in/ovc/product/15742.html"><img src="../img/potato.gif" alt="Картофель" title="Картофель"/></a>
+														</td>
+													</tr>
+													<tr><td><span id="Ing1_Quantity">9 ед.</span><input type="hidden" id="Ing1_Q" value="9"/></td></tr>
+													<tr><td><span id="Ing1_TotalPrice">$1</span></td></tr>
+												</tbody>
+											</table>
+										</td>
+										<td>
+											<table>
+												<tbody>
+													<tr><td>
+														<div class="input-group input-group-sm">
+															<span class="input-group-addon">#</span>
+															<input class="form-control " type="text" id="animal_Quality" placeholder="Качество"/>
+														</div>
+													</td></tr>
+													<tr><td>
+														<fieldset disabled><div class="input-group input-group-sm">
+															<span class="input-group-addon">$</span>
+															<input class="form-control" type="text" />
+														</div></fieldset>
+													</td></tr>
+													<tr>
+														<td><br/>
+														<a href="http://belyan.in/ovc/product/2556.html"><img src="../img/chicken.gif" alt="Курица" title="Курица"/></a>
+														</td>
+													</tr>
+													<tr><td><span id="animal_Quantity">50 ед.</span><input type="hidden" id="animals" value="50"/></td></tr>
+													<tr><td>&nbsp;</td></tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>						
+								</tbody>
+							</table>
+						</td>
+						
+						<td class="col-xs-2">
+							<table class="container-fluid">
+								<tbody>
+									<tr><td colspan="2">
+										<div class="input-group input-group-sm">
+											<span class="input-group-addon" title="Эффективность">Эфф., %</span>
+											<input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+										</div>
+									</td><td></td></tr>			
+									<tr><td  colspan="2">
+										<fieldset disabled>
+										<div class="input-group input-group-sm">
+											<span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+											<input class="form-control " type="text" id="Bonus" value="10%"/>
+											<input class="form-control " type="text" id="Bonus2" value="10%"/>											
+										</div></fieldset><br/>
+									</td><td></td></tr>	
+									<tr>
+										<td>
+										<img src="../img/meat.gif" alt="Мясо" title="Мясо"/>
+										</td>
+										<td><span id="Prod_Quantity">50 ед.</span><input type="hidden" id="Prod1_Quantity" value="50"/></td>
+									</tr>
+									<tr>
+									<td>
+										<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+									</td>
+									<td>
+										<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+									</td>									
+									</tr>									
+									<tr>
+										<td>
+										<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/>
+										</td>	
+										<td><span id="Prod_Quantity2">125 ед.</span><input type="hidden" id="Prod2_Quantity" value="125"/></td>
+									</tr>
+									<tr>
+									<td>
+										<h4><span class="label label-primary">Кач-во <span id="ProdQual2" class="badge">0</span></span></h4>
+									</td>
+									<td>
+										<h4><span class="label label-primary">C/c <span id="Cost2" class="badge">0</span></span></h4>
+									</td>									
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						
+						<td class="col-xs-1">
+							<table>
+								<tbody>
+									<tr><td>
+										<div class="input-group input-group-sm">
+											<span class="input-group-addon">$</span>
+											<input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+											<input class="form-control" type="text" id="Sale_Price2" placeholder="Цена"/>
+										</div>									
+									</td></tr>
+
+									<tr>
+										<td>
+										<h4><span class="label label-default" id="profit">$0</span></h4>
+										</td>
+									</tr>
+									<tr>
+										<td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</form>
+		</div>
+	</div>	
+	<div class="spoiler-wrapper">
 		<div class="spoiler folded alert alert-danger"><a href="#">Бройлерная птицеферма</a>&nbsp;<img src="../img/meat.gif" alt="Мясо" title="Мясо"/> + 20%</div>
 		<div class="spoiler-text">
 			<form class="form-horizontal">
@@ -240,7 +589,6 @@
 						</td>
 						
 						<td class="col-xs-2">
-							Бройлерная птицеферма <br/>
 							<div id="techDiv" class="input-group input-group-sm">
 								<span class="input-group-addon">Техна</span>
 								<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
@@ -363,7 +711,6 @@
 			</form>
 		</div>
 	</div>
-	
 	<div class="spoiler-wrapper">
 	<div class="spoiler folded alert alert-danger"><a href="#">Бройлерная птицеферма (комбикорм)</a>&nbsp;<img src="../img/meat.gif" alt="Мясо" title="Мясо"/> + 20%</div>
 		<div class="spoiler-text">
@@ -396,12 +743,11 @@
 					</td>
 					
 					<td class="col-xs-2">
-						Бройлерная птицеферма (комбикорм)<br/>
 						<div id="techDiv" class="input-group input-group-sm">
 							<span class="input-group-addon">Техна</span>
 							<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
 						</div>
-						<h4><span class="label label-primary">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+						<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
 					</td>
 
 					<td class="col-xs-5">
@@ -520,7 +866,7 @@
 		</div>
 	</div>
 	<div class="spoiler-wrapper">
-	<div class="spoiler folded alert alert-warning"><a href="#">Разведение кур (комбикорм)</a>&nbsp;<img src="../img/chicken.gif" alt="Курица" title="Курица"/></div>
+	<div class="spoiler folded alert alert-danger"><a href="#">Бройлерная птицеферма (картофель)</a>&nbsp;<img src="../img/meat.gif" alt="Мясо" title="Мясо"/> + 30%</div>
 		<div class="spoiler-text">
 		<form class="form-horizontal">
 		<table class="table table-bordered text-center vertical-mid">
@@ -551,12 +897,319 @@
 					</td>
 					
 					<td class="col-xs-2">
-						Разведение кур (комбикорм)<br/>
 						<div id="techDiv" class="input-group input-group-sm">
 							<span class="input-group-addon">Техна</span>
 							<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
 						</div>
-						<h4><span class="label label-primary">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+						<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+					</td>
+
+					<td class="col-xs-5">
+						<table class="inline">
+							<tbody>
+								<tr>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+													</div>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/15742.html"><img src="../img/potato.gif" alt="Картофель" title="Картофель"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="Ing1_Quantity">9 ед.</span><input type="hidden" id="Ing1_Q" value="9"/></td></td></tr>
+												<tr><td><span id="Ing1_TotalPrice">$1</span></td></tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="animal_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<fieldset disabled><div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" />
+													</div></fieldset>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/2556.html"><img src="../img/chicken.gif" alt="Курица" title="Курица"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="animal_Quantity">50 ед.</span><input type="hidden" id="animals" value="50"/></td></tr>
+												<tr><td>&nbsp;</td></tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>						
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-2">
+						<table class="container-fluid">
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Эффективность">Эфф., %</span>
+										<input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+									</div>
+								</td></tr>			
+								<tr><td>
+									<fieldset disabled>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+										<input class="form-control " type="text" id="Bonus" value="30%"/>
+									</div></fieldset><br/>
+								</td></tr>	
+								<tr>
+									<td>
+									<img src="../img/meat.gif" alt="Мясо" title="Мясо"/>
+									</td>
+								</tr>
+								<tr><td><span id="Prod_Quantity">60 ед.</span><input type="hidden" id="Prod1_Quantity" value="60"/></td></tr>
+								<tr><td>
+									<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+									<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+								</td></tr>
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-1">
+						<table>
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">$</span>
+										<input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+									</div>									
+								</td></tr>
+								<tr>
+									<td>
+									<h4><span class="label label-default" id="profit">$0</span></h4>
+									</td>
+								</tr>
+								<tr>
+									<td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</form>
+		</div>
+	</div>	
+	<div class="spoiler-wrapper">
+	<div class="spoiler folded alert alert-warning"><a href="#">Разведение кур</a>&nbsp;<img src="../img/chicken.gif" alt="Курица" title="Курица"/></div>
+		<div class="spoiler-text">
+		<form class="form-horizontal">
+		<table class="table table-bordered text-center vertical-mid">
+			<tbody>
+				<tr class="warning">
+					<th class="text-center">Тип предприятия</th>
+					<th class="text-center">Специализация</th>
+					<th class="text-center">Сырьё<br/>
+					<h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5>
+					</th>
+					<th class="text-center">Выпускаемая продукция</th>
+					<th class="text-center">Прибыль</th>
+				</tr>
+
+				<tr class="even">
+					<td class="col-xs-2">
+						<img src="../img/animalfarm.gif" title="Ферма"/><br/>
+						<p>Работники</p>
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">#</span>
+							<input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+						</div>					
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">$</span>
+							<input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+						</div>					
+						<h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>						
+					</td>
+					
+					<td class="col-xs-2">
+						<div id="techDiv" class="input-group input-group-sm">
+							<span class="input-group-addon">Техна</span>
+							<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+						</div>
+						<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+					</td>
+
+					<td class="col-xs-5">
+						<table class="inline">
+							<tbody>
+								<tr>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+													</div>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/1487.html"><img src="../img/grain.gif" alt="Зерно" title="Зерно"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="Ing1_Quantity">7.5 ед.</span><input type="hidden" id="Ing1_Q" value="7.5"/></td></td></tr>
+												<tr><td><span id="Ing1_TotalPrice">$1</span></td></tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="animal_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<fieldset disabled><div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" />
+													</div></fieldset>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/2556.html"><img src="../img/chicken.gif" alt="Курица" title="Курица"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="animal_Quantity">50 ед.</span><input type="hidden" id="animals" value="50"/></td></tr>
+												<tr><td>&nbsp;</td></tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>						
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-2">
+						<table class="container-fluid">
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Эффективность">Эфф., %</span>
+										<input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+									</div>
+								</td></tr>			
+								<tr><td>
+									<fieldset disabled>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+										<input class="form-control " type="text" id="Bonus" value="0%"/>
+									</div></fieldset><br/>
+								</td></tr>	
+								<tr>
+									<td>
+									<img src="../img/chicken.gif" alt="Курица" title="Курица"/>
+									</td>
+								</tr>
+								<tr><td><span id="Prod_Quantity">5 ед.</span><input type="hidden" id="Prod1_Quantity" value="5"/></td></tr>
+								<tr><td>
+									<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+									<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+								</td></tr>
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-1">
+						<table>
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">$</span>
+										<input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+									</div>									
+								</td></tr>
+								<tr>
+									<td>
+									<h4><span class="label label-default" id="profit">$0</span></h4>
+									</td>
+								</tr>
+								<tr>
+									<td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</form>	
+		</div>
+	</div>	
+	<div class="spoiler-wrapper">
+		<div class="spoiler folded alert alert-warning"><a href="#">Разведение кур (комбикорм)</a>&nbsp;<img src="../img/chicken.gif" alt="Курица" title="Курица"/></div>
+		<div class="spoiler-text">
+		<form class="form-horizontal">
+		<table class="table table-bordered text-center vertical-mid">
+			<tbody>
+				<tr class="warning">
+					<th class="text-center">Тип предприятия</th>
+					<th class="text-center">Специализация</th>
+					<th class="text-center">Сырьё<br/>
+					<h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5>
+					</th>
+					<th class="text-center">Выпускаемая продукция</th>
+					<th class="text-center">Прибыль</th>
+				</tr>
+
+				<tr class="even">
+					<td class="col-xs-2">
+						<img src="../img/animalfarm.gif" title="Ферма"/><br/>
+						<p>Работники</p>
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">#</span>
+							<input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+						</div>					
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">$</span>
+							<input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+						</div>					
+						<h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>						
+					</td>
+					
+					<td class="col-xs-2">
+						<div id="techDiv" class="input-group input-group-sm">
+							<span class="input-group-addon">Техна</span>
+							<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+						</div>
+						<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
 					</td>
 
 					<td class="col-xs-5">
@@ -639,7 +1292,7 @@
 									<img src="../img/chicken.gif" alt="Курица" title="Курица"/>
 									</td>
 								</tr>
-								<tr><td><span id="Prod_Quantity">6 ед.</span><input type="hidden" id="Prod1_Quantity" value="6"/></td></tr>
+								<tr><td><span id="Prod_Quantity">6.25 ед.</span><input type="hidden" id="Prod1_Quantity" value="6.25"/></td></tr>
 								<tr><td>
 									<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
 									<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
@@ -674,6 +1327,622 @@
 		</form>	
 		</div>
 	</div>
+	<div class="spoiler-wrapper">
+		<div class="spoiler folded alert alert-warning"><a href="#">Разведение кур (картофель)</a>&nbsp;<img src="../img/chicken.gif" alt="Курица" title="Курица"/>+10%</div>
+		<div class="spoiler-text">
+		<form class="form-horizontal">
+		<table class="table table-bordered text-center vertical-mid">
+			<tbody>
+				<tr class="warning">
+					<th class="text-center">Тип предприятия</th>
+					<th class="text-center">Специализация</th>
+					<th class="text-center">Сырьё<br/>
+					<h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5>
+					</th>
+					<th class="text-center">Выпускаемая продукция</th>
+					<th class="text-center">Прибыль</th>
+				</tr>
+
+				<tr class="even">
+					<td class="col-xs-2">
+						<img src="../img/animalfarm.gif" title="Ферма"/><br/>
+						<p>Работники</p>
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">#</span>
+							<input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+						</div>					
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">$</span>
+							<input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+						</div>					
+						<h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>						
+					</td>
+					
+					<td class="col-xs-2">
+						<div id="techDiv" class="input-group input-group-sm">
+							<span class="input-group-addon">Техна</span>
+							<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+						</div>
+						<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+					</td>
+
+					<td class="col-xs-5">
+						<table class="inline">
+							<tbody>
+								<tr>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+													</div>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/15742.html"><img src="../img/potato.gif" alt="Картофель" title="Картофель"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="Ing1_Quantity">9 ед.</span><input type="hidden" id="Ing1_Q" value="9"/></td></td></tr>
+												<tr><td><span id="Ing1_TotalPrice">$1</span></td></tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="animal_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<fieldset disabled><div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" />
+													</div></fieldset>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/2556.html"><img src="../img/chicken.gif" alt="Курица" title="Курица"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="animal_Quantity">50 ед.</span><input type="hidden" id="animals" value="50"/></td></tr>
+												<tr><td>&nbsp;</td></tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>						
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-2">
+						<table class="container-fluid">
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Эффективность">Эфф., %</span>
+										<input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+									</div>
+								</td></tr>			
+								<tr><td>
+									<fieldset disabled>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+										<input class="form-control " type="text" id="Bonus" value="10%"/>
+									</div></fieldset><br/>
+								</td></tr>	
+								<tr>
+									<td>
+									<img src="../img/chicken.gif" alt="Курица" title="Курица"/>
+									</td>
+								</tr>
+								<tr><td><span id="Prod_Quantity">6.25 ед.</span><input type="hidden" id="Prod1_Quantity" value="6.25"/></td></tr>
+								<tr><td>
+									<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+									<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+								</td></tr>
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-1">
+						<table>
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">$</span>
+										<input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+									</div>									
+								</td></tr>
+								<tr>
+									<td>
+									<h4><span class="label label-default" id="profit">$0</span></h4>
+									</td>
+								</tr>
+								<tr>
+									<td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</form>	
+		</div>
+	</div>
+	<div class="spoiler-wrapper">
+	<div class="spoiler folded alert alert-success"><a href="#">Яичная ферма</a>&nbsp;<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/>+10%</div>
+		<div class="spoiler-text">
+		<form class="form-horizontal">
+		<table class="table table-bordered text-center vertical-mid">
+			<tbody>
+				<tr class="warning">
+					<th class="text-center">Тип предприятия</th>
+					<th class="text-center">Специализация</th>
+					<th class="text-center">Сырьё<br/>
+					<h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5>
+					</th>
+					<th class="text-center">Выпускаемая продукция</th>
+					<th class="text-center">Прибыль</th>
+				</tr>
+
+				<tr class="even">
+					<td class="col-xs-2">
+						<img src="../img/animalfarm.gif" title="Ферма"/><br/>
+						<p>Работники</p>
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">#</span>
+							<input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+						</div>					
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">$</span>
+							<input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+						</div>					
+						<h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>						
+					</td>
+					
+					<td class="col-xs-2">
+						<div id="techDiv" class="input-group input-group-sm">
+							<span class="input-group-addon">Техна</span>
+							<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+						</div>
+						<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+					</td>
+
+					<td class="col-xs-5">
+						<table class="inline">
+							<tbody>
+								<tr>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+													</div>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/1487.html"><img src="../img/grain.gif" alt="Зерно" title="Зерно"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="Ing1_Quantity">7.5 ед.</span><input type="hidden" id="Ing1_Q" value="7.5"/></td></td></tr>
+												<tr><td><span id="Ing1_TotalPrice">$1</span></td></tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="animal_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<fieldset disabled><div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" />
+													</div></fieldset>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/2556.html"><img src="../img/chicken.gif" alt="Курица" title="Курица"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="animal_Quantity">50 ед.</span><input type="hidden" id="animals" value="50"/></td></tr>
+												<tr><td>&nbsp;</td></tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>						
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-2">
+						<table class="container-fluid">
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Эффективность">Эфф., %</span>
+										<input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+									</div>
+								</td></tr>			
+								<tr><td>
+									<fieldset disabled>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+										<input class="form-control " type="text" id="Bonus" value="0%"/>
+									</div></fieldset><br/>
+								</td></tr>	
+								<tr>
+									<td>
+									<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/>
+									</td>
+								</tr>
+								<tr><td><span id="Prod_Quantity">250 ед.</span><input type="hidden" id="Prod1_Quantity" value="250"/></td></tr>
+								<tr><td>
+									<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+									<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+								</td></tr>
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-1">
+						<table>
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">$</span>
+										<input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+									</div>									
+								</td></tr>
+								<tr>
+									<td>
+									<h4><span class="label label-default" id="profit">$0</span></h4>
+									</td>
+								</tr>
+								<tr>
+									<td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</form>	
+		</div>
+	</div>	
+	<div class="spoiler-wrapper">
+		<div class="spoiler folded alert alert-success"><a href="#">Яичная ферма (комбикорм)</a>&nbsp;<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/></div>
+		<div class="spoiler-text">
+		<form class="form-horizontal">
+		<table class="table table-bordered text-center vertical-mid">
+			<tbody>
+				<tr class="warning">
+					<th class="text-center">Тип предприятия</th>
+					<th class="text-center">Специализация</th>
+					<th class="text-center">Сырьё<br/>
+					<h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5>
+					</th>
+					<th class="text-center">Выпускаемая продукция</th>
+					<th class="text-center">Прибыль</th>
+				</tr>
+
+				<tr class="even">
+					<td class="col-xs-2">
+						<img src="../img/animalfarm.gif" title="Ферма"/><br/>
+						<p>Работники</p>
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">#</span>
+							<input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+						</div>					
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">$</span>
+							<input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+						</div>					
+						<h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>						
+					</td>
+					
+					<td class="col-xs-2">
+						<div id="techDiv" class="input-group input-group-sm">
+							<span class="input-group-addon">Техна</span>
+							<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+						</div>
+						<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+					</td>
+
+					<td class="col-xs-5">
+						<table class="inline">
+							<tbody>
+								<tr>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+													</div>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/15746.html"><img src="../img/feedstuff.gif" alt="Комбикорм" title="Комбикорм"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="Ing1_Quantity">6 ед.</span><input type="hidden" id="Ing1_Q" value="6"/></td></td></tr>
+												<tr><td><span id="Ing1_TotalPrice">$1</span></td></tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="animal_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<fieldset disabled><div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" />
+													</div></fieldset>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/2556.html"><img src="../img/chicken.gif" alt="Курица" title="Курица"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="animal_Quantity">50 ед.</span><input type="hidden" id="animals" value="50"/></td></tr>
+												<tr><td>&nbsp;</td></tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>						
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-2">
+						<table class="container-fluid">
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Эффективность">Эфф., %</span>
+										<input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+									</div>
+								</td></tr>			
+								<tr><td>
+									<fieldset disabled>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+										<input class="form-control " type="text" id="Bonus" value="0%"/>
+									</div></fieldset><br/>
+								</td></tr>	
+								<tr>
+									<td>
+									<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/>
+									</td>
+								</tr>
+								<tr><td><span id="Prod_Quantity">300 ед.</span><input type="hidden" id="Prod1_Quantity" value="300"/></td></tr>
+								<tr><td>
+									<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+									<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+								</td></tr>
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-1">
+						<table>
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">$</span>
+										<input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+									</div>									
+								</td></tr>
+								<tr>
+									<td>
+									<h4><span class="label label-default" id="profit">$0</span></h4>
+									</td>
+								</tr>
+								<tr>
+									<td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</form>	
+		</div>
+	</div>
+	<div class="spoiler-wrapper">
+		<div class="spoiler folded alert alert-success"><a href="#">Яичная ферма (картофель)</a>&nbsp;<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/></div>
+		<div class="spoiler-text">
+		<form class="form-horizontal">
+		<table class="table table-bordered text-center vertical-mid">
+			<tbody>
+				<tr class="warning">
+					<th class="text-center">Тип предприятия</th>
+					<th class="text-center">Специализация</th>
+					<th class="text-center">Сырьё<br/>
+					<h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5>
+					</th>
+					<th class="text-center">Выпускаемая продукция</th>
+					<th class="text-center">Прибыль</th>
+				</tr>
+
+				<tr class="even">
+					<td class="col-xs-2">
+						<img src="../img/animalfarm.gif" title="Ферма"/><br/>
+						<p>Работники</p>
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">#</span>
+							<input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+						</div>					
+						<div class="input-group input-group-sm">
+							<span class="input-group-addon">$</span>
+							<input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+						</div>					
+						<h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>						
+					</td>
+					
+					<td class="col-xs-2">
+						<div id="techDiv" class="input-group input-group-sm">
+							<span class="input-group-addon">Техна</span>
+							<input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+						</div>
+						<h4><span class="label label-primary hide">Кач-во станков <span id="EquipQuan" class="badge">0</span></span></h4>	
+					</td>
+
+					<td class="col-xs-5">
+						<table class="inline">
+							<tbody>
+								<tr>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+													</div>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/15742.html"><img src="../img/potato.gif" alt="Картофель" title="Картофель"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="Ing1_Quantity">9 ед.</span><input type="hidden" id="Ing1_Q" value="9"/></td></td></tr>
+												<tr><td><span id="Ing1_TotalPrice">$1</span></td></tr>
+											</tbody>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tbody>
+												<tr><td>
+													<div class="input-group input-group-sm">
+														<span class="input-group-addon">#</span>
+														<input class="form-control " type="text" id="animal_Quality" placeholder="Качество"/>
+													</div>
+												</td></tr>
+												<tr><td>
+													<fieldset disabled><div class="input-group input-group-sm">
+														<span class="input-group-addon">$</span>
+														<input class="form-control" type="text" />
+													</div></fieldset>
+												</td></tr>
+												<tr>
+													<td><br/>
+													<a href="http://belyan.in/ovc/product/2556.html"><img src="../img/chicken.gif" alt="Курица" title="Курица"/></a>
+													</td>
+												</tr>
+												<tr><td><span id="animal_Quantity">50 ед.</span><input type="hidden" id="animals" value="50"/></td></tr>
+												<tr><td>&nbsp;</td></tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>						
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-2">
+						<table class="container-fluid">
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Эффективность">Эфф., %</span>
+										<input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+									</div>
+								</td></tr>			
+								<tr><td>
+									<fieldset disabled>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+										<input class="form-control " type="text" id="Bonus" value="0%"/>
+									</div></fieldset><br/>
+								</td></tr>	
+								<tr>
+									<td>
+									<img src="../img/eggs.gif" alt="Яйца" title="Яйца"/>
+									</td>
+								</tr>
+								<tr><td><span id="Prod_Quantity">250 ед.</span><input type="hidden" id="Prod1_Quantity" value="250"/></td></tr>
+								<tr><td>
+									<h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+									<h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+								</td></tr>
+							</tbody>
+						</table>
+					</td>
+					
+					<td class="col-xs-1">
+						<table>
+							<tbody>
+								<tr><td>
+									<div class="input-group input-group-sm">
+										<span class="input-group-addon">$</span>
+										<input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+									</div>									
+								</td></tr>
+								<tr>
+									<td>
+									<h4><span class="label label-default" id="profit">$0</span></h4>
+									</td>
+								</tr>
+								<tr>
+									<td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</form>	
+		</div>
+	</div>		
 	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

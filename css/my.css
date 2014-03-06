@@ -26,3 +26,7 @@
 #all_spoilers, #calc_all {
 	width: 100%;
 }
+
+.container button .pull-left{
+	position: absolute;
+}
