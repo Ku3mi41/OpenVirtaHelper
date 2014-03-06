@@ -73,6 +73,7 @@ $('form').submit(
 			var eff			= parseFloat($(this).find("#Eff").val().replace('%', '')) / 100;
 			
 			var Sale_Price	= $(this).find("#Sale_Price").val();
+			var Sale_Price2	= $(this).find("#Sale_Price2").val();
 			
 			
 			if (typeof ing1base_quan == "undefined"){ ing1base_quan = parseFloat($(this).find("#Ing1_Quantity").text().replace(' ед.', '')); }
@@ -110,7 +111,8 @@ $('form').submit(
 			} 
 			
 			//количество товаров производимых 1 человеком
-			if (typeof prodbase_quan == "undefined"){ prodbase_quan = parseFloat($(this).find("#Prod_Quantity").text().replace(' ед.', '')); }
+			var prodbase_quan  = parseFloat($(this).find("#Prod1_Quantity").val());
+			var prodbase_quan2  = parseFloat($(this).find("#Prod2_Quantity").val());
 			
 			var work_qaunt	= $(this).find("#work_quan").val();
 			var work_salary	= $(this).find("#work_salary").val().replace(',', '.');
@@ -168,7 +170,7 @@ $('form').submit(
 			$(this).find("#Ing8_TotalPrice").text( "$" + commaSeparateNumber(Ing8_TotalPrice.toFixed(2)) );
 			$(this).find("#Ing9_TotalPrice").text( "$" + commaSeparateNumber(Ing9_TotalPrice.toFixed(2)) );
 			
-			//общая цена ингрдиентов
+			//общая цена ингридиентов
 			var IngTotalPrice = Ing1_TotalPrice + Ing2_TotalPrice + Ing3_TotalPrice + Ing4_TotalPrice + 
 								Ing5_TotalPrice + Ing6_TotalPrice + Ing7_TotalPrice +Ing8_TotalPrice + Ing9_TotalPrice;
 			$(this).find("#IngTotalPrice").text( "$" + commaSeparateNumber(IngTotalPrice.toFixed(2)) );					
@@ -176,6 +178,13 @@ $('form').submit(
 			//объем выпускаемой продукции
 			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
 			$(this).find("#Prod_Quantity").text( Math.round (Prod_Quantity) + " ед." );			
+			
+			//объем 2ой выпускаемой продукции
+			if ( $(this).find("#Bonus2").val() ) 
+			{
+				var Prod_Quantity2 = work_qaunt * prodbase_quan2 * Math.pow(1.05, tech-1) *  eff;
+				$(this).find("#Prod_Quantity2").text( Math.round (Prod_Quantity2) + " ед." );		
+			}
 			
 			//итоговое качество ингридиентов
 			var IngTotalQual = ( ( ing1base_quan * ing1qual + ing2base_quan * ing2qual + ing3base_quan * ing3qual + ing4base_quan * ing4qual +
@@ -190,16 +199,37 @@ $('form').submit(
 
 			//ограничение качества (по технологии)
 			if (ProdQual > Math.pow(tech, 1.3) ) {ProdQual = Math.pow(tech, 1.3)}
-			if ( ProdQual < 1 ) { ProdQual = 1 }
+			if ( ProdQual < 1 ) { ProdQual = 1 }			
 			$(this).find("#ProdQual").text( ProdQual.toFixed(2) ) ;
+			
+			//если есть второй продукт производства
+			if ( $(this).find("#Bonus2").val() ) 
+			{
+				var ProdQual2 = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65)  * ( 1 + $(this).find("#Bonus2").val().replace('%', '') / 100 );
+				if (ProdQual2 > Math.pow(tech, 1.3) ) {ProdQual2 = Math.pow(tech, 1.3)}
+				if ( ProdQual2 < 1 ) { ProdQual2 = 1 }			
+				$(this).find("#ProdQual2").text( ProdQual2.toFixed(2) ) ;
+			}
 			
 			//себестоимость
 			var exps = IngTotalPrice + work_salary * work_qaunt;
 			$(this).find("#Cost").text( "$" + commaSeparateNumber((exps / Prod_Quantity).toFixed(2)) );
 			
+			if ( $(this).find("#Bonus2").val() ) 
+			{
+				$(this).find("#Cost").text( "$" + commaSeparateNumber((exps / Prod_Quantity / 2).toFixed(2)) );			
+				$(this).find("#Cost2").text( "$" + commaSeparateNumber((exps / Prod_Quantity2 / 2).toFixed(2)) );
+			}			
+			
 			//прибыль
 			var profit = ( Sale_Price * Prod_Quantity ) - exps;
 			$(this).find("#profit").text( "$" + commaSeparateNumber(profit.toFixed(2)) );
+			
+			if ( $(this).find("#Bonus2").val() ) 
+			{
+				var profit = ( Sale_Price * Prod_Quantity + Sale_Price2 * Prod_Quantity2 ) - exps;
+				$(this).find("#profit").text( "$" + commaSeparateNumber(profit.toFixed(2)) );
+			}	
 			
 			//подсветка прибыли
 			$(this).find("#profit").removeClass("label-danger");
