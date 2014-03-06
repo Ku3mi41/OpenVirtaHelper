@@ -1,4 +1,4 @@
-//все спойлеры
+//развернуть/свернуть все спойлеры
 $( "#all_spoilers" ).click(function() {
 		var all_spoilers = document.querySelectorAll(".spoiler");
 		for (var i=0; i<all_spoilers.length; i++) 
@@ -65,10 +65,7 @@ $('form').submit(
 			
 			if ( $(this).find("#animal_Quality").val() ) { var animal_Qual = parseFloat($(this).find("#animal_Quality").val().replace(',', '.'));}
 			
-			if (typeof window.animal_Quan == "undefined") {
-				if ( $(this).find("#animal_Quantity").text() ) { window.animal_Quan = parseFloat($(this).find("#animal_Quantity").text().replace(',', '.'));} 
-				else { window.animal_Quan = 0}
-			}
+			var animal_Quan = parseFloat($(this).find("#animals").val());
 						
 			var eff			= parseFloat($(this).find("#Eff").val().replace('%', '')) / 100;
 			
@@ -76,39 +73,15 @@ $('form').submit(
 			var Sale_Price2	= $(this).find("#Sale_Price2").val();
 			
 			
-			if (typeof ing1base_quan == "undefined"){ ing1base_quan = parseFloat($(this).find("#Ing1_Quantity").text().replace(' ед.', '')); }
-			if (typeof window.ing2base_quan == "undefined") { 
-				if ( $(this).find("#Ing2_Quantity").text() ) { window.ing2base_quan = parseFloat($(this).find("#Ing2_Quantity").text().replace(' ед.', '')); } 
-				else { window.ing2base_quan = 0}
-			} 
-			if (typeof window.ing3base_quan == "undefined") { 
-				if ( $(this).find("#Ing3_Quantity").text() ) { window.ing3base_quan = parseFloat($(this).find("#Ing3_Quantity").text().replace(' ед.', '')); } 
-				else { window.ing3base_quan = 0}
-			} 
-			if (typeof window.ing4base_quan == "undefined") { 
-				if ( $(this).find("#Ing4_Quantity").text() ) { window.ing4base_quan = parseFloat($(this).find("#Ing4_Quantity").text().replace(' ед.', '')); } 
-				else { window.ing4base_quan = 0}
-			} 
-			if (typeof window.ing5base_quan == "undefined") { 
-				if ( $(this).find("#Ing5_Quantity").text() ) { window.ing5base_quan = parseFloat($(this).find("#Ing5_Quantity").text().replace(' ед.', '')); } 
-				else { window.ing5base_quan = 0}
-			} 
-			if (typeof window.ing6base_quan == "undefined") { 
-				if ( $(this).find("#Ing6_Quantity").text() ) { window.ing6base_quan = parseFloat($(this).find("#Ing6_Quantity").text().replace(' ед.', '')); } 
-				else { window.ing6base_quan = 0}
-			} 
-			if (typeof window.ing7base_quan == "undefined") { 
-				if ( $(this).find("#Ing7_Quantity").text() ) { window.ing7base_quan = parseFloat($(this).find("#Ing7_Quantity").text().replace(' ед.', '')); } 
-				else { window.ing7base_quan = 0}
-			} 
-			if (typeof window.ing8base_quan == "undefined") { 
-				if ( $(this).find("#Ing8_Quantity").text() ) { window.ing8base_quan = parseFloat($(this).find("#Ing8_Quantity").text().replace(' ед.', '')); } 
-				else { window.ing8base_quan = 0}
-			} 
-			if (typeof window.ing9base_quan == "undefined") { 
-				if ( $(this).find("#Ing9_Quantity").text() ) { window.ing9base_quan = parseFloat($(this).find("#Ing9_Quantity").text().replace(' ед.', '')); } 
-				else { window.ing9base_quan = 0}
-			} 
+			if ($(this).find("#Ing1_Q").val()) {var ing1base_quan = parseFloat($(this).find("#Ing1_Q").val()); }
+			if ($(this).find("#Ing2_Q").val()) {var ing2base_quan = parseFloat($(this).find("#Ing2_Q").val()); } else { var ing2base_quan = 0 }
+			if ($(this).find("#Ing3_Q").val()) {var ing3base_quan = parseFloat($(this).find("#Ing3_Q").val()); } else { var ing3base_quan = 0 }
+			if ($(this).find("#Ing4_Q").val()) {var ing4base_quan = parseFloat($(this).find("#Ing4_Q").val()); } else { var ing4base_quan = 0 }
+			if ($(this).find("#Ing5_Q").val()) {var ing5base_quan = parseFloat($(this).find("#Ing5_Q").val()); } else { var ing5base_quan = 0 }
+			if ($(this).find("#Ing6_Q").val()) {var ing6base_quan = parseFloat($(this).find("#Ing6_Q").val()); } else { var ing6base_quan = 0 }
+			if ($(this).find("#Ing7_Q").val()) {var ing7base_quan = parseFloat($(this).find("#Ing7_Q").val()); } else { var ing7base_quan = 0 }
+			if ($(this).find("#Ing8_Q").val()) {var ing8base_quan = parseFloat($(this).find("#Ing8_Q").val()); } else { var ing8base_quan = 0 }
+			if ($(this).find("#Ing9_Q").val()) {var ing9base_quan = parseFloat($(this).find("#Ing9_Q").val()); } else { var ing9base_quan = 0 }
 			
 			//количество товаров производимых 1 человеком
 			var prodbase_quan  = parseFloat($(this).find("#Prod1_Quantity").val());
@@ -127,17 +100,17 @@ $('form').submit(
 			
 			//количество ингридиентов
 			var Ing1_Quantity = ing1base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing2_Quantity = window.ing2base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing3_Quantity = window.ing3base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing4_Quantity = window.ing4base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing5_Quantity = window.ing5base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing6_Quantity = window.ing6base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing7_Quantity = window.ing7base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing8_Quantity = window.ing8base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
-			var Ing9_Quantity = window.ing9base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing2_Quantity = ing2base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing3_Quantity = ing3base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing4_Quantity = ing4base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing5_Quantity = ing5base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing6_Quantity = ing6base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing7_Quantity = ing7base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing8_Quantity = ing8base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing9_Quantity = ing9base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
 				//ферма
-				if ( $(this).find("#animal_Quantity").text() ) {var Ing1_Quantity = ing1base_quan * window.animal_Quan * work_qaunt;}
-				$(this).find("#animal_Quantity").text(commaSeparateNumber(window.animal_Quan * work_qaunt) + " ед.")
+				if ( $(this).find("#animal_Quantity").text() ) {var Ing1_Quantity = ing1base_quan * animal_Quan * work_qaunt;}
+				$(this).find("#animal_Quantity").text(commaSeparateNumber(animal_Quan * work_qaunt) + " ед.")
 			
 			$(this).find("#Ing1_Quantity").text(commaSeparateNumber(Ing1_Quantity.toFixed(2)) + " ед.");
 			$(this).find("#Ing2_Quantity").text(commaSeparateNumber(Ing2_Quantity.toFixed(2)) + " ед.");
@@ -190,10 +163,8 @@ $('form').submit(
 			var IngTotalQual = ( ( ing1base_quan * ing1qual + ing2base_quan * ing2qual + ing3base_quan * ing3qual + ing4base_quan * ing4qual +
 								ing5base_quan * ing5qual + ing6base_quan * ing6qual + ing7base_quan * ing7qual +ing8base_quan * ing8qual + ing9base_quan * ing9qual)/
 			( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan + ing5base_quan + ing6base_quan + ing7base_quan + ing8base_quan + ing9base_quan) ) * eff;
-	
 					//ферма
-					if ( $(this).find("#animal_Quality").val() ) { var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 ) * eff; }
-					
+					if ( $(this).find("#animal_Quality").val() ) { var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 ) * eff; }	
 			//качество товара
 			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65)  * ( 1 + $(this).find("#Bonus").val().replace('%', '') / 100 );
 
@@ -244,24 +215,26 @@ $('form').submit(
 			}
 			
 			//доля ингридиентов в расходах
-			var ing1cost = Ing1_TotalPrice / IngTotalPrice * 100;
-			var ing2cost = Ing2_TotalPrice / IngTotalPrice * 100;
-			var ing3cost = Ing3_TotalPrice / IngTotalPrice * 100;
-			var ing4cost = Ing4_TotalPrice / IngTotalPrice * 100;
-			var ing5cost = Ing5_TotalPrice / IngTotalPrice * 100;
-			var ing6cost = Ing6_TotalPrice / IngTotalPrice * 100;
-			var ing7cost = Ing7_TotalPrice / IngTotalPrice * 100;
-			var ing8cost = Ing8_TotalPrice / IngTotalPrice * 100;
-			var ing9cost = Ing9_TotalPrice / IngTotalPrice * 100;
-			$(this).find("#ing1").width( ing1cost + "%" );
-			$(this).find("#ing2").width( ing2cost + "%" );
-			$(this).find("#ing3").width( ing3cost + "%" );
-			$(this).find("#ing4").width( ing4cost + "%" );
-			$(this).find("#ing5").width( ing5cost + "%" );
-			$(this).find("#ing6").width( ing6cost + "%" );
-			$(this).find("#ing7").width( ing7cost + "%" );
-			$(this).find("#ing8").width( ing8cost + "%" );
-			$(this).find("#ing9").width( ing9cost + "%" );
+			if ( !$(this).find("#animal_Quantity").text() ) {
+				var ing1cost = Ing1_TotalPrice / IngTotalPrice * 100;
+				var ing2cost = Ing2_TotalPrice / IngTotalPrice * 100;
+				var ing3cost = Ing3_TotalPrice / IngTotalPrice * 100;
+				var ing4cost = Ing4_TotalPrice / IngTotalPrice * 100;
+				var ing5cost = Ing5_TotalPrice / IngTotalPrice * 100;
+				var ing6cost = Ing6_TotalPrice / IngTotalPrice * 100;
+				var ing7cost = Ing7_TotalPrice / IngTotalPrice * 100;
+				var ing8cost = Ing8_TotalPrice / IngTotalPrice * 100;
+				var ing9cost = Ing9_TotalPrice / IngTotalPrice * 100;
+				$(this).find("#ing1").width( ing1cost + "%" );
+				$(this).find("#ing2").width( ing2cost + "%" );
+				$(this).find("#ing3").width( ing3cost + "%" );
+				$(this).find("#ing4").width( ing4cost + "%" );
+				$(this).find("#ing5").width( ing5cost + "%" );
+				$(this).find("#ing6").width( ing6cost + "%" );
+				$(this).find("#ing7").width( ing7cost + "%" );
+				$(this).find("#ing8").width( ing8cost + "%" );
+				$(this).find("#ing9").width( ing9cost + "%" );
+			}
 		}
 		else {$(this).find("#techDiv").addClass("has-error");};
 	}
