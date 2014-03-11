@@ -30,3 +30,8 @@
 .btn-default.pull-left {
 	position: absolute;
 }
+
+.spoiler-wrapper.input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn
+{
+	padding: 5px;
+}
