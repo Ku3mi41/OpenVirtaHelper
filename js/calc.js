@@ -112,15 +112,15 @@ $('form').submit(
 				if ( $(this).find("#animal_Quantity").text() ) {var Ing1_Quantity = ing1base_quan * animal_Quan * work_qaunt;}
 				$(this).find("#animal_Quantity").text(commaSeparateNumber(animal_Quan * work_qaunt) + " ед.")
 			
-			$(this).find("#Ing1_Quantity").text(commaSeparateNumber(Ing1_Quantity.toFixed(2)) + " ед.");
-			$(this).find("#Ing2_Quantity").text(commaSeparateNumber(Ing2_Quantity.toFixed(2)) + " ед.");
-			$(this).find("#Ing3_Quantity").text(commaSeparateNumber(Ing3_Quantity.toFixed(2)) + " ед.");
-			$(this).find("#Ing4_Quantity").text(commaSeparateNumber(Ing4_Quantity.toFixed(2)) + " ед.");
-			$(this).find("#Ing5_Quantity").text(commaSeparateNumber(Ing5_Quantity.toFixed(2)) + " ед.");
-			$(this).find("#Ing6_Quantity").text(commaSeparateNumber(Ing6_Quantity.toFixed(2)) + " ед.");
-			$(this).find("#Ing7_Quantity").text(commaSeparateNumber(Ing7_Quantity.toFixed(2)) + " ед.");
-			$(this).find("#Ing8_Quantity").text(commaSeparateNumber(Ing8_Quantity.toFixed(2)) + " ед.");
-			$(this).find("#Ing9_Quantity").text(commaSeparateNumber(Ing9_Quantity.toFixed(2)) + " ед.");
+			$(this).find("#Ing1_Quantity").text(commaSeparateNumber( Math.ceil( Ing1_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing2_Quantity").text(commaSeparateNumber( Math.ceil( Ing2_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing3_Quantity").text(commaSeparateNumber( Math.ceil( Ing3_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing4_Quantity").text(commaSeparateNumber( Math.ceil( Ing4_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing5_Quantity").text(commaSeparateNumber( Math.ceil( Ing5_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing6_Quantity").text(commaSeparateNumber( Math.ceil( Ing6_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing7_Quantity").text(commaSeparateNumber( Math.ceil( Ing7_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing8_Quantity").text(commaSeparateNumber( Math.ceil( Ing8_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing9_Quantity").text(commaSeparateNumber( Math.ceil( Ing9_Quantity.toFixed(2)) ) + " ед.");
 						
 			//цена ингридиентов
 			var Ing1_TotalPrice = Ing1_Quantity * ing1price;	
@@ -150,13 +150,13 @@ $('form').submit(
 			
 			//объем выпускаемой продукции
 			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
-			$(this).find("#Prod_Quantity").text( Math.round (Prod_Quantity) + " ед." );			
+			$(this).find("#Prod_Quantity").text( commaSeparateNumber( Math.round (Prod_Quantity) ) + " ед." );			
 			
 			//объем 2ой выпускаемой продукции
 			if ( $(this).find("#Bonus2").val() ) 
 			{
 				var Prod_Quantity2 = work_qaunt * prodbase_quan2 * Math.pow(1.05, tech-1) *  eff;
-				$(this).find("#Prod_Quantity2").text( Math.round (Prod_Quantity2) + " ед." );		
+				$(this).find("#Prod_Quantity2").text( commaSeparateNumber( Math.round (Prod_Quantity2) ) + " ед." );		
 			}
 			
 			//итоговое качество ингридиентов
@@ -183,7 +183,8 @@ $('form').submit(
 			}
 			
 			//себестоимость
-			var exps = IngTotalPrice + work_salary * work_qaunt;
+			var zp = work_salary * work_qaunt;
+			var exps = IngTotalPrice + zp + zp * 0.1 ;
 			$(this).find("#Cost").text( "$" + commaSeparateNumber((exps / Prod_Quantity).toFixed(2)) );
 			
 			if ( $(this).find("#Bonus2").val() ) 
