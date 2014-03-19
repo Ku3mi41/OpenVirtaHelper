@@ -23,7 +23,12 @@ $(document).ready(function(){
 	$('.spoiler').click(function(){
 		$(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle()
 	})
+	
+	//открываем первый спойлер
+	var all_spoilers = document.querySelectorAll(".spoiler");
+	all_spoilers[0].click();	
 })
+
 
 //резделитель разрядов
 function commaSeparateNumber(val){
