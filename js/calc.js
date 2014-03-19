@@ -43,7 +43,7 @@ $('form').submit(
 		{
 			$(this).find("#techDiv").removeClass("has-error");
 			
-			var ing1qual	= parseFloat($(this).find("#Ing1_Quality").val().replace(',', '.'));
+			if ( $(this).find("#Ing1_Quality").val() ) {var ing1qual = parseFloat($(this).find("#Ing1_Quality").val().replace(',', '.'));} else { var ing1qual = 0}
 			if ( $(this).find("#Ing2_Quality").val() ) {var ing2qual = parseFloat($(this).find("#Ing2_Quality").val().replace(',', '.'));} else { var ing2qual = 0}
 			if ( $(this).find("#Ing3_Quality").val() ) {var ing3qual = parseFloat($(this).find("#Ing3_Quality").val().replace(',', '.'));} else { var ing3qual = 0}
 			if ( $(this).find("#Ing4_Quality").val() ) {var ing4qual = parseFloat($(this).find("#Ing4_Quality").val().replace(',', '.'));} else { var ing4qual = 0}
@@ -52,8 +52,12 @@ $('form').submit(
 			if ( $(this).find("#Ing7_Quality").val() ) {var ing7qual = parseFloat($(this).find("#Ing7_Quality").val().replace(',', '.'));} else { var ing7qual = 0}
 			if ( $(this).find("#Ing8_Quality").val() ) {var ing8qual = parseFloat($(this).find("#Ing8_Quality").val().replace(',', '.'));} else { var ing8qual = 0}
 			if ( $(this).find("#Ing9_Quality").val() ) {var ing9qual = parseFloat($(this).find("#Ing9_Quality").val().replace(',', '.'));} else { var ing9qual = 0}
+			if ( $(this).find("#Ing10_Quality").val() ) {var ing10qual = parseFloat($(this).find("#Ing10_Quality").val().replace(',', '.'));} else { var ing10qual = 0}
+			if ( $(this).find("#Ing11_Quality").val() ) {var ing11qual = parseFloat($(this).find("#Ing11_Quality").val().replace(',', '.'));} else { var ing11qual = 0}
+			if ( $(this).find("#Ing12_Quality").val() ) {var ing12qual = parseFloat($(this).find("#Ing12_Quality").val().replace(',', '.'));} else { var ing12qual = 0}
+			if ( $(this).find("#Ing13_Quality").val() ) {var ing13qual = parseFloat($(this).find("#Ing13_Quality").val().replace(',', '.'));} else { var ing13qual = 0}
 			
-			var ing1price	= parseFloat($(this).find("#Ing1_Price").val().replace(',', '.'));
+			if ( $(this).find("#Ing1_Price").val() ) { var ing1price = parseFloat($(this).find("#Ing1_Price").val().replace(',', '.'));} else { var ing1price = 0}
 			if ( $(this).find("#Ing2_Price").val() ) { var ing2price = parseFloat($(this).find("#Ing2_Price").val().replace(',', '.'));} else { var ing2price = 0}
 			if ( $(this).find("#Ing3_Price").val() ) { var ing3price = parseFloat($(this).find("#Ing3_Price").val().replace(',', '.'));} else { var ing3price = 0}
 			if ( $(this).find("#Ing4_Price").val() ) { var ing4price = parseFloat($(this).find("#Ing4_Price").val().replace(',', '.'));} else { var ing4price = 0}
@@ -62,6 +66,10 @@ $('form').submit(
 			if ( $(this).find("#Ing7_Price").val() ) { var ing7price = parseFloat($(this).find("#Ing7_Price").val().replace(',', '.'));} else { var ing7price = 0}
 			if ( $(this).find("#Ing8_Price").val() ) { var ing8price = parseFloat($(this).find("#Ing8_Price").val().replace(',', '.'));} else { var ing8price = 0}
 			if ( $(this).find("#Ing9_Price").val() ) { var ing9price = parseFloat($(this).find("#Ing9_Price").val().replace(',', '.'));} else { var ing9price = 0}
+			if ( $(this).find("#Ing10_Price").val() ) { var ing10price = parseFloat($(this).find("#Ing10_Price").val().replace(',', '.'));} else { var ing10price = 0}
+			if ( $(this).find("#Ing11_Price").val() ) { var ing11price = parseFloat($(this).find("#Ing11_Price").val().replace(',', '.'));} else { var ing11price = 0}
+			if ( $(this).find("#Ing12_Price").val() ) { var ing12price = parseFloat($(this).find("#Ing12_Price").val().replace(',', '.'));} else { var ing12price = 0}
+			if ( $(this).find("#Ing13_Price").val() ) { var ing13price = parseFloat($(this).find("#Ing13_Price").val().replace(',', '.'));} else { var ing13price = 0}
 			
 			if ( $(this).find("#animal_Quality").val() ) { var animal_Qual = parseFloat($(this).find("#animal_Quality").val().replace(',', '.'));}
 			
@@ -82,6 +90,10 @@ $('form').submit(
 			if ($(this).find("#Ing7_Q").val()) {var ing7base_quan = parseFloat($(this).find("#Ing7_Q").val()); } else { var ing7base_quan = 0 }
 			if ($(this).find("#Ing8_Q").val()) {var ing8base_quan = parseFloat($(this).find("#Ing8_Q").val()); } else { var ing8base_quan = 0 }
 			if ($(this).find("#Ing9_Q").val()) {var ing9base_quan = parseFloat($(this).find("#Ing9_Q").val()); } else { var ing9base_quan = 0 }
+			if ($(this).find("#Ing10_Q").val()) {var ing10base_quan = parseFloat($(this).find("#Ing10_Q").val()); } else { var ing10base_quan = 0 }
+			if ($(this).find("#Ing11_Q").val()) {var ing11base_quan = parseFloat($(this).find("#Ing11_Q").val()); } else { var ing11base_quan = 0 }
+			if ($(this).find("#Ing12_Q").val()) {var ing12base_quan = parseFloat($(this).find("#Ing12_Q").val()); } else { var ing12base_quan = 0 }
+			if ($(this).find("#Ing13_Q").val()) {var ing13base_quan = parseFloat($(this).find("#Ing13_Q").val()); } else { var ing13base_quan = 0 }
 			
 			//количество товаров производимых 1 человеком
 			var prodbase_quan  = parseFloat($(this).find("#Prod1_Quantity").val());
@@ -108,6 +120,10 @@ $('form').submit(
 			var Ing7_Quantity = ing7base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
 			var Ing8_Quantity = ing8base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
 			var Ing9_Quantity = ing9base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing10_Quantity = ing10base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing11_Quantity = ing11base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing12_Quantity = ing12base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
+			var Ing13_Quantity = ing13base_quan * prodbase_quan * work_qaunt * Math.pow(1.05, tech-1 ) * eff;
 				//ферма
 				if ( $(this).find("#animal_Quantity").text() ) {var Ing1_Quantity = ing1base_quan * animal_Quan * work_qaunt;}
 				$(this).find("#animal_Quantity").text(commaSeparateNumber(animal_Quan * work_qaunt) + " ед.")
@@ -121,9 +137,13 @@ $('form').submit(
 			$(this).find("#Ing7_Quantity").text(commaSeparateNumber( Math.ceil( Ing7_Quantity.toFixed(2)) ) + " ед.");
 			$(this).find("#Ing8_Quantity").text(commaSeparateNumber( Math.ceil( Ing8_Quantity.toFixed(2)) ) + " ед.");
 			$(this).find("#Ing9_Quantity").text(commaSeparateNumber( Math.ceil( Ing9_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing10_Quantity").text(commaSeparateNumber( Math.ceil( Ing10_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing11_Quantity").text(commaSeparateNumber( Math.ceil( Ing11_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing12_Quantity").text(commaSeparateNumber( Math.ceil( Ing12_Quantity.toFixed(2)) ) + " ед.");
+			$(this).find("#Ing13_Quantity").text(commaSeparateNumber( Math.ceil( Ing13_Quantity.toFixed(2)) ) + " ед.");
 						
 			//цена ингридиентов
-			var Ing1_TotalPrice = Ing1_Quantity * ing1price;	
+			if (ing1price > 0) {var Ing1_TotalPrice = Ing1_Quantity * ing2price;} else { var Ing1_TotalPrice = 0}
 			if (ing2price > 0) {var Ing2_TotalPrice = Ing2_Quantity * ing2price;} else { var Ing2_TotalPrice = 0}
 			if (ing3price > 0) {var Ing3_TotalPrice = Ing3_Quantity * ing3price;} else { var Ing3_TotalPrice = 0}
 			if (ing4price > 0) {var Ing4_TotalPrice = Ing4_Quantity * ing4price;} else { var Ing4_TotalPrice = 0}
@@ -132,6 +152,10 @@ $('form').submit(
 			if (ing7price > 0) {var Ing7_TotalPrice = Ing7_Quantity * ing7price;} else { var Ing7_TotalPrice = 0}
 			if (ing8price > 0) {var Ing8_TotalPrice = Ing8_Quantity * ing8price;} else { var Ing8_TotalPrice = 0}
 			if (ing9price > 0) {var Ing9_TotalPrice = Ing9_Quantity * ing9price;} else { var Ing9_TotalPrice = 0}
+			if (ing10price > 0) {var Ing10_TotalPrice = Ing10_Quantity * ing10price;} else { var Ing10_TotalPrice = 0}
+			if (ing11price > 0) {var Ing11_TotalPrice = Ing11_Quantity * ing11price;} else { var Ing11_TotalPrice = 0}
+			if (ing12price > 0) {var Ing12_TotalPrice = Ing12_Quantity * ing12price;} else { var Ing12_TotalPrice = 0}
+			if (ing13price > 0) {var Ing13_TotalPrice = Ing13_Quantity * ing13price;} else { var Ing13_TotalPrice = 0}
 		
 			$(this).find("#Ing1_TotalPrice").text( "$" + commaSeparateNumber(Ing1_TotalPrice.toFixed(2)) );
 			$(this).find("#Ing2_TotalPrice").text( "$" + commaSeparateNumber(Ing2_TotalPrice.toFixed(2)) );
@@ -142,10 +166,15 @@ $('form').submit(
 			$(this).find("#Ing7_TotalPrice").text( "$" + commaSeparateNumber(Ing7_TotalPrice.toFixed(2)) );
 			$(this).find("#Ing8_TotalPrice").text( "$" + commaSeparateNumber(Ing8_TotalPrice.toFixed(2)) );
 			$(this).find("#Ing9_TotalPrice").text( "$" + commaSeparateNumber(Ing9_TotalPrice.toFixed(2)) );
+			$(this).find("#Ing10_TotalPrice").text( "$" + commaSeparateNumber(Ing10_TotalPrice.toFixed(2)) );
+			$(this).find("#Ing11_TotalPrice").text( "$" + commaSeparateNumber(Ing11_TotalPrice.toFixed(2)) );
+			$(this).find("#Ing12_TotalPrice").text( "$" + commaSeparateNumber(Ing12_TotalPrice.toFixed(2)) );
+			$(this).find("#Ing13_TotalPrice").text( "$" + commaSeparateNumber(Ing13_TotalPrice.toFixed(2)) );
 			
 			//общая цена ингридиентов
 			var IngTotalPrice = Ing1_TotalPrice + Ing2_TotalPrice + Ing3_TotalPrice + Ing4_TotalPrice + 
-								Ing5_TotalPrice + Ing6_TotalPrice + Ing7_TotalPrice +Ing8_TotalPrice + Ing9_TotalPrice;
+								Ing5_TotalPrice + Ing6_TotalPrice + Ing7_TotalPrice +Ing8_TotalPrice + 
+								Ing9_TotalPrice + Ing10_TotalPrice + Ing11_TotalPrice + Ing12_TotalPrice + Ing13_TotalPrice;
 			$(this).find("#IngTotalPrice").text( "$" + commaSeparateNumber(IngTotalPrice.toFixed(2)) );					
 			
 			//объем выпускаемой продукции
@@ -161,8 +190,11 @@ $('form').submit(
 			
 			//итоговое качество ингридиентов
 			var IngTotalQual = ( ( ing1base_quan * ing1qual + ing2base_quan * ing2qual + ing3base_quan * ing3qual + ing4base_quan * ing4qual +
-								ing5base_quan * ing5qual + ing6base_quan * ing6qual + ing7base_quan * ing7qual +ing8base_quan * ing8qual + ing9base_quan * ing9qual)/
-			( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan + ing5base_quan + ing6base_quan + ing7base_quan + ing8base_quan + ing9base_quan) ) * eff;
+								ing5base_quan * ing5qual + ing6base_quan * ing6qual + ing7base_quan * ing7qual +ing8base_quan * ing8qual +
+								ing9base_quan * ing9qual + ing10base_quan * ing10qual + ing11base_quan * ing11qual +
+								ing12base_quan * ing12qual + ing13base_quan * ing13qual)/
+								( ing1base_quan + ing2base_quan + ing3base_quan + ing4base_quan + ing5base_quan + ing6base_quan + ing7base_quan +
+								ing8base_quan + ing9base_quan + ing10base_quan + ing11base_quan + ing12base_quan + ing13base_quan) ) * eff;
 					//ферма
 					if ( $(this).find("#animal_Quality").val() ) { var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 ) * eff; }	
 			//качество товара
@@ -226,6 +258,10 @@ $('form').submit(
 				var ing7cost = Ing7_TotalPrice / IngTotalPrice * 100;
 				var ing8cost = Ing8_TotalPrice / IngTotalPrice * 100;
 				var ing9cost = Ing9_TotalPrice / IngTotalPrice * 100;
+				var ing10cost = Ing10_TotalPrice / IngTotalPrice * 100;
+				var ing11cost = Ing11_TotalPrice / IngTotalPrice * 100;
+				var ing12cost = Ing12_TotalPrice / IngTotalPrice * 100;
+				var ing13cost = Ing13_TotalPrice / IngTotalPrice * 100;
 				$(this).find("#ing1").width( ing1cost + "%" );
 				$(this).find("#ing2").width( ing2cost + "%" );
 				$(this).find("#ing3").width( ing3cost + "%" );
@@ -235,6 +271,10 @@ $('form').submit(
 				$(this).find("#ing7").width( ing7cost + "%" );
 				$(this).find("#ing8").width( ing8cost + "%" );
 				$(this).find("#ing9").width( ing9cost + "%" );
+				$(this).find("#ing10").width( ing10cost + "%" );
+				$(this).find("#ing11").width( ing11cost + "%" );
+				$(this).find("#ing12").width( ing12cost + "%" );
+				$(this).find("#ing13").width( ing13cost + "%" );
 			}
 		}
 		else {$(this).find("#techDiv").addClass("has-error");};
