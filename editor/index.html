@@ -2951,7 +2951,7 @@
 		
 		if ( $("#type").val() == "Завод" ) 
 		{
-			var template = '<div class="spoiler-wrapper"> <div class="spoiler folded alert alert-info"><a href="#">' + $("#Prod1 :selected").text() + '</a>&nbsp;'
+			var template = '<div class="spoiler-wrapper"> <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">' + $("#Prod1 :selected").text() + '</a>&nbsp;'
 			+ $("#Prod1").val() 
 			if ( $("#GBonus").val() != 0 ) { template = template + '+' + $("#GBonus").val() + '%' }
 			template = template + '</div> <div class="spoiler-text"> <form class="form-horizontal"> <table class="table table-bordered text-center vertical-mid"> <tbody> <tr class="warning"> <th class="text-center">Тип предприятия</th> <th class="text-center">Специализация</th> <th class="text-center">Сырьё<br/> <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5> </th> <th class="text-center">Выпускаемая продукция</th> <th class="text-center">Прибыль</th> </tr>  <tr class="even"> <td class="col-xs-2"> <img src="../img/workshop.gif" title="Фабрика"/><br/> <p>Работники</p> <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> <input class="form-control " type="text" id="work_quan" placeholder="Количество"/> </div> <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> <input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/> </div> <h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4> </td> <td class="col-xs-1"> <div id="techDiv" class="input-group input-group-sm"> <span class="input-group-addon">Техна</span> <input class="form-control" type="text" id="tech" placeholder="Уровень"/> </div> <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span></h4> </td>  <td class="col-xs-6"> <table class="inline"> <tbody>'
@@ -3037,5 +3037,5 @@
 	</script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>

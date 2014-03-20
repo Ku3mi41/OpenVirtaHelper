@@ -86,7 +86,7 @@ $('form').submit(
 			var Sale_Price2	= $(this).find("#Sale_Price2").val();
 			
 			
-			if ($(this).find("#Ing1_Q").val()) {var ing1base_quan = parseFloat($(this).find("#Ing1_Q").val()); }
+			if ($(this).find("#Ing1_Q").val()) {var ing1base_quan = parseFloat($(this).find("#Ing1_Q").val()); } else { var ing1base_quan = 0 }
 			if ($(this).find("#Ing2_Q").val()) {var ing2base_quan = parseFloat($(this).find("#Ing2_Q").val()); } else { var ing2base_quan = 0 }
 			if ($(this).find("#Ing3_Q").val()) {var ing3base_quan = parseFloat($(this).find("#Ing3_Q").val()); } else { var ing3base_quan = 0 }
 			if ($(this).find("#Ing4_Q").val()) {var ing4base_quan = parseFloat($(this).find("#Ing4_Q").val()); } else { var ing4base_quan = 0 }
@@ -148,7 +148,7 @@ $('form').submit(
 			$(this).find("#Ing13_Quantity").text(commaSeparateNumber( Math.ceil( Ing13_Quantity.toFixed(2)) ) + " ед.");
 						
 			//цена ингридиентов
-			if (ing1price > 0) {var Ing1_TotalPrice = Ing1_Quantity * ing2price;} else { var Ing1_TotalPrice = 0}
+			if (ing1price > 0) {var Ing1_TotalPrice = Ing1_Quantity * ing1price;} else { var Ing1_TotalPrice = 0}
 			if (ing2price > 0) {var Ing2_TotalPrice = Ing2_Quantity * ing2price;} else { var Ing2_TotalPrice = 0}
 			if (ing3price > 0) {var Ing3_TotalPrice = Ing3_Quantity * ing3price;} else { var Ing3_TotalPrice = 0}
 			if (ing4price > 0) {var Ing4_TotalPrice = Ing4_Quantity * ing4price;} else { var Ing4_TotalPrice = 0}
