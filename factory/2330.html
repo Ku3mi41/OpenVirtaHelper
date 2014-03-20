@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Шоколадная фабрика | OpenVirtaHelper</title>
-    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="shortcut icon" href="../favicon.ico"/>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.css">
@@ -16,889 +17,961 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-    <div id="right_menu">
-        <button id="calc_all" type="button" class="btn btn-default btn-sm pull-right">
-            <span class="glyphicon glyphicon-forward"></span> Рассчитать все</button>
-        </br>
+<div id="right_menu">
+    <button id="calc_all" type="button" class="btn btn-default btn-sm pull-right">
+        <span class="glyphicon glyphicon-forward"></span> Рассчитать все
+    </button>
+    </br>
 
-        <button id="all_spoilers" type="button" class="btn btn-default btn-sm pull-right"><span class="glyphicon glyphicon-plus"></span> Развернуть все</button>
+    <button id="all_spoilers" type="button" class="btn btn-default btn-sm pull-right"><span
+            class="glyphicon glyphicon-plus"></span> Развернуть все
+    </button>
+</div>
+<div class="container">
+</br>
+<a href="../factories.html">
+    <button type="button" class="btn btn-default btn-sm pull-left">
+        <span class="glyphicon glyphicon-align-justify"></span> Список заводов
+    </button>
+</a>
+
+<h1 class="text-center"><a href="http://virtonomica.ru/olga/main/industry/unit_type/info/2330">Шоколадная фабрика</a>
+</h1>
+<br/>
+
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Карамельные конфеты</a>&nbsp;
+        <a href="../product/3865.html" title="Конфеты">
+            <img src="../img/sweet.gif" align="middle" alt="Конфеты.html" title="Конфеты">
+        </a>-10%
     </div>
-    <div class="container">
-        </br>
-        <a href="../factories.html">
-            <button type="button" class="btn btn-default btn-sm pull-left">
-                <span class="glyphicon glyphicon-align-justify"></span> Список заводов
-            </button>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё
+                        <br/>
+                        <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                    class="badge">0</span></span></h5>
+                    </th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2">
+                        <img src="../img/workshop.gif" title="Фабрика"/>
+                        <br/>
+
+                        <p>Работники</p>
+
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                            <input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+                        </div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                            <input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+                        </div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span>
+                            <input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span>
+                        </h4>
+                    </td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" title="Сахар" id="ing1"></div>
+                                <div class="progress-bar progress-bar-warning" title="Фрукты" id="ing2"></div>
+                            </div>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                                    <input class="form-control " type="text" id="Ing1_Quality"
+                                                           placeholder="Качество"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                                    <input class="form-control" type="text" id="Ing1_Price"
+                                                           placeholder="Цена"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <br/>
+                                                <a href="../product/1491.html" title="Сахар">
+                                                    <img src="../img/sugar.gif" align="middle" alt="Сахар.html"
+                                                         title="Сахар">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing1_Quantity">0.5 ед.</span>
+                                                <input type="hidden" id="Ing1_Q" value="0.5"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing1_TotalPrice">$1</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                                    <input class="form-control " type="text" id="Ing2_Quality"
+                                                           placeholder="Качество"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                                    <input class="form-control" type="text" id="Ing2_Price"
+                                                           placeholder="Цена"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <br/>
+                                                <a href="../product/1492.html" title="Фрукты">
+                                                    <img src="../img/fruits.gif" align="middle" alt="Фрукты.html"
+                                                         title="Фрукты">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing2_Quantity">0.5 ед.</span>
+                                                <input type="hidden" id="Ing2_Q" value="0.5"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing2_TotalPrice">$1</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %"
+                                               value="100"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
+                                        <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="-10%"/>
+                                        </div>
+                                    </fieldset>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="../product/3865.html" title="Конфеты">
+                                        <img src="../img/sweet.gif" align="middle" alt="Конфеты.html" title="Конфеты">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                    <input type="hidden" id="Prod1_Quantity" value="56"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                    </h4>
+                                    <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                    class="badge">0</span></span></h4>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4><span class="label label-default" id="profit">$0</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Шоколадные конфеты</a>&nbsp;
+        <a href="../product/3865.html" title="Конфеты">
+            <img src="../img/sweet.gif" align="middle" alt="Конфеты.html" title="Конфеты">
         </a>
-
-        <h1 class="text-center"><a href="http://virtonomica.ru/olga/main/industry/unit_type/info/2330">Шоколадная фабрика</a></h1>
-        <br/>
-        <div class="spoiler-wrapper">
-            <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Карамельные конфеты</a>&nbsp;
-                <a href="../product/3865.html" title="Конфеты">
-                    <img src="../img/sweet.gif" align="middle" alt="Конфеты.html" title="Конфеты">
-                </a>-10%</div>
-            <div class="spoiler-text">
-                <form class="form-horizontal">
-                    <table class="table table-bordered text-center vertical-mid">
-                        <tbody>
-                            <tr class="warning">
-                                <th class="text-center">Тип предприятия</th>
-                                <th class="text-center">Специализация</th>
-                                <th class="text-center">Сырьё
-                                    <br/>
-                                    <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5> 
-                                </th>
-                                <th class="text-center">Выпускаемая продукция</th>
-                                <th class="text-center">Прибыль</th>
-                            </tr>
-                            <tr class="even">
-                                <td class="col-xs-2">
-                                    <img src="../img/workshop.gif" title="Фабрика" />
-                                    <br/>
-                                    <p>Работники</p>
-                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                        <input class="form-control " type="text" id="work_quan" placeholder="Количество" />
-                                    </div>
-                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                        <input class="form-control " type="text" id="work_salary" placeholder="Зарплата" />
-                                    </div>
-                                    <h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4> 
-                                </td>
-                                <td class="col-xs-1">
-                                    <div id="techDiv" class="input-group input-group-sm"> <span class="input-group-addon">Техна</span> 
-                                        <input class="form-control" type="text" id="tech" placeholder="Уровень" />
-                                    </div>
-                                    <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span></h4> 
-                                </td>
-                                <td class="col-xs-6">
-                                    <table class="inline">
-                                        <tbody>
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-success" title="Сахар" id="ing1"></div>
-                                                <div class="progress-bar progress-bar-warning" title="Фрукты" id="ing2"></div>
-                                            </div>
-                                            <tr>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing1_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1491.html" title="Сахар">
-                                                                        <img src="../img/sugar.gif" align="middle" alt="Сахар.html" title="Сахар">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing1_Quantity">0.5 ед.</span>
-                                                                    <input type="hidden" id="Ing1_Q" value="0.5" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing1_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing2_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing2_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1492.html" title="Фрукты">
-                                                                        <img src="../img/fruits.gif" align="middle" alt="Фрукты.html" title="Фрукты">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing2_Quantity">0.5 ед.</span>
-                                                                    <input type="hidden" id="Ing2_Q" value="0.5" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing2_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="col-xs-2">
-                                    <table class="container-fluid">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"> <span class="input-group-addon" title="Эффективность">Эфф., %</span> 
-                                                        <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <fieldset disabled>
-                                                        <div class="input-group input-group-sm"> <span class="input-group-addon" title="Бонус к качеству">Бонус</span> 
-                                                            <input class="form-control " type="text" id="Bonus" value="-10%" />
-                                                        </div>
-                                                    </fieldset>
-                                                    <br/>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <a href="../product/3865.html" title="Конфеты">
-                                                        <img src="../img/sweet.gif" align="middle" alt="Конфеты.html" title="Конфеты">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><span id="Prod_Quantity">1 ед.</span>
-                                                    <input type="hidden" id="Prod1_Quantity" value="56" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4> 
-                                                    <h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4> 
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="col-xs-1">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h4><span class="label label-default" id="profit">$0</span></h4> 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </form>
-            </div>
-        </div>
-        <div class="spoiler-wrapper">
-            <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Шоколадные конфеты</a>&nbsp;
-                <a href="../product/3865.html" title="Конфеты">
-                    <img src="../img/sweet.gif" align="middle" alt="Конфеты.html" title="Конфеты">
-                </a>
-            </div>
-            <div class="spoiler-text">
-                <form class="form-horizontal">
-                    <table class="table table-bordered text-center vertical-mid">
-                        <tbody>
-                            <tr class="warning">
-                                <th class="text-center">Тип предприятия</th>
-                                <th class="text-center">Специализация</th>
-                                <th class="text-center">Сырьё
-                                    <br/>
-                                    <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5> 
-                                </th>
-                                <th class="text-center">Выпускаемая продукция</th>
-                                <th class="text-center">Прибыль</th>
-                            </tr>
-                            <tr class="even">
-                                <td class="col-xs-2">
-                                    <img src="../img/workshop.gif" title="Фабрика" />
-                                    <br/>
-                                    <p>Работники</p>
-                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                        <input class="form-control " type="text" id="work_quan" placeholder="Количество" />
-                                    </div>
-                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                        <input class="form-control " type="text" id="work_salary" placeholder="Зарплата" />
-                                    </div>
-                                    <h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4> 
-                                </td>
-                                <td class="col-xs-1">
-                                    <div id="techDiv" class="input-group input-group-sm"> <span class="input-group-addon">Техна</span> 
-                                        <input class="form-control" type="text" id="tech" placeholder="Уровень" />
-                                    </div>
-                                    <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span></h4> 
-                                </td>
-                                <td class="col-xs-6">
-                                    <table class="inline">
-                                        <tbody>
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-success" title="Сахар" id="ing1"></div>
-                                                <div class="progress-bar progress-bar-warning" title="Какао" id="ing2"></div>
-                                            </div>
-                                            <tr>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing1_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1491.html" title="Сахар">
-                                                                        <img src="../img/sugar.gif" align="middle" alt="Сахар.html" title="Сахар">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing1_Quantity">0.5 ед.</span>
-                                                                    <input type="hidden" id="Ing1_Q" value="0.5" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing1_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing2_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing2_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1488.html" title="Какао">
-                                                                        <img src="../img/cacao.gif" align="middle" alt="Какао.html" title="Какао">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing2_Quantity">0.5 ед.</span>
-                                                                    <input type="hidden" id="Ing2_Q" value="0.5" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing2_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="col-xs-2">
-                                    <table class="container-fluid">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"> <span class="input-group-addon" title="Эффективность">Эфф., %</span> 
-                                                        <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <fieldset disabled>
-                                                        <div class="input-group input-group-sm"> <span class="input-group-addon" title="Бонус к качеству">Бонус</span> 
-                                                            <input class="form-control " type="text" id="Bonus" value="0%" />
-                                                        </div>
-                                                    </fieldset>
-                                                    <br/>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <a href="../product/3865.html" title="Конфеты">
-                                                        <img src="../img/sweet.gif" align="middle" alt="Конфеты.html" title="Конфеты">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><span id="Prod_Quantity">1 ед.</span>
-                                                    <input type="hidden" id="Prod1_Quantity" value="50" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4> 
-                                                    <h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4> 
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="col-xs-1">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h4><span class="label label-default" id="profit">$0</span></h4> 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </form>
-            </div>
-        </div>
-        <div class="spoiler-wrapper">
-            <div class="spoiler folded alert alert-warning"><a href="javascript: void(0)">Шоколад</a>&nbsp;
-                <a href="../product/1507.html" title="Шоколад">
-                    <img src="../img/chocolate.gif" align="middle" alt="Шоколад.html" title="Шоколад">
-                </a>
-            </div>
-            <div class="spoiler-text">
-                <form class="form-horizontal">
-                    <table class="table table-bordered text-center vertical-mid">
-                        <tbody>
-                            <tr class="warning">
-                                <th class="text-center">Тип предприятия</th>
-                                <th class="text-center">Специализация</th>
-                                <th class="text-center">Сырьё
-                                    <br/>
-                                    <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5> 
-                                </th>
-                                <th class="text-center">Выпускаемая продукция</th>
-                                <th class="text-center">Прибыль</th>
-                            </tr>
-                            <tr class="even">
-                                <td class="col-xs-2">
-                                    <img src="../img/workshop.gif" title="Фабрика" />
-                                    <br/>
-                                    <p>Работники</p>
-                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                        <input class="form-control " type="text" id="work_quan" placeholder="Количество" />
-                                    </div>
-                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                        <input class="form-control " type="text" id="work_salary" placeholder="Зарплата" />
-                                    </div>
-                                    <h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4> 
-                                </td>
-                                <td class="col-xs-1">
-                                    <div id="techDiv" class="input-group input-group-sm"> <span class="input-group-addon">Техна</span> 
-                                        <input class="form-control" type="text" id="tech" placeholder="Уровень" />
-                                    </div>
-                                    <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span></h4> 
-                                </td>
-                                <td class="col-xs-6">
-                                    <table class="inline">
-                                        <tbody>
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-success" title="Молоко" id="ing1"></div>
-                                                <div class="progress-bar progress-bar-warning" title="Какао" id="ing2"></div>
-                                            </div>
-                                            <tr>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing1_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1489.html" title="Молоко">
-                                                                        <img src="../img/milk.gif" align="middle" alt="Молоко.html" title="Молоко">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing1_Quantity">0.5 ед.</span>
-                                                                    <input type="hidden" id="Ing1_Q" value="0.5" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing1_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing2_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing2_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1488.html" title="Какао">
-                                                                        <img src="../img/cacao.gif" align="middle" alt="Какао.html" title="Какао">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing2_Quantity">0.5 ед.</span>
-                                                                    <input type="hidden" id="Ing2_Q" value="0.5" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing2_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="col-xs-2">
-                                    <table class="container-fluid">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"> <span class="input-group-addon" title="Эффективность">Эфф., %</span> 
-                                                        <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <fieldset disabled>
-                                                        <div class="input-group input-group-sm"> <span class="input-group-addon" title="Бонус к качеству">Бонус</span> 
-                                                            <input class="form-control " type="text" id="Bonus" value="0%" />
-                                                        </div>
-                                                    </fieldset>
-                                                    <br/>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <a href="../product/1507.html" title="Шоколад">
-                                                        <img src="../img/chocolate.gif" align="middle" alt="Шоколад.html" title="Шоколад">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><span id="Prod_Quantity">1 ед.</span>
-                                                    <input type="hidden" id="Prod1_Quantity" value="50" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4> 
-                                                    <h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4> 
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="col-xs-1">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h4><span class="label label-default" id="profit">$0</span></h4> 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </form>
-            </div>
-        </div>
-        <div class="spoiler-wrapper">
-            <div class="spoiler folded alert alert-warning"><a href="javascript: void(0)">Шоколад с изюмом</a>&nbsp;
-                <a href="../product/1507.html" title="Шоколад">
-                    <img src="../img/chocolate.gif" align="middle" alt="Шоколад.html" title="Шоколад">
-                </a>+10%</div>
-            <div class="spoiler-text">
-                <form class="form-horizontal">
-                    <table class="table table-bordered text-center vertical-mid">
-                        <tbody>
-                            <tr class="warning">
-                                <th class="text-center">Тип предприятия</th>
-                                <th class="text-center">Специализация</th>
-                                <th class="text-center">Сырьё
-                                    <br/>
-                                    <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5> 
-                                </th>
-                                <th class="text-center">Выпускаемая продукция</th>
-                                <th class="text-center">Прибыль</th>
-                            </tr>
-                            <tr class="even">
-                                <td class="col-xs-2">
-                                    <img src="../img/workshop.gif" title="Фабрика" />
-                                    <br/>
-                                    <p>Работники</p>
-                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                        <input class="form-control " type="text" id="work_quan" placeholder="Количество" />
-                                    </div>
-                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                        <input class="form-control " type="text" id="work_salary" placeholder="Зарплата" />
-                                    </div>
-                                    <h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4> 
-                                </td>
-                                <td class="col-xs-1">
-                                    <div id="techDiv" class="input-group input-group-sm"> <span class="input-group-addon">Техна</span> 
-                                        <input class="form-control" type="text" id="tech" placeholder="Уровень" />
-                                    </div>
-                                    <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span></h4> 
-                                </td>
-                                <td class="col-xs-6">
-                                    <table class="inline">
-                                        <tbody>
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-success" title="Молоко" id="ing1"></div>
-                                                <div class="progress-bar progress-bar-warning" title="Какао" id="ing2"></div>
-                                                <div class="progress-bar progress-bar-danger" title="Фрукты" id="ing3"></div>
-                                            </div>
-                                            <tr>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing1_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1489.html" title="Молоко">
-                                                                        <img src="../img/milk.gif" align="middle" alt="Молоко.html" title="Молоко">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing1_Quantity">0.5 ед.</span>
-                                                                    <input type="hidden" id="Ing1_Q" value="0.5" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing1_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing2_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing2_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1488.html" title="Какао">
-                                                                        <img src="../img/cacao.gif" align="middle" alt="Какао.html" title="Какао">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing2_Quantity">0.5 ед.</span>
-                                                                    <input type="hidden" id="Ing2_Q" value="0.5" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing2_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td>
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> 
-                                                                        <input class="form-control " type="text" id="Ing3_Quality" placeholder="Качество" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                                        <input class="form-control" type="text" id="Ing3_Price" placeholder="Цена" />
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <br/>
-                                                                    <a href="../product/1492.html" title="Фрукты">
-                                                                        <img src="../img/fruits.gif" align="middle" alt="Фрукты.html" title="Фрукты">
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing3_Quantity">0.1 ед.</span>
-                                                                    <input type="hidden" id="Ing3_Q" value="0.1" />
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><span id="Ing3_TotalPrice">$1</span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="col-xs-2">
-                                    <table class="container-fluid">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"> <span class="input-group-addon" title="Эффективность">Эфф., %</span> 
-                                                        <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <fieldset disabled>
-                                                        <div class="input-group input-group-sm"> <span class="input-group-addon" title="Бонус к качеству">Бонус</span> 
-                                                            <input class="form-control " type="text" id="Bonus" value="10%" />
-                                                        </div>
-                                                    </fieldset>
-                                                    <br/>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <a href="../product/1507.html" title="Шоколад">
-                                                        <img src="../img/chocolate.gif" align="middle" alt="Шоколад.html" title="Шоколад">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><span id="Prod_Quantity">1 ед.</span>
-                                                    <input type="hidden" id="Prod1_Quantity" value="40" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4> 
-                                                    <h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4> 
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="col-xs-1">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> 
-                                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена" />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h4><span class="label label-default" id="profit">$0</span></h4> 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </form>
-            </div>
-        </div>
     </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё
+                        <br/>
+                        <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                    class="badge">0</span></span></h5>
+                    </th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2">
+                        <img src="../img/workshop.gif" title="Фабрика"/>
+                        <br/>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://yandex.st/jquery/2.1.0/jquery.min.js"></script>
-    <script src="../js/calc.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function () {
-                try {
-                    w.yaCounter19600771 = new Ya.Metrika({
-                        id: 19600771,
-                        webvisor: true,
-                        clickmap: true,
-                        trackLinks: true,
-                        accurateTrackBounce: true
-                    });
-                } catch (e) {}
-            });
+                        <p>Работники</p>
 
-            var n = d.getElementsByTagName("script")[0],
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                            <input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+                        </div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                            <input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+                        </div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span>
+                            <input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span>
+                        </h4>
+                    </td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" title="Сахар" id="ing1"></div>
+                                <div class="progress-bar progress-bar-warning" title="Какао" id="ing2"></div>
+                            </div>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                                    <input class="form-control " type="text" id="Ing1_Quality"
+                                                           placeholder="Качество"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                                    <input class="form-control" type="text" id="Ing1_Price"
+                                                           placeholder="Цена"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <br/>
+                                                <a href="../product/1491.html" title="Сахар">
+                                                    <img src="../img/sugar.gif" align="middle" alt="Сахар.html"
+                                                         title="Сахар">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing1_Quantity">0.5 ед.</span>
+                                                <input type="hidden" id="Ing1_Q" value="0.5"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing1_TotalPrice">$1</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                                    <input class="form-control " type="text" id="Ing2_Quality"
+                                                           placeholder="Качество"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                                    <input class="form-control" type="text" id="Ing2_Price"
+                                                           placeholder="Цена"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <br/>
+                                                <a href="../product/1488.html" title="Какао">
+                                                    <img src="../img/cacao.gif" align="middle" alt="Какао.html"
+                                                         title="Какао">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing2_Quantity">0.5 ед.</span>
+                                                <input type="hidden" id="Ing2_Q" value="0.5"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing2_TotalPrice">$1</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %"
+                                               value="100"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
+                                        <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/>
+                                        </div>
+                                    </fieldset>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="../product/3865.html" title="Конфеты">
+                                        <img src="../img/sweet.gif" align="middle" alt="Конфеты.html" title="Конфеты">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                    <input type="hidden" id="Prod1_Quantity" value="50"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                    </h4>
+                                    <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                    class="badge">0</span></span></h4>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4><span class="label label-default" id="profit">$0</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-warning"><a href="javascript: void(0)">Шоколад</a>&nbsp;
+        <a href="../product/1507.html" title="Шоколад">
+            <img src="../img/chocolate.gif" align="middle" alt="Шоколад.html" title="Шоколад">
+        </a>
+    </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё
+                        <br/>
+                        <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                    class="badge">0</span></span></h5>
+                    </th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2">
+                        <img src="../img/workshop.gif" title="Фабрика"/>
+                        <br/>
+
+                        <p>Работники</p>
+
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                            <input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+                        </div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                            <input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+                        </div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span>
+                            <input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span>
+                        </h4>
+                    </td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" title="Молоко" id="ing1"></div>
+                                <div class="progress-bar progress-bar-warning" title="Какао" id="ing2"></div>
+                            </div>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                                    <input class="form-control " type="text" id="Ing1_Quality"
+                                                           placeholder="Качество"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                                    <input class="form-control" type="text" id="Ing1_Price"
+                                                           placeholder="Цена"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <br/>
+                                                <a href="../product/1489.html" title="Молоко">
+                                                    <img src="../img/milk.gif" align="middle" alt="Молоко.html"
+                                                         title="Молоко">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing1_Quantity">0.5 ед.</span>
+                                                <input type="hidden" id="Ing1_Q" value="0.5"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing1_TotalPrice">$1</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                                    <input class="form-control " type="text" id="Ing2_Quality"
+                                                           placeholder="Качество"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                                    <input class="form-control" type="text" id="Ing2_Price"
+                                                           placeholder="Цена"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <br/>
+                                                <a href="../product/1488.html" title="Какао">
+                                                    <img src="../img/cacao.gif" align="middle" alt="Какао.html"
+                                                         title="Какао">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing2_Quantity">0.5 ед.</span>
+                                                <input type="hidden" id="Ing2_Q" value="0.5"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="Ing2_TotalPrice">$1</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %"
+                                               value="100"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
+                                        <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/>
+                                        </div>
+                                    </fieldset>
+                                    <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="../product/1507.html" title="Шоколад">
+                                        <img src="../img/chocolate.gif" align="middle" alt="Шоколад.html"
+                                             title="Шоколад">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                    <input type="hidden" id="Prod1_Quantity" value="50"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                    </h4>
+                                    <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                    class="badge">0</span></span></h4>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4><span class="label label-default" id="profit">$0</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="spoiler-wrapper">
+<div class="spoiler folded alert alert-warning"><a href="javascript: void(0)">Шоколад с изюмом</a>&nbsp;
+    <a href="../product/1507.html" title="Шоколад">
+        <img src="../img/chocolate.gif" align="middle" alt="Шоколад.html" title="Шоколад">
+    </a>+10%
+</div>
+<div class="spoiler-text">
+<form class="form-horizontal">
+<table class="table table-bordered text-center vertical-mid">
+<tbody>
+<tr class="warning">
+    <th class="text-center">Тип предприятия</th>
+    <th class="text-center">Специализация</th>
+    <th class="text-center">Сырьё
+        <br/>
+        <h5><span class="label label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
+        </h5>
+    </th>
+    <th class="text-center">Выпускаемая продукция</th>
+    <th class="text-center">Прибыль</th>
+</tr>
+<tr class="even">
+<td class="col-xs-2">
+    <img src="../img/workshop.gif" title="Фабрика"/>
+    <br/>
+
+    <p>Работники</p>
+
+    <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+        <input class="form-control " type="text" id="work_quan" placeholder="Количество"/>
+    </div>
+    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+        <input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/>
+    </div>
+    <h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>
+</td>
+<td class="col-xs-1">
+    <div id="techDiv" class="input-group input-group-sm"><span class="input-group-addon">Техна</span>
+        <input class="form-control" type="text" id="tech" placeholder="Уровень"/>
+    </div>
+    <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span></h4>
+</td>
+<td class="col-xs-6">
+    <table class="inline">
+        <tbody>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" title="Молоко" id="ing1"></div>
+            <div class="progress-bar progress-bar-warning" title="Какао" id="ing2"></div>
+            <div class="progress-bar progress-bar-danger" title="Фрукты" id="ing3"></div>
+        </div>
+        <tr>
+            <td>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                <input class="form-control " type="text" id="Ing1_Quality" placeholder="Качество"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                <input class="form-control" type="text" id="Ing1_Price" placeholder="Цена"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br/>
+                            <a href="../product/1489.html" title="Молоко">
+                                <img src="../img/milk.gif" align="middle" alt="Молоко.html" title="Молоко">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="Ing1_Quantity">0.5 ед.</span>
+                            <input type="hidden" id="Ing1_Q" value="0.5"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="Ing1_TotalPrice">$1</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                <input class="form-control " type="text" id="Ing2_Quality" placeholder="Качество"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                <input class="form-control" type="text" id="Ing2_Price" placeholder="Цена"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br/>
+                            <a href="../product/1488.html" title="Какао">
+                                <img src="../img/cacao.gif" align="middle" alt="Какао.html" title="Какао">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="Ing2_Quantity">0.5 ед.</span>
+                            <input type="hidden" id="Ing2_Q" value="0.5"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="Ing2_TotalPrice">$1</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span>
+                                <input class="form-control " type="text" id="Ing3_Quality" placeholder="Качество"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                <input class="form-control" type="text" id="Ing3_Price" placeholder="Цена"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br/>
+                            <a href="../product/1492.html" title="Фрукты">
+                                <img src="../img/fruits.gif" align="middle" alt="Фрукты.html" title="Фрукты">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="Ing3_Quantity">0.1 ед.</span>
+                            <input type="hidden" id="Ing3_Q" value="0.1"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="Ing3_TotalPrice">$1</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>
+<td class="col-xs-2">
+    <table class="container-fluid">
+        <tbody>
+        <tr>
+            <td>
+                <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                              title="Эффективность">Эфф., %</span>
+                    <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset disabled>
+                    <div class="input-group input-group-sm"><span class="input-group-addon" title="Бонус к качеству">Бонус</span>
+                        <input class="form-control " type="text" id="Bonus" value="10%"/>
+                    </div>
+                </fieldset>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="../product/1507.html" title="Шоколад">
+                    <img src="../img/chocolate.gif" align="middle" alt="Шоколад.html" title="Шоколад">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><span id="Prod_Quantity">1 ед.</span>
+                <input type="hidden" id="Prod1_Quantity" value="40"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4>
+                <h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>
+<td class="col-xs-1">
+    <table>
+        <tbody>
+        <tr>
+            <td>
+                <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                    <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4><span class="label label-default" id="profit">$0</span></h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://yandex.st/jquery/2.1.0/jquery.min.js"></script>
+<script src="../js/calc.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter19600771 = new Ya.Metrika({
+                    id: 19600771,
+                    webvisor: true,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+            } catch (e) {
+            }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
                 s = d.createElement("script"),
                 f = function () {
                     n.parentNode.insertBefore(s, n);
                 };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else {
-                f();
-            }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript>
-        <div>
-            <img src="//mc.yandex.ru/watch/19600771" style="position:absolute; left:-9999px;" alt="" />
-        </div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-<div class="footer"><p class="text-center text-muted"></br>Все права на проект "Виртономика" принадлежат компании GAMERFLOT TRADING Ltd.</br>				Авторы калькулятора: Ku3mi41, A-root <a class="text-muted" href="https://github.com/Ku3mi41/OpenVirtaCalc.html" title="Да, ты тоже можешь стать соавтором калькулятора!">и... ты?</a></p></div></body>
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>
+    <div>
+        <img src="//mc.yandex.ru/watch/19600771" style="position:absolute; left:-9999px;" alt=""/>
+    </div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+<div class="footer"><p class="text-center text-muted"></br>Все права на проект "Виртономика" принадлежат компании
+    GAMERFLOT TRADING Ltd.</br>                Авторы калькулятора: Ku3mi41, A-root <a class="text-muted"
+                                                                                       href="https://github.com/Ku3mi41/OpenVirtaCalc.html"
+                                                                                       title="Да, ты тоже можешь стать соавтором калькулятора!">и...
+        ты?</a></p></div>
+</body>
 
 </html>
