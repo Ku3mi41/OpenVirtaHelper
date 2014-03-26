@@ -184,6 +184,9 @@ $('form').submit(
 			
 			//объем выпускаемой продукции
 			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
+					//для шахт
+					if ( $(this).find("#ResDif").val() ) { Prod_Quantity = Prod_Quantity * $(this).find("#ResDif").val() }
+
 			$(this).find("#Prod_Quantity").text( commaSeparateNumber( Math.round (Prod_Quantity) ) + " ед." );			
 			
 			//объем 2ой выпускаемой продукции
@@ -204,6 +207,8 @@ $('form').submit(
 					if ( $(this).find("#animal_Quality").val() ) { var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 ) * eff; }	
 			//качество товара
 			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65)  * ( 1 + $(this).find("#Bonus").val().replace('%', '') / 100 );
+					//шахты
+					if ( $(this).find("#ResQ").val()) { ProdQual = Math.pow(tech, 0.65) * $(this).find("#ResQ").val() }
 
 			//ограничение качества (по технологии)
 			if (ProdQual > Math.pow(tech, 1.3) ) {ProdQual = Math.pow(tech, 1.3)}
