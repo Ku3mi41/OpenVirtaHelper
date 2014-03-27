@@ -186,6 +186,13 @@ $('form').submit(
 			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
 					//для шахт
 					if ( $(this).find("#ResDif").val() ) { Prod_Quantity = Prod_Quantity * $(this).find("#ResDif").val() }
+					
+					//фермы
+					if ( $(this).find("#ResFQ") ) 
+					{ 
+						Prod_Quantity2 = Prod_Quantity / 52;
+						$(this).find("#Prod_Quantity2").text( commaSeparateNumber( Math.round (Prod_Quantity2) ) + " ед. / нед." );
+					}
 
 			$(this).find("#Prod_Quantity").text( commaSeparateNumber( Math.round (Prod_Quantity) ) + " ед." );			
 			
@@ -208,8 +215,9 @@ $('form').submit(
 			//качество товара
 			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65)  * ( 1 + $(this).find("#Bonus").val().replace('%', '') / 100 );
 					//шахты
-					if ( $(this).find("#ResQ").val()) { ProdQual = Math.pow(tech, 0.65) * $(this).find("#ResQ").val() }
-
+					if ( $(this).find("#ResQ").val() ) { ProdQual = Math.pow(tech, 0.65) * $(this).find("#ResQ").val() * eff }
+					//фермы
+					if ( $(this).find("#ResFQ").val() ) { ProdQual = Math.pow(tech, 0.65) * Math.pow($(this).find("#ResFQ").val(), 0.5) * eff }					
 			//ограничение качества (по технологии)
 			if (ProdQual > Math.pow(tech, 1.3) ) {ProdQual = Math.pow(tech, 1.3)}
 			if ( ProdQual < 1 ) { ProdQual = 1 }			
@@ -238,6 +246,8 @@ $('form').submit(
 			//прибыль
 			var profit = ( Sale_Price * Prod_Quantity ) - exps;
 			$(this).find("#profit").text( "$" + commaSeparateNumber(profit.toFixed(2)) );
+					//фермы
+					if ( $(this).find("#ResFQ") ) { $(this).find("#profit1").text( "$" + commaSeparateNumber( (profit / 52).toFixed(2) ) ) }
 			
 			if ( $(this).find("#Bonus2").val() ) 
 			{

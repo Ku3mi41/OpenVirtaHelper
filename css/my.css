@@ -21,6 +21,7 @@
 	display: block;
 	top: 50px;
 	right: 20px;
+	z-index: 9999;
 }
 
 #all_spoilers, #calc_all {
