@@ -37,8 +37,11 @@
 	padding: 5px;
 }
 
-
-
 td.col-xs-6 table div  span{ display: none !important} 
 td.col-xs-6 td:first-child table div span { display: table-cell !important}
 td.col-xs-6 table { margin: 0 2px}
+
+a[href^="http://virtonomica.ru"]::after {
+ padding: 0 0 0 5px;
+ content: url(../img/virta.ico);
+ }
