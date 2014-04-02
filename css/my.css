@@ -45,3 +45,9 @@ a[href^="http://virtonomica.ru"]::after {
  padding: 0 0 0 5px;
  content: url(../img/virta.ico);
  }
+
+#orphus  {
+	position: fixed;
+	bottom:0;
+	right:0;
+ }
