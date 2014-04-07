@@ -26,7 +26,7 @@ $(document).ready(function(){
 	
 	//открываем первый спойлер
 	var all_spoilers = document.querySelectorAll(".spoiler");
-	all_spoilers[0].click();	
+	if ( all_spoilers[0] ) { all_spoilers[0].click()}
 })
 
 
