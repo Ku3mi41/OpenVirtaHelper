@@ -38,46 +38,165 @@
     </button>
 </a>
 
-    <h1 class="text-center"><a href="http://virtonomica.ru/olga/main/industry/unit_type/info/2400">Угольная шахта</a></h1><br/>
+    <h1 class="text-center"><a href="http://virtonomica.ru/olga/main/industry/unit_type/info/2400">Угольная шахта</a>
+    </h1><br/>
 
 
-<div class="spoiler-wrapper"> <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Уголь</a>&nbsp;
+    <div class="spoiler-wrapper">
+        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Уголь</a>&nbsp;
 
-<a href="../product/1469.html" title="Уголь"><img src="../img/coal.gif" alt= "Уголь" title= "Уголь" /></a>
+            <a href="../product/1469.html" title="Уголь"><img src="../img/coal.gif" alt="Уголь" title="Уголь"/></a>
 
-</div> <div class="spoiler-text"> <form class="form-horizontal"> <table class="table table-bordered text-center vertical-mid"> <tbody> <tr class="warning"> <th class="text-center">Тип предприятия</th> <th class="text-center">Специализация</th> <th class="text-center">Сырьё<br/> <h5><span class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span></h5> </th> <th class="text-center">Выпускаемая продукция</th> <th class="text-center">Прибыль</th> </tr>  <tr class="even"> <td class="col-xs-2"> <img src="../img/workshop.gif" title="Фабрика"/><br/> <p>Работники</p> <div class="input-group input-group-sm"> <span class="input-group-addon">#</span> <input class="form-control " type="text" id="work_quan" placeholder="Количество"/> </div> <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> <input class="form-control " type="text" id="work_salary" placeholder="Зарплата"/> </div> <h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4> </td> <td class="col-xs-1"> <div id="techDiv" class="input-group input-group-sm"> <span class="input-group-addon">Техна</span> <input class="form-control" type="text" id="tech" placeholder="Уровень"/> </div> <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span></h4> </td>  <td class="col-xs-6"> <table class="inline"> <tbody><tr><td> <table> <tbody> <tr><td> Базовое качество<br/><select class="form-control" id="ResQ">
-			  <option value="0.277202073">1.00</option>
-			  <option value="0.36971831">1.25</option>
-			  <option value="0.467479675">1.50</option>
-			  <option value="0.573529412">1.75</option>
-			  <option value="0.681372549">2.00</option>
-			  <option value="0.794117647">2.25</option>
-			  <option value="0.906862745">2.50</option>
-			  <option value="1.029411765">2.75</option>
-			  <option value="1.151960784">3.00</option>
-			  <option value="1.279411765">3.25</option>
-			  <option value="1.406862745">3.50</option>
-			  <option value="1.539215686">3.75</option>
-			  <option value="1.676470588">4.00</option>
-			  <option value="1.81372549">4.25</option>
-			  <option value="1.950980392">4.50</option>
-			  <option value="2.093495935">4.75</option>
-			  <option value="2.236067977">5.00</option>
-			</select></td></tr> <tr><td> Сложность добычи<br/><select class="form-control" id="ResDif">
-			  <option value="1.96">1</option>
-			  <option value="1.4">2</option>
-			  <option value="1">3</option>
-			  <option value="0.7142858">4</option>
-			  <option value="0.5102042">5</option>
-			</select>		 </td></tr> </tbody> </table> </td></tr> </tbody> </table> </td>  <td class="col-xs-2"> <table class="container-fluid"> <tbody> <tr><td> <div class="input-group input-group-sm"> <span class="input-group-addon" title="Эффективность">Эфф., %</span> <input class="form-control " type="text" id="Eff" placeholder="Эффективность, %" value="100"/> </div> </td></tr> <tr><td> <fieldset disabled> <div class="input-group input-group-sm"> <span class="input-group-addon" title="Бонус к качеству">Бонус</span> <input class="form-control " type="text" id="Bonus" value="0%"/> </div></fieldset><br/> </td></tr> <tr> <td>
-			
-			<a href="../product/1469.html" title="Уголь"><img src="../img/coal.gif" alt= "Уголь" title= "Уголь" /></a>
-			
-			</td> </tr> <tr><td><span id="Prod_Quantity">1 ед.</span>
-			
-			<input type="hidden" id="Prod1_Quantity" value="90"/>
-			
-			</td></tr> <tr><td> <h4><span class="label label-primary">Кач-во <span id="ProdQual" class="badge">0</span></span></h4> <h4><span class="label label-primary">C/c <span id="Cost" class="badge">0</span></span></h4> </td></tr> </tbody> </table> </td>  <td class="col-xs-1"> <table> <tbody> <tr><td> <div class="input-group input-group-sm"> <span class="input-group-addon">$</span> <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/> </div> </td></tr> <tr> <td> <h4><span class="label label-default" id="profit">$0</span></h4> </td> </tr> <tr> <td><button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </form> </div> </div>
+        </div>
+        <div class="spoiler-text">
+            <form class="form-horizontal">
+                <table class="table table-bordered text-center vertical-mid">
+                    <tbody>
+                    <tr class="warning">
+                        <th class="text-center">Тип предприятия</th>
+                        <th class="text-center">Специализация</th>
+                        <th class="text-center">Сырьё<br/> <h5><span
+                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
+                        </h5></th>
+                        <th class="text-center">Выпускаемая продукция</th>
+                        <th class="text-center">Прибыль</th>
+                    </tr>
+                    <tr class="even">
+                        <td class="col-xs-2"><img src="../img/workshop.gif" title="Фабрика"/><br/>
+
+                            <p>Работники</p>
+
+                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                     class="badge">0</span></span></h4>
+                        </td>
+                        <td class="col-xs-1">
+                            <div id="techDiv" class="input-group input-group-sm"><span
+                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                                  id="tech" placeholder="Уровень"/>
+                            </div>
+                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                               class="badge">0</span></span></h4></td>
+                        <td class="col-xs-6">
+                            <table class="inline">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tbody>
+                                            <tr>
+                                                <td> Базовое качество<br/><select class="form-control" id="ResQ">
+                                                    <option value="0.277202073">1.00</option>
+                                                    <option value="0.36971831">1.25</option>
+                                                    <option value="0.467479675">1.50</option>
+                                                    <option value="0.573529412">1.75</option>
+                                                    <option value="0.681372549">2.00</option>
+                                                    <option value="0.794117647">2.25</option>
+                                                    <option value="0.906862745">2.50</option>
+                                                    <option value="1.029411765">2.75</option>
+                                                    <option value="1.151960784">3.00</option>
+                                                    <option value="1.279411765">3.25</option>
+                                                    <option value="1.406862745">3.50</option>
+                                                    <option value="1.539215686">3.75</option>
+                                                    <option value="1.676470588">4.00</option>
+                                                    <option value="1.81372549">4.25</option>
+                                                    <option value="1.950980392">4.50</option>
+                                                    <option value="2.093495935">4.75</option>
+                                                    <option value="2.236067977">5.00</option>
+                                                </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td> Сложность добычи<br/><select class="form-control" id="ResDif">
+                                                    <option value="1.96">1</option>
+                                                    <option value="1.4">2</option>
+                                                    <option value="1">3</option>
+                                                    <option value="0.7142858">4</option>
+                                                    <option value="0.5102042">5</option>
+                                                </select></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="col-xs-2">
+                            <table class="container-fluid">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                      title="Эффективность">Эфф., %</span>
+                                            <input class="form-control " type="text" id="Eff"
+                                                   placeholder="Эффективность, %" value="100"/></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <fieldset disabled>
+                                            <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                          title="Бонус к качеству">Бонус</span>
+                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                        </fieldset>
+                                        <br/></td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        <a href="../product/1469.html" title="Уголь"><img src="../img/coal.gif"
+                                                                                          alt="Уголь"
+                                                                                          title="Уголь"/></a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span id="Prod_Quantity">1 ед.</span>
+
+                                        <input type="hidden" id="Prod1_Quantity" value="90"/>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                           class="badge">0</span></span>
+                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                          class="badge">0</span></span>
+                                    </h4></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="col-xs-1">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><h4><span class="label label-default" id="profit">$0</span></h4></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -120,11 +239,13 @@
 </noscript>
 <!-- /Yandex.Metrika counter -->
 <script type="text/javascript" src="../js/orphus.js"></script>
-<a href="http://orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="../img/orphus.gif" border="0" width="181" height="54" /></a>
+<a href="http://orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="../img/orphus.gif" border="0"
+                                                            width="181" height="54"/></a>
+
 <div class="footer"><p class="text-center text-muted"></br>Все права на проект "Виртономика" принадлежат компании
     GAMERFLOT TRADING Ltd.</br>                Авторы калькулятора: Ku3mi41, Aroot(Belf_87) <a class="text-muted"
-                                                                                       href="https://github.com/Ku3mi41/OpenVirtaCalc.html"
-                                                                                       title="Да, ты тоже можешь стать соавтором калькулятора!">и...
+                                                                                               href="https://github.com/Ku3mi41/OpenVirtaCalc.html"
+                                                                                               title="Да, ты тоже можешь стать соавтором калькулятора!">и...
         ты?</a></p></div>
 </body>
 </html>
