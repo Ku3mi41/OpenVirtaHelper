@@ -1,3 +1,7 @@
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 //развернуть/свернуть все спойлеры
 $( "#all_spoilers" ).click(function() {
 		var all_spoilers = document.querySelectorAll(".spoiler");

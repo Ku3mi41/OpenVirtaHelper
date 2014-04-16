@@ -28,15 +28,21 @@
 				<li><a href="factories.html">Заводы</a></li>
 				<li class="active"><a href="#">Товары</a></li>
 			</ul>
-			<h1>OpenVirtaHelper</h1>
+			<h1>OpenVirtaHelper</h1>			
+			<div class="col-xs-3 pull-right">
+			<input placeholder="Быстрый поиск..." class="form-control input-sm" type='text' id='quickfind' onkeyup=" if ($(this).val() != '') {$('td>a').hide();keyword = $(this).val().toLowerCase() ;$('td>a:contains('+keyword+')').show();$('td>a:contains('+keyword.capitalize()+')').show();} else {$('td>a').show()}"/>
+			</div>
 			<h5 class="text-muted">Открытый калькулятор Виртономики</h5></br>
+
 		</div>
 
 
 				<div class="container">
-					<table class="table table-striped">
+					<table id="factories" class="table table-striped">
 					<tbody><tr>
+					<thead>
 					<th colspan="8" class="warning text-center">Полезные ископаемые</th>
+					</thead>
 					</tr>
 					<tr class="odd">
 					<td width="35"><a href="product/1460.html" title="Алмазы"><img src="img/diamonds.gif" align="middle" alt="Алмазы.html" title="Алмазы"></a><a href="product/1460.html" title="Алмазы"></a></td>
@@ -610,7 +616,7 @@
     <script src="js/bootstrap.min.js"></script>
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
-	(function (d, w, c) {
+		(function (d, w, c) {
 		(w[c] = w[c] || []).push(function() {
 			try {
 				w.yaCounter19600771 = new Ya.Metrika({id:19600771,

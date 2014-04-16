@@ -29,6 +29,9 @@
 				<li><a href="products.html">Товары</a></li>
 			</ul>
 			<h1>OpenVirtaHelper</h1>
+			<div class="col-xs-3 pull-right">
+			<input placeholder="Быстрый поиск..." class="form-control input-sm" type='text' id='quickfind' onkeyup=" if ($(this).val() != '') {$('td>a').hide();keyword = $(this).val().toLowerCase() ;$('td>a:contains('+keyword+')').show();$('td>a:contains('+keyword.capitalize()+')').show();} else {$('td>a').show()}"/>
+			</div>
 			<h5 class="text-muted">Открытый помощник Виртономики</h5></br>
 			</div>			
 				<div class="container">
