@@ -217,14 +217,17 @@ $('form').submit(
 					//ферма
 					if ( $(this).find("#animal_Quality").val() ) { var IngTotalQual = ( ing1qual * 0.3 + animal_Qual * 0.7 ) * eff; }	
 			//качество товара
-			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65)  * ( 1 + $(this).find("#Bonus").val().replace('%', '') / 100 );
+			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65);
 					//шахты
 					if ( $(this).find("#ResQ").val() ) { ProdQual = Math.pow(tech, 0.65) * $(this).find("#ResQ").val() * eff }
 					//фермы
 					if ( $(this).find("#ResFQ").val() ) { ProdQual = Math.pow(tech, 0.65) * Math.pow($(this).find("#ResFQ").val(), 0.5) * eff }					
 			//ограничение качества (по технологии)
 			if (ProdQual > Math.pow(tech, 1.3) ) {ProdQual = Math.pow(tech, 1.3)}
-			if ( ProdQual < 1 ) { ProdQual = 1 }			
+			if ( ProdQual < 1 ) { ProdQual = 1 }	
+			//бонус к качеству
+			ProdQual = ProdQual * ( 1 + $(this).find("#Bonus").val().replace('%', '') / 100 );
+			
 			$(this).find("#ProdQual").text( ProdQual.toFixed(2) ) ;
 			
 			//если есть второй продукт производства
