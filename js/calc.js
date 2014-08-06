@@ -1,3 +1,11 @@
+//регулятор бонусов
+function setBonus(val, callbtn){
+	if ( callbtn.hasClass("btn-warning") ) { val = -val;}
+	callbtn.toggleClass("btn-default").toggleClass("btn-warning");
+	callbtn.closest('form').find('#Bonus').val(parseFloat(callbtn.closest('form').find('#Bonus').val()) + val + '%');
+	callbtn.closest('form').find('#Bonus2').val(parseFloat(callbtn.closest('form').find('#Bonus2').val()) + val + '%');
+}
+
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
@@ -190,6 +198,7 @@ $('form').submit(
 			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
 					//для шахт
 					if ( $(this).find("#ResDif").val() ) { Prod_Quantity = Prod_Quantity * $(this).find("#ResDif").val() }
+					if ( $(this).find("#10Q").hasClass("btn-warning") ) { Prod_Quantity = Prod_Quantity * 0.95 }
 					
 					//фермы
 					if ( $(this).find("#ResFQ") ) 

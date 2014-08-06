@@ -141,10 +141,26 @@
                                                                                       title="Бонус к качеству">Бонус</span>
                                             <input class="form-control " type="text" id="Bonus" value="%"/></div>
                                     </fieldset>
-                                    <br/></td>
+                                </td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><a href="../product/1485.html" title="Электронные компоненты"><img
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/><a href="../product/1485.html" title="Электронные компоненты"><img
                                         src="../img/electroniccomponents.gif" alt="Электронные компоненты"
                                         title="Электронные компоненты"/></a></td>
                             </tr>
@@ -323,16 +339,32 @@
                                                                                       title="Бонус к качеству">Бонус</span>
                                             <input class="form-control " type="text" id="Bonus" value="25%"/></div>
                                     </fieldset>
-                                    <br/></td>
+                                </td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><a href="../product/1485.html" title="Электронные компоненты"><img
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/><a href="../product/1485.html" title="Электронные компоненты"><img
                                         src="../img/electroniccomponents.gif" alt="Электронные компоненты"
                                         title="Электронные компоненты"/></a></td>
                             </tr>
                             <tr>
                                 <td><span id="Prod_Quantity">0.8 ед.</span><input type="hidden" id="Prod1_Quantity"
-                                                                                value="0.8"/></td>
+                                                                                  value="0.8"/></td>
                             </tr>
                             <tr>
                                 <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"

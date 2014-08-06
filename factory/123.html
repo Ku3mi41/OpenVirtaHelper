@@ -283,10 +283,25 @@
                                                                   title="Бонус к качеству">Бонус</span>
                         <input class="form-control " type="text" id="Bonus" value="0%"/></div>
                 </fieldset>
-                <br/></td>
+            </td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../product/130.html" title="Корпус яхты"><img
+            <td>
+                <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))"> +1%
+                </button>
+                <button id="10Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                    +10%
+                </button>
+                <button id="15Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                    +15%
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td><br/><a href="../product/130.html" title="Корпус яхты"><img
                     src="../img/ship_body.gif" alt="Корпус яхты" title="Корпус яхты"/></a></td>
         </tr>
         <tr>
@@ -613,10 +628,25 @@
                                                                   title="Бонус к качеству">Бонус</span>
                         <input class="form-control " type="text" id="Bonus" value="0%"/></div>
                 </fieldset>
-                <br/></td>
+            </td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../product/131.html" title="Оснащение яхты"><img
+            <td>
+                <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))"> +1%
+                </button>
+                <button id="10Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                    +10%
+                </button>
+                <button id="15Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                    +15%
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td><br/><a href="../product/131.html" title="Оснащение яхты"><img
                     src="../img/yacht_equipment.gif" alt="Оснащение яхты"
                     title="Оснащение яхты"/></a></td>
         </tr>
@@ -834,11 +864,27 @@
                                                                       title="Бонус к качеству">Бонус</span>
                             <input class="form-control " type="text" id="Bonus" value="0%"/></div>
                     </fieldset>
-                    <br/></td>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <td><a href="../product/133.html" title="Яхта"><img src="../img/yacht.gif"
-                                                                    alt="Яхта" title="Яхта"/></a>
+                <td>
+                    <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))">
+                        +1%
+                    </button>
+                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                        +10%
+                    </button>
+                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                        +15%
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td><br/><a href="../product/133.html" title="Яхта"><img src="../img/yacht.gif"
+                                                                         alt="Яхта" title="Яхта"/></a>
                 </td>
             </tr>
             <tr>

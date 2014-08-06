@@ -177,11 +177,28 @@
                                                                                       title="Бонус к качеству">Бонус</span>
                                             <input class="form-control " type="text" id="Bonus" value="%"/></div>
                                     </fieldset>
-                                    <br/></td>
+                                </td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><a href="../product/7092.html" title="Фен"><img src="../img/hairdrier.gif"
-                                                                                    alt="Фен" title="Фен"/></a></td>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/><a href="../product/7092.html" title="Фен"><img src="../img/hairdrier.gif"
+                                                                                         alt="Фен" title="Фен"/></a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><span id="Prod_Quantity">1 ед.</span><input type="hidden" id="Prod1_Quantity"
@@ -398,10 +415,26 @@
                                                                       title="Бонус к качеству">Бонус</span>
                             <input class="form-control " type="text" id="Bonus" value="5%"/></div>
                     </fieldset>
-                    <br/></td>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <td><a href="../product/7092.html" title="Фен в упаковке"><img
+                <td>
+                    <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))">
+                        +1%
+                    </button>
+                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                        +10%
+                    </button>
+                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                        +15%
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td><br/><a href="../product/7092.html" title="Фен в упаковке"><img
                         src="../img/hairdrier.gif" alt="Фен в упаковке" title="Фен в упаковке"/></a>
                 </td>
             </tr>
@@ -656,11 +689,26 @@
                                                                   title="Бонус к качеству">Бонус</span>
                         <input class="form-control " type="text" id="Bonus" value="%"/></div>
                 </fieldset>
-                <br/></td>
+            </td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../product/7093.html" title="Утюг"><img src="../img/iron.gif"
-                                                                 alt="Утюг" title="Утюг"/></a>
+            <td>
+                <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))"> +1%
+                </button>
+                <button id="10Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                    +10%
+                </button>
+                <button id="15Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                    +15%
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td><br/><a href="../product/7093.html" title="Утюг"><img src="../img/iron.gif"
+                                                                      alt="Утюг" title="Утюг"/></a>
             </td>
         </tr>
         <tr>
@@ -952,10 +1000,25 @@
                                                                   title="Бонус к качеству">Бонус</span>
                         <input class="form-control " type="text" id="Bonus" value="5%"/></div>
                 </fieldset>
-                <br/></td>
+            </td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../product/7093.html" title="Утюг в упаковке"><img
+            <td>
+                <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))"> +1%
+                </button>
+                <button id="10Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                    +10%
+                </button>
+                <button id="15Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                    +15%
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td><br/><a href="../product/7093.html" title="Утюг в упаковке"><img
                     src="../img/iron.gif" alt="Утюг в упаковке" title="Утюг в упаковке"/></a>
             </td>
         </tr>

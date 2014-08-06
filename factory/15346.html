@@ -250,10 +250,25 @@
                                                                   title="Бонус к качеству">Бонус</span>
                         <input class="form-control " type="text" id="Bonus" value="%"/></div>
                 </fieldset>
-                <br/></td>
+            </td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../product/15337.html" title="Беговая дорожка"><img
+            <td>
+                <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))"> +1%
+                </button>
+                <button id="10Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                    +10%
+                </button>
+                <button id="15Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                    +15%
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td><br/><a href="../product/15337.html" title="Беговая дорожка"><img
                     src="../img/trainer.gif" alt="Беговая дорожка" title="Беговая дорожка"/></a>
             </td>
         </tr>
@@ -581,10 +596,25 @@
                                                                   title="Бонус к качеству">Бонус</span>
                         <input class="form-control " type="text" id="Bonus" value="10%"/></div>
                 </fieldset>
-                <br/></td>
+            </td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../product/15337.html" title="Многофункциональный тренажер"><img
+            <td>
+                <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))"> +1%
+                </button>
+                <button id="10Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                    +10%
+                </button>
+                <button id="15Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                    +15%
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td><br/><a href="../product/15337.html" title="Многофункциональный тренажер"><img
                     src="../img/trainer.gif" alt="Многофункциональный тренажер"
                     title="Многофункциональный тренажер"/></a></td>
         </tr>

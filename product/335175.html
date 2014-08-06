@@ -180,10 +180,25 @@
                                                                                           title="Бонус к качеству">Бонус</span>
                                                 <input class="form-control " type="text" id="Bonus" value="0%"/></div>
                                         </fieldset>
-                                        <br/></td>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="../product/335175.html" title="Рыбные консервы"><img
+                                    <td>
+                                        <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                                onclick="setBonus(1, $(this))"> +1%
+                                        </button>
+                                        <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                                onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                            +10%
+                                        </button>
+                                        <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                                onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                            +15%
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><br/><a href="../product/335175.html" title="Рыбные консервы"><img
                                             src="../img/fishcan.gif" align="middle" alt="Рыбные консервы.html"
                                             title="Рыбные консервы"></a></td>
                                 </tr>

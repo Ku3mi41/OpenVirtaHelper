@@ -43,8 +43,9 @@
 
     <div class="spoiler-wrapper">
         <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Садовый декор</a> <a
-                href="../product/422380.html" title="Садовый декор"><img src="../img/gardengnome.gif" alt="Садовый декор"
-                                                                    title="Садовый декор"/></a></div>
+                href="../product/422380.html" title="Садовый декор"><img src="../img/gardengnome.gif"
+                                                                         alt="Садовый декор"
+                                                                         title="Садовый декор"/></a></div>
         <div class="spoiler-text">
             <form class="form-horizontal">
                 <table class="table table-bordered text-center vertical-mid">
@@ -79,7 +80,7 @@
                         <td class="col-xs-6">
                             <table class="inline">
                                 <tbody>
-								<div class="alert alert-warning">Требуется минимальное качество глины: 3</div>
+                                <div class="alert alert-warning">Требуется минимальное качество глины: 3</div>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-success" title="Пластмасса" id="ing1"></div>
                                     <div class="progress-bar progress-bar-warning" title="Электронные компоненты"
@@ -113,8 +114,8 @@
                                             </tr>
                                             <tr>
                                                 <td><span id="Ing1_Quantity">2 ед.</span><input type="hidden"
-                                                                                                  id="Ing1_Q"
-                                                                                                  value="2"/></td>
+                                                                                                id="Ing1_Q"
+                                                                                                value="2"/></td>
                                             </tr>
                                             <tr>
                                                 <td><span id="Ing1_TotalPrice">$1</span></td>
@@ -150,8 +151,8 @@
                                             </tr>
                                             <tr>
                                                 <td><span id="Ing2_Quantity">5 ед.</span><input type="hidden"
-                                                                                                  id="Ing2_Q"
-                                                                                                  value="5"/></td>
+                                                                                                id="Ing2_Q"
+                                                                                                value="5"/></td>
                                             </tr>
                                             <tr>
                                                 <td><span id="Ing2_TotalPrice">$1</span></td>
@@ -181,11 +182,27 @@
                                                                                           title="Бонус к качеству">Бонус</span>
                                                 <input class="form-control " type="text" id="Bonus" value="%"/></div>
                                         </fieldset>
-                                        <br/></td>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="../product/422380.html" title="Садовый декор"><img
-                                            src="../img/gardengnome.gif" alt="Садовый декор" title="Садовый декор"/></a></td>
+                                    <td>
+                                        <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                                onclick="setBonus(1, $(this))"> +1%
+                                        </button>
+                                        <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                                onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                            +10%
+                                        </button>
+                                        <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                                onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                            +15%
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><br/><a href="../product/422380.html" title="Садовый декор"><img
+                                            src="../img/gardengnome.gif" alt="Садовый декор" title="Садовый декор"/></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><span id="Prod_Quantity">1 ед.</span><input type="hidden" id="Prod1_Quantity"

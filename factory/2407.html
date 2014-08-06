@@ -139,12 +139,29 @@
                                                                                       title="Бонус к качеству">Бонус</span>
                                             <input class="form-control " type="text" id="Bonus" value="%"/></div>
                                     </fieldset>
-                                    <br/></td>
+                                </td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><a href="../product/302158.html" title="Картон"><img src="../img/paperboard.gif"
-                                                                                         alt="Картон"
-                                                                                         title="Картон"/></a></td>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/><a href="../product/302158.html" title="Картон"><img
+                                        src="../img/paperboard.gif"
+                                        alt="Картон"
+                                        title="Картон"/></a></td>
                             </tr>
                             <tr>
                                 <td><span id="Prod_Quantity">1 ед.</span><input type="hidden" id="Prod1_Quantity"
@@ -285,11 +302,28 @@
                                                                                       title="Бонус к качеству">Бонус</span>
                                             <input class="form-control " type="text" id="Bonus" value="%"/></div>
                                     </fieldset>
-                                    <br/></td>
+                                </td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><a href="../product/1472.html" title="Бумага"><img src="../img/paper.gif"
-                                                                                       alt="Бумага" title="Бумага"/></a>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/><a href="../product/1472.html" title="Бумага"><img src="../img/paper.gif"
+                                                                                            alt="Бумага"
+                                                                                            title="Бумага"/></a>
                                 </td>
                             </tr>
                             <tr>
@@ -435,10 +469,26 @@
                                                                                       title="Бонус к качеству">Бонус</span>
                                             <input class="form-control " type="text" id="Bonus" value="%"/></div>
                                     </fieldset>
-                                    <br/></td>
+                                </td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td><a href="../product/1472.html" title="Бумага из хлопковой целлюлозы"><img
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/><a href="../product/1472.html" title="Бумага из хлопковой целлюлозы"><img
                                         src="../img/paper.gif" alt="Бумага из хлопковой целлюлозы"
                                         title="Бумага из хлопковой целлюлозы"/></a></td>
                             </tr>

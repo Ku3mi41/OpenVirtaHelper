@@ -32,1134 +32,1270 @@
     </button>
 </div>
 <div class="container">
-    </br><a href="../factories.html">
+</br><a href="../factories.html">
     <button type="button" class="btn btn-default btn-sm pull-left">
         <span class="glyphicon glyphicon-align-justify"></span> Список заводов
     </button>
 </a>
 
-    <h1 class="text-center"><a href="http://virtonomica.ru/olga/main/industry/unit_type/info/2119">Земледельческая
-        ферма</a></h1><br/>
+<h1 class="text-center"><a href="http://virtonomica.ru/olga/main/industry/unit_type/info/2119">Земледельческая
+    ферма</a></h1><br/>
 
 
-    <div class="spoiler-wrapper">
-        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Хлопок</a>&nbsp;
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Хлопок</a>&nbsp;
 
-            <a href="http://virtonomica.ru/olga/main/product/info/1493" title="Хлопок"><img src="../img/cotton.gif"
-                                                                                            align="middle" alt="Хлопок"
-                                                                                            title="Хлопок"></a>
+        <a href="http://virtonomica.ru/olga/main/product/info/1493" title="Хлопок"><img src="../img/cotton.gif"
+                                                                                        align="middle" alt="Хлопок"
+                                                                                        title="Хлопок"></a>
 
-        </div>
-        <div class="spoiler-text">
-            <form class="form-horizontal">
-                <table class="table table-bordered text-center vertical-mid">
-                    <tbody>
-                    <tr class="warning">
-                        <th class="text-center">Тип предприятия</th>
-                        <th class="text-center">Специализация</th>
-                        <th class="text-center">Сырьё<br/> <h5><span
-                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
-                        </h5></th>
-                        <th class="text-center">Выпускаемая продукция</th>
-                        <th class="text-center">Прибыль</th>
-                    </tr>
-                    <tr class="even">
-                        <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
-
-                            <p>Работники</p>
-
-                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                                     class="badge">0</span></span></h4>
-                        </td>
-                        <td class="col-xs-1">
-                            <div id="techDiv" class="input-group input-group-sm"><span
-                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                                                  id="tech" placeholder="Уровень"/>
-                            </div>
-                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                                               class="badge">0</span></span></h4></td>
-                        <td class="col-xs-6">
-                            <table class="inline">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"><span
-                                                            class="input-group-addon">#</span> <input
-                                                            class="form-control" type="text" id="ResFQ"
-                                                            placeholder="Базовое качество"/></div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-2">
-                            <table class="container-fluid">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                      title="Эффективность">Эфф., %</span>
-                                            <input class="form-control " type="text" id="Eff"
-                                                   placeholder="Эффективность, %" value="100"/></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <fieldset disabled>
-                                            <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                          title="Бонус к качеству">Бонус</span>
-                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
-                                        </fieldset>
-                                        <br/></td>
-                                </tr>
-                                <tr>
-                                    <td>
-
-                                        <a href="http://virtonomica.ru/olga/main/product/info/1493" title="Хлопок"><img
-                                                src="../img/cotton.gif" align="middle" alt="Хлопок" title="Хлопок"></a>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity">1 ед.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity2">1 ед. / нед.</span>
-
-                                        <input type="hidden" id="Prod1_Quantity" value="10400"/>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
-                                                                                           class="badge">0</span></span>
-                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
-                                                                                          class="badge">0</span></span>
-                                    </h4></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
-                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
-                                            class="label label-success" id="profit1">$0</span></h4></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
     </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё<br/> <h5><span
+                            class="label hide label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                   class="badge">0</span></span>
+                    </h5></th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
 
-    <div class="spoiler-wrapper">
-        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Кормовые культуры</a>&nbsp;
+                        <p>Работники</p>
 
-            <a href="../product/15745.html" title="Кормовые культуры"><img src="../img/feedcrop.gif"
-                                                                           alt="Кормовые культуры"
-                                                                           title="Кормовые культуры"/></a>
-
-        </div>
-        <div class="spoiler-text">
-            <form class="form-horizontal">
-                <table class="table table-bordered text-center vertical-mid">
-                    <tbody>
-                    <tr class="warning">
-                        <th class="text-center">Тип предприятия</th>
-                        <th class="text-center">Специализация</th>
-                        <th class="text-center">Сырьё<br/> <h5><span
-                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
-                        </h5></th>
-                        <th class="text-center">Выпускаемая продукция</th>
-                        <th class="text-center">Прибыль</th>
-                    </tr>
-                    <tr class="even">
-                        <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
-
-                            <p>Работники</p>
-
-                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                                     class="badge">0</span></span></h4>
-                        </td>
-                        <td class="col-xs-1">
-                            <div id="techDiv" class="input-group input-group-sm"><span
-                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                                                  id="tech" placeholder="Уровень"/>
-                            </div>
-                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                                               class="badge">0</span></span></h4></td>
-                        <td class="col-xs-6">
-                            <table class="inline">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"><span
-                                                            class="input-group-addon">#</span> <input
-                                                            class="form-control" type="text" id="ResFQ"
-                                                            placeholder="Базовое качество"/></div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-2">
-                            <table class="container-fluid">
-                                <tbody>
-                                <tr>
-                                    <td>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                              id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                           class="badge">0</span></span></h4></td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span
+                                                        class="input-group-addon">#</span> <input
+                                                        class="form-control" type="text" id="ResFQ"
+                                                        placeholder="Базовое качество"/></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff"
+                                               placeholder="Эффективность, %" value="100"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
                                         <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                      title="Эффективность">Эфф., %</span>
-                                            <input class="form-control " type="text" id="Eff"
-                                                   placeholder="Эффективность, %" value="100"/></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <fieldset disabled>
-                                            <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                          title="Бонус к качеству">Бонус</span>
-                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
-                                        </fieldset>
-                                        <br/></td>
-                                </tr>
-                                <tr>
-                                    <td>
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                    </fieldset>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/>
 
-                                        <a href="../product/15745.html" title="Кормовые культуры"><img
-                                                src="../img/feedcrop.gif" alt="Кормовые культуры"
-                                                title="Кормовые культуры"/></a>
+                                    <a href="http://virtonomica.ru/olga/main/product/info/1493" title="Хлопок"><img
+                                            src="../img/cotton.gif" align="middle" alt="Хлопок" title="Хлопок"></a>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity">1 ед.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity2">1 ед. / нед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity2">1 ед. / нед.</span>
 
-                                        <input type="hidden" id="Prod1_Quantity" value="52000"/>
+                                    <input type="hidden" id="Prod1_Quantity" value="10400"/>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
-                                                                                           class="badge">0</span></span>
-                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
-                                                                                          class="badge">0</span></span>
-                                    </h4></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
-                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
-                                            class="label label-success" id="profit1">$0</span></h4></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                      class="badge">0</span></span>
+                                </h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
+                                        class="label label-success" id="profit1">$0</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+</div>
 
-    <div class="spoiler-wrapper">
-        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Подсолнечник</a>&nbsp;
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Кормовые культуры</a>&nbsp;
 
-            <a href="../product/15744.html" title="Подсолнечник"><img src="../img/sunflower.gif" alt="Подсолнечник"
-                                                                      title="Подсолнечник"/></a>
+        <a href="../product/15745.html" title="Кормовые культуры"><img src="../img/feedcrop.gif"
+                                                                       alt="Кормовые культуры"
+                                                                       title="Кормовые культуры"/></a>
 
-        </div>
-        <div class="spoiler-text">
-            <form class="form-horizontal">
-                <table class="table table-bordered text-center vertical-mid">
-                    <tbody>
-                    <tr class="warning">
-                        <th class="text-center">Тип предприятия</th>
-                        <th class="text-center">Специализация</th>
-                        <th class="text-center">Сырьё<br/> <h5><span
-                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
-                        </h5></th>
-                        <th class="text-center">Выпускаемая продукция</th>
-                        <th class="text-center">Прибыль</th>
-                    </tr>
-                    <tr class="even">
-                        <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
+    </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё<br/> <h5><span
+                            class="label hide label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                   class="badge">0</span></span>
+                    </h5></th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
 
-                            <p>Работники</p>
+                        <p>Работники</p>
 
-                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                                     class="badge">0</span></span></h4>
-                        </td>
-                        <td class="col-xs-1">
-                            <div id="techDiv" class="input-group input-group-sm"><span
-                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                                                  id="tech" placeholder="Уровень"/>
-                            </div>
-                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                                               class="badge">0</span></span></h4></td>
-                        <td class="col-xs-6">
-                            <table class="inline">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"><span
-                                                            class="input-group-addon">#</span> <input
-                                                            class="form-control" type="text" id="ResFQ"
-                                                            placeholder="Базовое качество"/></div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-2">
-                            <table class="container-fluid">
-                                <tbody>
-                                <tr>
-                                    <td>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                              id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                           class="badge">0</span></span></h4></td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span
+                                                        class="input-group-addon">#</span> <input
+                                                        class="form-control" type="text" id="ResFQ"
+                                                        placeholder="Базовое качество"/></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff"
+                                               placeholder="Эффективность, %" value="100"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
                                         <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                      title="Эффективность">Эфф., %</span>
-                                            <input class="form-control " type="text" id="Eff"
-                                                   placeholder="Эффективность, %" value="100"/></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <fieldset disabled>
-                                            <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                          title="Бонус к качеству">Бонус</span>
-                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
-                                        </fieldset>
-                                        <br/></td>
-                                </tr>
-                                <tr>
-                                    <td>
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                    </fieldset>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/>
 
-                                        <a href="../product/15744.html" title="Подсолнечник"><img
-                                                src="../img/sunflower.gif" alt="Подсолнечник" title="Подсолнечник"/></a>
+                                    <a href="../product/15745.html" title="Кормовые культуры"><img
+                                            src="../img/feedcrop.gif" alt="Кормовые культуры"
+                                            title="Кормовые культуры"/></a>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity">1 ед.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity2">1 ед. / нед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity2">1 ед. / нед.</span>
 
-                                        <input type="hidden" id="Prod1_Quantity" value="26000"/>
+                                    <input type="hidden" id="Prod1_Quantity" value="52000"/>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
-                                                                                           class="badge">0</span></span>
-                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
-                                                                                          class="badge">0</span></span>
-                                    </h4></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
-                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
-                                            class="label label-success" id="profit1">$0</span></h4></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                      class="badge">0</span></span>
+                                </h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
+                                        class="label label-success" id="profit1">$0</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+</div>
 
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Подсолнечник</a>&nbsp;
 
-    <div class="spoiler-wrapper">
-        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Картофель</a>&nbsp;
+        <a href="../product/15744.html" title="Подсолнечник"><img src="../img/sunflower.gif" alt="Подсолнечник"
+                                                                  title="Подсолнечник"/></a>
 
-            <a href="../product/15742.html" title="Картофель"><img src="../img/potato.gif" alt="Картофель"
-                                                                   title="Картофель"/></a>
+    </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё<br/> <h5><span
+                            class="label hide label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                   class="badge">0</span></span>
+                    </h5></th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
 
-        </div>
-        <div class="spoiler-text">
-            <form class="form-horizontal">
-                <table class="table table-bordered text-center vertical-mid">
-                    <tbody>
-                    <tr class="warning">
-                        <th class="text-center">Тип предприятия</th>
-                        <th class="text-center">Специализация</th>
-                        <th class="text-center">Сырьё<br/> <h5><span
-                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
-                        </h5></th>
-                        <th class="text-center">Выпускаемая продукция</th>
-                        <th class="text-center">Прибыль</th>
-                    </tr>
-                    <tr class="even">
-                        <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
+                        <p>Работники</p>
 
-                            <p>Работники</p>
-
-                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                                     class="badge">0</span></span></h4>
-                        </td>
-                        <td class="col-xs-1">
-                            <div id="techDiv" class="input-group input-group-sm"><span
-                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                                                  id="tech" placeholder="Уровень"/>
-                            </div>
-                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                                               class="badge">0</span></span></h4></td>
-                        <td class="col-xs-6">
-                            <table class="inline">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"><span
-                                                            class="input-group-addon">#</span> <input
-                                                            class="form-control" type="text" id="ResFQ"
-                                                            placeholder="Базовое качество"/></div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-2">
-                            <table class="container-fluid">
-                                <tbody>
-                                <tr>
-                                    <td>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                              id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                           class="badge">0</span></span></h4></td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span
+                                                        class="input-group-addon">#</span> <input
+                                                        class="form-control" type="text" id="ResFQ"
+                                                        placeholder="Базовое качество"/></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff"
+                                               placeholder="Эффективность, %" value="100"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
                                         <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                      title="Эффективность">Эфф., %</span>
-                                            <input class="form-control " type="text" id="Eff"
-                                                   placeholder="Эффективность, %" value="100"/></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <fieldset disabled>
-                                            <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                          title="Бонус к качеству">Бонус</span>
-                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
-                                        </fieldset>
-                                        <br/></td>
-                                </tr>
-                                <tr>
-                                    <td>
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                    </fieldset>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/>
 
-                                        <a href="../product/15742.html" title="Картофель"><img src="../img/potato.gif"
-                                                                                               alt="Картофель"
-                                                                                               title="Картофель"/></a>
+                                    <a href="../product/15744.html" title="Подсолнечник"><img
+                                            src="../img/sunflower.gif" alt="Подсолнечник" title="Подсолнечник"/></a>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity">1 ед.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity2">1 ед. / нед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity2">1 ед. / нед.</span>
 
-                                        <input type="hidden" id="Prod1_Quantity" value="20800"/>
+                                    <input type="hidden" id="Prod1_Quantity" value="26000"/>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
-                                                                                           class="badge">0</span></span>
-                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
-                                                                                          class="badge">0</span></span>
-                                    </h4></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
-                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
-                                            class="label label-success" id="profit1">$0</span></h4></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                      class="badge">0</span></span>
+                                </h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
+                                        class="label label-success" id="profit1">$0</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+</div>
 
 
-    <div class="spoiler-wrapper">
-        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Помидоры</a>&nbsp;
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Картофель</a>&nbsp;
 
-            <a href="../product/15743.html" title="Помидоры"><img src="../img/tomato.gif" alt="Помидоры"
-                                                                  title="Помидоры"/></a>
+        <a href="../product/15742.html" title="Картофель"><img src="../img/potato.gif" alt="Картофель"
+                                                               title="Картофель"/></a>
 
-        </div>
-        <div class="spoiler-text">
-            <form class="form-horizontal">
-                <table class="table table-bordered text-center vertical-mid">
-                    <tbody>
-                    <tr class="warning">
-                        <th class="text-center">Тип предприятия</th>
-                        <th class="text-center">Специализация</th>
-                        <th class="text-center">Сырьё<br/> <h5><span
-                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
-                        </h5></th>
-                        <th class="text-center">Выпускаемая продукция</th>
-                        <th class="text-center">Прибыль</th>
-                    </tr>
-                    <tr class="even">
-                        <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
+    </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё<br/> <h5><span
+                            class="label hide label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                   class="badge">0</span></span>
+                    </h5></th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
 
-                            <p>Работники</p>
+                        <p>Работники</p>
 
-                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                                     class="badge">0</span></span></h4>
-                        </td>
-                        <td class="col-xs-1">
-                            <div id="techDiv" class="input-group input-group-sm"><span
-                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                                                  id="tech" placeholder="Уровень"/>
-                            </div>
-                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                                               class="badge">0</span></span></h4></td>
-                        <td class="col-xs-6">
-                            <table class="inline">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"><span
-                                                            class="input-group-addon">#</span> <input
-                                                            class="form-control" type="text" id="ResFQ"
-                                                            placeholder="Базовое качество"/></div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-2">
-                            <table class="container-fluid">
-                                <tbody>
-                                <tr>
-                                    <td>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                              id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                           class="badge">0</span></span></h4></td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span
+                                                        class="input-group-addon">#</span> <input
+                                                        class="form-control" type="text" id="ResFQ"
+                                                        placeholder="Базовое качество"/></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff"
+                                               placeholder="Эффективность, %" value="100"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
                                         <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                      title="Эффективность">Эфф., %</span>
-                                            <input class="form-control " type="text" id="Eff"
-                                                   placeholder="Эффективность, %" value="100"/></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <fieldset disabled>
-                                            <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                          title="Бонус к качеству">Бонус</span>
-                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
-                                        </fieldset>
-                                        <br/></td>
-                                </tr>
-                                <tr>
-                                    <td>
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                    </fieldset>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/>
 
-                                        <a href="../product/15743.html" title="Помидоры"><img src="../img/tomato.gif"
-                                                                                              alt="Помидоры"
-                                                                                              title="Помидоры"/></a>
+                                    <a href="../product/15742.html" title="Картофель"><img src="../img/potato.gif"
+                                                                                           alt="Картофель"
+                                                                                           title="Картофель"/></a>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity">1 ед.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity2">1 ед. / нед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity2">1 ед. / нед.</span>
 
-                                        <input type="hidden" id="Prod1_Quantity" value="20800"/>
+                                    <input type="hidden" id="Prod1_Quantity" value="20800"/>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
-                                                                                           class="badge">0</span></span>
-                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
-                                                                                          class="badge">0</span></span>
-                                    </h4></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
-                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
-                                            class="label label-success" id="profit1">$0</span></h4></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                      class="badge">0</span></span>
+                                </h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
+                                        class="label label-success" id="profit1">$0</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+</div>
 
 
-    <div class="spoiler-wrapper">
-        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Табак</a>&nbsp;
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Помидоры</a>&nbsp;
 
-            <a href="../product/422196.html" title="Табак"><img src="../img/tobacco.gif" alt="Табак" title="Табак"/></a>
+        <a href="../product/15743.html" title="Помидоры"><img src="../img/tomato.gif" alt="Помидоры"
+                                                              title="Помидоры"/></a>
 
-        </div>
-        <div class="spoiler-text">
-            <form class="form-horizontal">
-                <table class="table table-bordered text-center vertical-mid">
-                    <tbody>
-                    <tr class="warning">
-                        <th class="text-center">Тип предприятия</th>
-                        <th class="text-center">Специализация</th>
-                        <th class="text-center">Сырьё<br/> <h5><span
-                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
-                        </h5></th>
-                        <th class="text-center">Выпускаемая продукция</th>
-                        <th class="text-center">Прибыль</th>
-                    </tr>
-                    <tr class="even">
-                        <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
+    </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё<br/> <h5><span
+                            class="label hide label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                   class="badge">0</span></span>
+                    </h5></th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
 
-                            <p>Работники</p>
+                        <p>Работники</p>
 
-                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                                     class="badge">0</span></span></h4>
-                        </td>
-                        <td class="col-xs-1">
-                            <div id="techDiv" class="input-group input-group-sm"><span
-                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                                                  id="tech" placeholder="Уровень"/>
-                            </div>
-                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                                               class="badge">0</span></span></h4></td>
-                        <td class="col-xs-6">
-                            <table class="inline">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"><span
-                                                            class="input-group-addon">#</span> <input
-                                                            class="form-control" type="text" id="ResFQ"
-                                                            placeholder="Базовое качество"/></div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-2">
-                            <table class="container-fluid">
-                                <tbody>
-                                <tr>
-                                    <td>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                              id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                           class="badge">0</span></span></h4></td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span
+                                                        class="input-group-addon">#</span> <input
+                                                        class="form-control" type="text" id="ResFQ"
+                                                        placeholder="Базовое качество"/></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff"
+                                               placeholder="Эффективность, %" value="100"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
                                         <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                      title="Эффективность">Эфф., %</span>
-                                            <input class="form-control " type="text" id="Eff"
-                                                   placeholder="Эффективность, %" value="100"/></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <fieldset disabled>
-                                            <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                          title="Бонус к качеству">Бонус</span>
-                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
-                                        </fieldset>
-                                        <br/></td>
-                                </tr>
-                                <tr>
-                                    <td>
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                    </fieldset>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/>
 
-                                        <a href="../product/422196.html" title="Табак"><img src="../img/tobacco.gif"
-                                                                                            alt="Табак" title="Табак"/></a>
+                                    <a href="../product/15743.html" title="Помидоры"><img src="../img/tomato.gif"
+                                                                                          alt="Помидоры"
+                                                                                          title="Помидоры"/></a>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity">1 ед.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity2">1 ед. / нед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity2">1 ед. / нед.</span>
 
-                                        <input type="hidden" id="Prod1_Quantity" value="10000"/>
+                                    <input type="hidden" id="Prod1_Quantity" value="20800"/>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
-                                                                                           class="badge">0</span></span>
-                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
-                                                                                          class="badge">0</span></span>
-                                    </h4></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
-                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
-                                            class="label label-success" id="profit1">$0</span></h4></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                      class="badge">0</span></span>
+                                </h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
+                                        class="label label-success" id="profit1">$0</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+</div>
 
-    <div class="spoiler-wrapper">
-        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Сахар</a>&nbsp;
 
-            <a href="../product/1491.html" title="Сахар"><img src="../img/sugar.gif" alt="Сахар" title="Сахар"/></a>
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Табак</a>&nbsp;
 
-        </div>
-        <div class="spoiler-text">
-            <form class="form-horizontal">
-                <table class="table table-bordered text-center vertical-mid">
-                    <tbody>
-                    <tr class="warning">
-                        <th class="text-center">Тип предприятия</th>
-                        <th class="text-center">Специализация</th>
-                        <th class="text-center">Сырьё<br/> <h5><span
-                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
-                        </h5></th>
-                        <th class="text-center">Выпускаемая продукция</th>
-                        <th class="text-center">Прибыль</th>
-                    </tr>
-                    <tr class="even">
-                        <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
+        <a href="../product/422196.html" title="Табак"><img src="../img/tobacco.gif" alt="Табак" title="Табак"/></a>
 
-                            <p>Работники</p>
+    </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё<br/> <h5><span
+                            class="label hide label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                   class="badge">0</span></span>
+                    </h5></th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
 
-                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                                     class="badge">0</span></span></h4>
-                        </td>
-                        <td class="col-xs-1">
-                            <div id="techDiv" class="input-group input-group-sm"><span
-                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                                                  id="tech" placeholder="Уровень"/>
-                            </div>
-                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                                               class="badge">0</span></span></h4></td>
-                        <td class="col-xs-6">
-                            <table class="inline">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"><span
-                                                            class="input-group-addon">#</span> <input
-                                                            class="form-control" type="text" id="ResFQ"
-                                                            placeholder="Базовое качество"/></div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-2">
-                            <table class="container-fluid">
-                                <tbody>
-                                <tr>
-                                    <td>
+                        <p>Работники</p>
+
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                              id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                           class="badge">0</span></span></h4></td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span
+                                                        class="input-group-addon">#</span> <input
+                                                        class="form-control" type="text" id="ResFQ"
+                                                        placeholder="Базовое качество"/></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff"
+                                               placeholder="Эффективность, %" value="100"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
                                         <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                      title="Эффективность">Эфф., %</span>
-                                            <input class="form-control " type="text" id="Eff"
-                                                   placeholder="Эффективность, %" value="100"/></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <fieldset disabled>
-                                            <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                          title="Бонус к качеству">Бонус</span>
-                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
-                                        </fieldset>
-                                        <br/></td>
-                                </tr>
-                                <tr>
-                                    <td>
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                    </fieldset>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/>
 
-                                        <a href="../product/1491.html" title="Сахар"><img src="../img/sugar.gif"
-                                                                                          alt="Сахар"
-                                                                                          title="Сахар"/></a>
+                                    <a href="../product/422196.html" title="Табак"><img src="../img/tobacco.gif"
+                                                                                        alt="Табак" title="Табак"/></a>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity">1 ед.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity2">1 ед. / нед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity2">1 ед. / нед.</span>
 
-                                        <input type="hidden" id="Prod1_Quantity" value="9360"/>
+                                    <input type="hidden" id="Prod1_Quantity" value="10000"/>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
-                                                                                           class="badge">0</span></span>
-                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
-                                                                                          class="badge">0</span></span>
-                                    </h4></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
-                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
-                                            class="label label-success" id="profit1">$0</span></h4></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                      class="badge">0</span></span>
+                                </h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
+                                        class="label label-success" id="profit1">$0</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+</div>
 
-    <div class="spoiler-wrapper">
-        <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Зерно</a>&nbsp;
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Сахар</a>&nbsp;
 
-            <a href="../product/1487.html" title="Зерно"><img src="../img/grain.gif" alt="Зерно" title="Зерно"/></a>
+        <a href="../product/1491.html" title="Сахар"><img src="../img/sugar.gif" alt="Сахар" title="Сахар"/></a>
 
-        </div>
-        <div class="spoiler-text">
-            <form class="form-horizontal">
-                <table class="table table-bordered text-center vertical-mid">
-                    <tbody>
-                    <tr class="warning">
-                        <th class="text-center">Тип предприятия</th>
-                        <th class="text-center">Специализация</th>
-                        <th class="text-center">Сырьё<br/> <h5><span
-                                class="label hide label-primary">Общая стоимость <span id="IngTotalPrice" class="badge">0</span></span>
-                        </h5></th>
-                        <th class="text-center">Выпускаемая продукция</th>
-                        <th class="text-center">Прибыль</th>
-                    </tr>
-                    <tr class="even">
-                        <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
+    </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё<br/> <h5><span
+                            class="label hide label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                   class="badge">0</span></span>
+                    </h5></th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
 
-                            <p>Работники</p>
+                        <p>Работники</p>
 
-                            <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-                            <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                                    class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-                            <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                                     class="badge">0</span></span></h4>
-                        </td>
-                        <td class="col-xs-1">
-                            <div id="techDiv" class="input-group input-group-sm"><span
-                                    class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                                                  id="tech" placeholder="Уровень"/>
-                            </div>
-                            <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                                               class="badge">0</span></span></h4></td>
-                        <td class="col-xs-6">
-                            <table class="inline">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="input-group input-group-sm"><span
-                                                            class="input-group-addon">#</span> <input
-                                                            class="form-control" type="text" id="ResFQ"
-                                                            placeholder="Базовое качество"/></div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-2">
-                            <table class="container-fluid">
-                                <tbody>
-                                <tr>
-                                    <td>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                              id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                           class="badge">0</span></span></h4></td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span
+                                                        class="input-group-addon">#</span> <input
+                                                        class="form-control" type="text" id="ResFQ"
+                                                        placeholder="Базовое качество"/></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff"
+                                               placeholder="Эффективность, %" value="100"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
                                         <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                      title="Эффективность">Эфф., %</span>
-                                            <input class="form-control " type="text" id="Eff"
-                                                   placeholder="Эффективность, %" value="100"/></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <fieldset disabled>
-                                            <div class="input-group input-group-sm"><span class="input-group-addon"
-                                                                                          title="Бонус к качеству">Бонус</span>
-                                                <input class="form-control " type="text" id="Bonus" value="0%"/></div>
-                                        </fieldset>
-                                        <br/></td>
-                                </tr>
-                                <tr>
-                                    <td>
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                    </fieldset>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/>
 
-                                        <a href="../product/1487.html" title="Зерно"><img src="../img/grain.gif"
-                                                                                          alt="Зерно"
-                                                                                          title="Зерно"/></a>
+                                    <a href="../product/1491.html" title="Сахар"><img src="../img/sugar.gif"
+                                                                                      alt="Сахар"
+                                                                                      title="Сахар"/></a>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity">1 ед.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span id="Prod_Quantity2">1 ед. / нед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity2">1 ед. / нед.</span>
 
-                                        <input type="hidden" id="Prod1_Quantity" value="10400"/>
+                                    <input type="hidden" id="Prod1_Quantity" value="9360"/>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
-                                                                                           class="badge">0</span></span>
-                                    </h4> <h4><span class="label label-primary">C/c <span id="Cost"
-                                                                                          class="badge">0</span></span>
-                                    </h4></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td class="col-xs-1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
-                                            <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
-                                            class="label label-success" id="profit1">$0</span></h4></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                      class="badge">0</span></span>
+                                </h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
+                                        class="label label-success" id="profit1">$0</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+</div>
+
+<div class="spoiler-wrapper">
+    <div class="spoiler folded alert alert-info"><a href="javascript: void(0)">Зерно</a>&nbsp;
+
+        <a href="../product/1487.html" title="Зерно"><img src="../img/grain.gif" alt="Зерно" title="Зерно"/></a>
+
+    </div>
+    <div class="spoiler-text">
+        <form class="form-horizontal">
+            <table class="table table-bordered text-center vertical-mid">
+                <tbody>
+                <tr class="warning">
+                    <th class="text-center">Тип предприятия</th>
+                    <th class="text-center">Специализация</th>
+                    <th class="text-center">Сырьё<br/> <h5><span
+                            class="label hide label-primary">Общая стоимость <span id="IngTotalPrice"
+                                                                                   class="badge">0</span></span>
+                    </h5></th>
+                    <th class="text-center">Выпускаемая продукция</th>
+                    <th class="text-center">Прибыль</th>
+                </tr>
+                <tr class="even">
+                    <td class="col-xs-2"><img src="../img/farm.gif" title="Фабрика"/><br/>
+
+                        <p>Работники</p>
+
+                        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
+                                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
+                        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
+                                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
+                        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
+                                                                                 class="badge">0</span></span></h4>
+                    </td>
+                    <td class="col-xs-1">
+                        <div id="techDiv" class="input-group input-group-sm"><span
+                                class="input-group-addon">Техна</span> <input class="form-control" type="text"
+                                                                              id="tech" placeholder="Уровень"/>
+                        </div>
+                        <h4><span class="label label-primary">Станки <span id="EquipQuan"
+                                                                           class="badge">0</span></span></h4></td>
+                    <td class="col-xs-6">
+                        <table class="inline">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group input-group-sm"><span
+                                                        class="input-group-addon">#</span> <input
+                                                        class="form-control" type="text" id="ResFQ"
+                                                        placeholder="Базовое качество"/></div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-2">
+                        <table class="container-fluid">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                  title="Эффективность">Эфф., %</span>
+                                        <input class="form-control " type="text" id="Eff"
+                                               placeholder="Эффективность, %" value="100"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <fieldset disabled>
+                                        <div class="input-group input-group-sm"><span class="input-group-addon"
+                                                                                      title="Бонус к качеству">Бонус</span>
+                                            <input class="form-control " type="text" id="Bonus" value="0%"/></div>
+                                    </fieldset>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="CorpQ" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(1, $(this))"> +1%
+                                    </button>
+                                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                                        +10%
+                                    </button>
+                                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                                        +15%
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br/>
+
+                                    <a href="../product/1487.html" title="Зерно"><img src="../img/grain.gif"
+                                                                                      alt="Зерно"
+                                                                                      title="Зерно"/></a>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity">1 ед.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span id="Prod_Quantity2">1 ед. / нед.</span>
+
+                                    <input type="hidden" id="Prod1_Quantity" value="10400"/>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-primary">Кач-во <span id="ProdQual"
+                                                                                       class="badge">0</span></span>
+                                </h4> <h4><span class="label label-primary">C/c <span id="Cost"
+                                                                                      class="badge">0</span></span>
+                                </h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="col-xs-1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="input-group input-group-sm"><span class="input-group-addon">$</span>
+                                        <input class="form-control" type="text" id="Sale_Price" placeholder="Цена"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4><span class="label label-default" id="profit">$0</span></h4><h4><span
+                                        class="label label-success" id="profit1">$0</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="DoCalc" type="submit" class="btn btn-info">Рассчитать</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
 
 </div>
 

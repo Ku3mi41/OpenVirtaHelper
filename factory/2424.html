@@ -218,10 +218,26 @@
                                                                       title="Бонус к качеству">Бонус</span>
                             <input class="form-control " type="text" id="Bonus" value="%"/></div>
                     </fieldset>
-                    <br/></td>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <td><a href="../product/1510.html" title="Холодильники"><img
+                <td>
+                    <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))">
+                        +1%
+                    </button>
+                    <button id="10Q" type="button" class="btn btn-default btn-xs"
+                            onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                        +10%
+                    </button>
+                    <button id="15Q" type="button" class="btn btn-default btn-xs"
+                            onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                        +15%
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td><br/><a href="../product/1510.html" title="Холодильники"><img
                         src="../img/householdappliances.gif" alt="Холодильники"
                         title="Холодильники"/></a></td>
             </tr>
@@ -480,10 +496,25 @@
                                                                   title="Бонус к качеству">Бонус</span>
                         <input class="form-control " type="text" id="Bonus" value="5%"/></div>
                 </fieldset>
-                <br/></td>
+            </td>
+            <td></td>
         </tr>
         <tr>
-            <td><a href="../product/1510.html" title="Холодильники в упаковк"><img
+            <td>
+                <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))"> +1%
+                </button>
+                <button id="10Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                    +10%
+                </button>
+                <button id="15Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                    +15%
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td><br/><a href="../product/1510.html" title="Холодильники в упаковк"><img
                     src="../img/householdappliances.gif" alt="Холодильники в упаковк"
                     title="Холодильники в упаковк"/></a></td>
         </tr>

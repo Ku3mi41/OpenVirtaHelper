@@ -229,11 +229,25 @@
                         <input class="form-control " type="text" id="Bonus" value="0%"/>
                     </div>
                 </fieldset>
-                <br/>
             </td>
+            <td></td>
         </tr>
         <tr>
             <td>
+                <button id="CorpQ" type="button" class="btn btn-default btn-xs" onclick="setBonus(1, $(this))"> +1%
+                </button>
+                <button id="10Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(10, $(this));$(this).closest('form').find('#15Q').toggleClass('disabled')">
+                    +10%
+                </button>
+                <button id="15Q" type="button" class="btn btn-default btn-xs"
+                        onclick="setBonus(15, $(this));$(this).closest('form').find('#10Q').toggleClass('disabled')">
+                    +15%
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td><br/>
                 <a href="../product/422197.html" title="Сигареты">
                     <img src="../img/cigarette.gif" align="middle" alt="Сигареты.html" title="Сигареты">
                 </a>
