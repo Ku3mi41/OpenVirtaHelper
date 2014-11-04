@@ -198,7 +198,8 @@ $('form').submit(
 			var Prod_Quantity = work_qaunt * prodbase_quan * Math.pow(1.05, tech-1) *  eff;
 					//для шахт
 					if ( $(this).find("#ResDif").val() ) { Prod_Quantity = Prod_Quantity * $(this).find("#ResDif").val() }
-					if ( $(this).find("#10Q").hasClass("btn-warning") ) { Prod_Quantity = Prod_Quantity * 0.95 }
+					// закоментировано 
+					//if ( $(this).find("#10Q").hasClass("btn-warning") ) { Prod_Quantity = Prod_Quantity * 0.95 }
 					
 					//фермы
 					if ( $(this).find("#ResFQ") ) 
