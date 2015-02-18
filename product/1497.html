@@ -63,30 +63,31 @@
 </tr>
 <tr class="even">
     <td class="col-xs-2"><img src="../img/workshop.gif" title="Фабрика"/> <br/>
-
         <p>Работники</p>
-
-        <div class="input-group input-group-sm"><span class="input-group-addon">#</span> <input
-                class="form-control " type="text" id="work_quan" placeholder="Количество"/></div>
-        <div class="input-group input-group-sm"><span class="input-group-addon">$</span> <input
-                class="form-control " type="text" id="work_salary" placeholder="Зарплата"/></div>
-        <h4><span class="label label-primary">Квалификация <span id="PersonalQual"
-                                                                 class="badge">0</span></span></h4>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">#</span>
+            <input class="form-control" type="text" id="work_quan" placeholder="Количество"/>
+        </div>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">$</span>
+            <input class="form-control" type="text" id="work_salary" placeholder="Зарплата"/>
+        </div>
+        <h4><span class="label label-primary">Квалификация <span id="PersonalQual" class="badge">0</span></span></h4>
     </td>
     <td class="col-xs-1">
-        <div id="techDiv" class="input-group input-group-sm"><span
-                class="input-group-addon">Техна</span> <input class="form-control" type="text"
-                                                              id="tech" placeholder="Уровень"/>
+        <div id="techDiv" class="input-group input-group-sm">
+            <span class="input-group-addon">Техна</span> 
+            <input class="form-control" type="text" id="tech" placeholder="Уровень"/>
         </div>
-        <h4><span class="label label-primary">Станки <span id="EquipQuan"
-                                                           class="badge">0</span></span></h4></td>
+        <h4><span class="label label-primary">Станки <span id="EquipQuan" class="badge">0</span></span></h4>
+    </td>
     <td class="col-xs-6">
         <table class="inline">
             <tbody>
             <div class="progress">
-                <div class="progress-bar progress-bar-success" title="Какао" id="ing1"></div>
-                <div class="progress-bar progress-bar-warning" title="Мука" id="ing2"></div>
-                <div class="progress-bar progress-bar-danger" title="Сахар" id="ing3"></div>
+                <div class="progress-bar progress-bar-success" title="Какао" id="ingWidth1"></div>
+                <div class="progress-bar progress-bar-warning" title="Мука" id="ingWidth2"></div>
+                <div class="progress-bar progress-bar-danger" title="Сахар" id="ingWidth3"></div>
             </div>
             <tr>
                 <td>
@@ -94,32 +95,34 @@
                         <tbody>
                         <tr>
                             <td>
-                                <div class="input-group input-group-sm"><span
-                                        class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing1_Quality"
-                                        placeholder="Качество"/></div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon">#</span> 
+                                    <input class="form-control" type="text" id="Ing_Quality1" placeholder="Качество"/>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="input-group input-group-sm"><span
-                                        class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing1_Price"
-                                        placeholder="Цена"/></div>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon">$</span> 
+                                    <input class="form-control" type="text" id="Ing_Price1" placeholder="Цена"/>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><br/> <a href="../product/1488.html" title="Какао"> <img
-                                    src="../img/cacao.gif" align="middle" alt="Какао.html"
-                                    title="Какао"> </a></td>
+                            <td><br/>
+                                <a href="../product/1488.html" title="Какао"> 
+                                    <img src="../img/cacao.gif" align="middle" alt="Какао.html" title="Какао">
+                                </a>
+                            </td>
                         </tr>
                         <tr>
-                            <td><span id="Ing1_Quantity">0.3 ед.</span> <input type="hidden"
-                                                                               id="Ing1_Q"
-                                                                               value="0.3"/></td>
+                            <td><span id="Ing_Quantity1">0.3 ед.</span> 
+                                <input type="hidden" id="Ing_Qty1" value="0.3"/>
+                            </td>
                         </tr>
                         <tr>
-                            <td><span id="Ing1_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice1">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -131,7 +134,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing2_Quality"
+                                        class="form-control " type="text" id="Ing_Quality2"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -139,7 +142,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing2_Price"
+                                        class="form-control" type="text" id="Ing_Price2"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -149,12 +152,12 @@
                                     title="Мука"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing2_Quantity">0.5 ед.</span> <input type="hidden"
-                                                                               id="Ing2_Q"
+                            <td><span id="Ing_Quantity2">0.5 ед.</span> <input type="hidden"
+                                                                               id="Ing_Qty2"
                                                                                value="0.5"/></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing2_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice2">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -166,7 +169,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing3_Quality"
+                                        class="form-control " type="text" id="Ing_Quality3"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -174,7 +177,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing3_Price"
+                                        class="form-control" type="text" id="Ing_Price3"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -184,12 +187,12 @@
                                     title="Сахар"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing3_Quantity">0.25 ед.</span> <input type="hidden"
-                                                                                id="Ing3_Q"
+                            <td><span id="Ing_Quantity3">0.25 ед.</span> <input type="hidden"
+                                                                                id="Ing_Qty3"
                                                                                 value="0.25"/></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing3_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice3">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -319,9 +322,9 @@
         <table class="inline">
             <tbody>
             <div class="progress">
-                <div class="progress-bar progress-bar-success" title="Сахар" id="ing1"></div>
-                <div class="progress-bar progress-bar-warning" title="Мука" id="ing2"></div>
-                <div class="progress-bar progress-bar-danger" title="Яйца" id="ing3"></div>
+                <div class="progress-bar progress-bar-success" title="Сахар" id="ingWidth1"></div>
+                <div class="progress-bar progress-bar-warning" title="Мука" id="ingWidth2"></div>
+                <div class="progress-bar progress-bar-danger" title="Яйца" id="ingWidth3"></div>
             </div>
             <tr>
                 <td>
@@ -331,7 +334,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing1_Quality"
+                                        class="form-control " type="text" id="Ing_Quality1"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -339,7 +342,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing1_Price"
+                                        class="form-control" type="text" id="Ing_Price1"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -349,12 +352,12 @@
                                     title="Сахар"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing1_Quantity">0.5 ед.</span> <input type="hidden"
-                                                                               id="Ing1_Q"
+                            <td><span id="Ing_Quantity1">0.5 ед.</span> <input type="hidden"
+                                                                               id="Ing_Qty1"
                                                                                value="0.5"/></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing1_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice1">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -366,7 +369,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing2_Quality"
+                                        class="form-control " type="text" id="Ing_Quality2"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -374,7 +377,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing2_Price"
+                                        class="form-control" type="text" id="Ing_Price2"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -384,12 +387,12 @@
                                     title="Мука"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing2_Quantity">1 ед.</span> <input type="hidden"
-                                                                             id="Ing2_Q" value="1"/>
+                            <td><span id="Ing_Quantity2">1 ед.</span> <input type="hidden"
+                                                                             id="Ing_Qty2" value="1"/>
                             </td>
                         </tr>
                         <tr>
-                            <td><span id="Ing2_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice2">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -401,7 +404,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing3_Quality"
+                                        class="form-control " type="text" id="Ing_Quality3"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -409,7 +412,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing3_Price"
+                                        class="form-control" type="text" id="Ing_Price3"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -419,12 +422,12 @@
                                     title="Яйца"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing3_Quantity">2 ед.</span> <input type="hidden"
-                                                                             id="Ing3_Q" value="2"/>
+                            <td><span id="Ing_Quantity3">2 ед.</span> <input type="hidden"
+                                                                             id="Ing_Qty3" value="2"/>
                             </td>
                         </tr>
                         <tr>
-                            <td><span id="Ing3_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice3">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -555,11 +558,11 @@
     <table class="inline">
         <tbody>
         <div class="progress">
-            <div class="progress-bar progress-bar-success" title="Сахар" id="ing1"></div>
-            <div class="progress-bar progress-bar-warning" title="Мука" id="ing2"></div>
-            <div class="progress-bar progress-bar-danger" title="Яйца" id="ing3"></div>
-            <div class="progress-bar progress-bar-info" title="Масло" id="ing4"></div>
-            <div class="progress-bar progress-bar-success" title="Молоко" id="ing5"></div>
+            <div class="progress-bar progress-bar-success" title="Сахар" id="ingWidth1"></div>
+            <div class="progress-bar progress-bar-warning" title="Мука" id="ingWidth2"></div>
+            <div class="progress-bar progress-bar-danger" title="Яйца" id="ingWidth3"></div>
+            <div class="progress-bar progress-bar-info" title="Масло" id="ingWidth4"></div>
+            <div class="progress-bar progress-bar-success" title="Молоко" id="ingWidth5"></div>
         </div>
         <tr>
             <td>
@@ -569,7 +572,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="Ing1_Quality"
+                                    class="form-control " type="text" id="Ing_Quality1"
                                     placeholder="Качество"/></div>
                         </td>
                     </tr>
@@ -577,7 +580,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">$</span> <input
-                                    class="form-control" type="text" id="Ing1_Price"
+                                    class="form-control" type="text" id="Ing_Price1"
                                     placeholder="Цена"/></div>
                         </td>
                     </tr>
@@ -587,12 +590,12 @@
                                 title="Сахар"> </a></td>
                     </tr>
                     <tr>
-                        <td><span id="Ing1_Quantity">0.5 ед.</span> <input type="hidden"
-                                                                           id="Ing1_Q"
+                        <td><span id="Ing_Quantity1">0.5 ед.</span> <input type="hidden"
+                                                                           id="Ing_Qty1"
                                                                            value="0.5"/></td>
                     </tr>
                     <tr>
-                        <td><span id="Ing1_TotalPrice">$1</span></td>
+                        <td><span id="Ing_TotalPrice1">$1</span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -604,7 +607,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="Ing2_Quality"
+                                    class="form-control " type="text" id="Ing_Quality2"
                                     placeholder="Качество"/></div>
                         </td>
                     </tr>
@@ -612,7 +615,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">$</span> <input
-                                    class="form-control" type="text" id="Ing2_Price"
+                                    class="form-control" type="text" id="Ing_Price2"
                                     placeholder="Цена"/></div>
                         </td>
                     </tr>
@@ -622,12 +625,12 @@
                                 title="Мука"> </a></td>
                     </tr>
                     <tr>
-                        <td><span id="Ing2_Quantity">1 ед.</span> <input type="hidden"
-                                                                         id="Ing2_Q" value="1"/>
+                        <td><span id="Ing_Quantity2">1 ед.</span> <input type="hidden"
+                                                                         id="Ing_Qty2" value="1"/>
                         </td>
                     </tr>
                     <tr>
-                        <td><span id="Ing2_TotalPrice">$1</span></td>
+                        <td><span id="Ing_TotalPrice2">$1</span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -639,7 +642,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="Ing3_Quality"
+                                    class="form-control " type="text" id="Ing_Quality3"
                                     placeholder="Качество"/></div>
                         </td>
                     </tr>
@@ -647,7 +650,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">$</span> <input
-                                    class="form-control" type="text" id="Ing3_Price"
+                                    class="form-control" type="text" id="Ing_Price3"
                                     placeholder="Цена"/></div>
                         </td>
                     </tr>
@@ -657,12 +660,12 @@
                                 title="Яйца"> </a></td>
                     </tr>
                     <tr>
-                        <td><span id="Ing3_Quantity">2 ед.</span> <input type="hidden"
-                                                                         id="Ing3_Q" value="2"/>
+                        <td><span id="Ing_Quantity3">2 ед.</span> <input type="hidden"
+                                                                         id="Ing_Qty3" value="2"/>
                         </td>
                     </tr>
                     <tr>
-                        <td><span id="Ing3_TotalPrice">$1</span></td>
+                        <td><span id="Ing_TotalPrice3">$1</span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -674,7 +677,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="Ing4_Quality"
+                                    class="form-control " type="text" id="Ing_Quality4"
                                     placeholder="Качество"/></div>
                         </td>
                     </tr>
@@ -682,7 +685,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">$</span> <input
-                                    class="form-control" type="text" id="Ing4_Price"
+                                    class="form-control" type="text" id="Ing_Price4"
                                     placeholder="Цена"/></div>
                         </td>
                     </tr>
@@ -692,12 +695,12 @@
                                 title="Масло"> </a></td>
                     </tr>
                     <tr>
-                        <td><span id="Ing4_Quantity">0.5 ед.</span> <input type="hidden"
-                                                                           id="Ing4_Q"
+                        <td><span id="Ing_Quantity4">0.5 ед.</span> <input type="hidden"
+                                                                           id="Ing_Qty4"
                                                                            value="0.5"/></td>
                     </tr>
                     <tr>
-                        <td><span id="Ing4_TotalPrice">$1</span></td>
+                        <td><span id="Ing_TotalPrice4">$1</span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -709,7 +712,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">#</span> <input
-                                    class="form-control " type="text" id="Ing5_Quality"
+                                    class="form-control " type="text" id="Ing_Quality5"
                                     placeholder="Качество"/></div>
                         </td>
                     </tr>
@@ -717,7 +720,7 @@
                         <td>
                             <div class="input-group input-group-sm"><span
                                     class="input-group-addon">$</span> <input
-                                    class="form-control" type="text" id="Ing5_Price"
+                                    class="form-control" type="text" id="Ing_Price5"
                                     placeholder="Цена"/></div>
                         </td>
                     </tr>
@@ -727,12 +730,12 @@
                                 title="Молоко"> </a></td>
                     </tr>
                     <tr>
-                        <td><span id="Ing5_Quantity">0.5 ед.</span> <input type="hidden"
-                                                                           id="Ing5_Q"
+                        <td><span id="Ing_Quantity5">0.5 ед.</span> <input type="hidden"
+                                                                           id="Ing_Qty5"
                                                                            value="0.5"/></td>
                     </tr>
                     <tr>
-                        <td><span id="Ing5_TotalPrice">$1</span></td>
+                        <td><span id="Ing_TotalPrice5">$1</span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -861,10 +864,10 @@
         <table class="inline">
             <tbody>
             <div class="progress">
-                <div class="progress-bar progress-bar-success" title="Сахар" id="ing1"></div>
-                <div class="progress-bar progress-bar-warning" title="Мука" id="ing2"></div>
-                <div class="progress-bar progress-bar-danger" title="Яйца" id="ing3"></div>
-                <div class="progress-bar progress-bar-info" title="Фрукты" id="ing4"></div>
+                <div class="progress-bar progress-bar-success" title="Сахар" id="ingWidth1"></div>
+                <div class="progress-bar progress-bar-warning" title="Мука" id="ingWidth2"></div>
+                <div class="progress-bar progress-bar-danger" title="Яйца" id="ingWidth3"></div>
+                <div class="progress-bar progress-bar-info" title="Фрукты" id="ingWidth4"></div>
             </div>
             <tr>
                 <td>
@@ -874,7 +877,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing1_Quality"
+                                        class="form-control " type="text" id="Ing_Quality1"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -882,7 +885,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing1_Price"
+                                        class="form-control" type="text" id="Ing_Price1"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -892,12 +895,12 @@
                                     title="Сахар"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing1_Quantity">0.25 ед.</span> <input type="hidden"
-                                                                               id="Ing1_Q"
+                            <td><span id="Ing_Quantity1">0.25 ед.</span> <input type="hidden"
+                                                                               id="Ing_Qty1"
                                                                                value="0.25"/></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing1_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice1">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -909,7 +912,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing2_Quality"
+                                        class="form-control " type="text" id="Ing_Quality2"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -917,7 +920,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing2_Price"
+                                        class="form-control" type="text" id="Ing_Price2"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -927,12 +930,12 @@
                                     title="Мука"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing2_Quantity">1 ед.</span> <input type="hidden"
-                                                                             id="Ing2_Q" value="1"/>
+                            <td><span id="Ing_Quantity2">1 ед.</span> <input type="hidden"
+                                                                             id="Ing_Qty2" value="1"/>
                             </td>
                         </tr>
                         <tr>
-                            <td><span id="Ing2_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice2">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -944,7 +947,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing3_Quality"
+                                        class="form-control " type="text" id="Ing_Quality3"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -952,7 +955,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing3_Price"
+                                        class="form-control" type="text" id="Ing_Price3"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -962,12 +965,12 @@
                                     title="Яйца"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing3_Quantity">2 ед.</span> <input type="hidden"
-                                                                             id="Ing3_Q" value="2"/>
+                            <td><span id="Ing_Quantity3">2 ед.</span> <input type="hidden"
+                                                                             id="Ing_Qty3" value="2"/>
                             </td>
                         </tr>
                         <tr>
-                            <td><span id="Ing3_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice3">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -979,7 +982,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">#</span> <input
-                                        class="form-control " type="text" id="Ing4_Quality"
+                                        class="form-control " type="text" id="Ing_Quality4"
                                         placeholder="Качество"/></div>
                             </td>
                         </tr>
@@ -987,7 +990,7 @@
                             <td>
                                 <div class="input-group input-group-sm"><span
                                         class="input-group-addon">$</span> <input
-                                        class="form-control" type="text" id="Ing4_Price"
+                                        class="form-control" type="text" id="Ing_Price4"
                                         placeholder="Цена"/></div>
                             </td>
                         </tr>
@@ -997,12 +1000,12 @@
                                     title="Фрукты"> </a></td>
                         </tr>
                         <tr>
-                            <td><span id="Ing4_Quantity">0.5 ед.</span> <input type="hidden"
-                                                                             id="Ing4_Q" value="0.5"/>
+                            <td><span id="Ing_Quantity4">0.5 ед.</span> <input type="hidden"
+                                                                             id="Ing_Qty4" value="0.5"/>
                             </td>
                         </tr>
                         <tr>
-                            <td><span id="Ing4_TotalPrice">$1</span></td>
+                            <td><span id="Ing_TotalPrice4">$1</span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -1092,49 +1095,12 @@
 </form>
 </div>
 </div>
-<div class="alert alert-warning text-center"><h2>Использование</h2></div>
-
-</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://yandex.st/jquery/2.1.0/jquery.min.js"></script>
 <script src="../js/calc.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../js/bootstrap.min.js"></script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter19600771 = new Ya.Metrika({id: 19600771,
-                    webvisor: true,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true});
-            } catch (e) {
-            }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () {
-                    n.parentNode.insertBefore(s, n);
-                };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript>
-    <div><img src="//mc.yandex.ru/watch/19600771" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
 <script type="text/javascript" src="../js/orphus.js"></script>
 <a href="http://orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="../img/orphus.gif" border="0"
                                                             width="181" height="54"/></a>
