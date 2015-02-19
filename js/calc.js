@@ -13,29 +13,27 @@ String.prototype.capitalize = function() {
 
 //развернуть/свернуть все спойлеры1
 $( "#all_spoilers" ).click(function() {
-		var all_spoilers = document.querySelectorAll(".spoiler");
-		for (var i=0; i<all_spoilers.length; i++) 
-		all_spoilers[i].click();
-		if ( $("#all_spoilers").html() == "<span class=\"glyphicon glyphicon-plus\"></span> Развернуть все" ) 
-		{ $("#all_spoilers").html( "<span class=\"glyphicon glyphicon-minus\"></span> Свернуть все" ) } 
-		else { $("#all_spoilers").html( "<span class=\"glyphicon glyphicon-plus\"></span> Развернуть все" ) }
-		
+		if ($("#all_spoilers span").hasClass('glyphicon-plus')) { 
+			$("#all_spoilers").html( "<span class=\"glyphicon glyphicon-minus\"></span> Свернуть все" );
+			$(".spoiler-text").slideDown(); 
+		} else { 
+			$("#all_spoilers").html( "<span class=\"glyphicon glyphicon-plus\"></span> Развернуть все" );
+			$(".spoiler-text").slideUp(); 
+		};
 });
 
 //рассчитать все формы
-$( "#calc_all" ).click(function() {
-		var calc_buttons = document.querySelectorAll("#DoCalc");
-		for (var i=0; i<calc_buttons.length; i++) 
-		calc_buttons[i].click();
+$("#calc_all" ).click(function() {
+		 $("[id=DoCalc]").click();
 });
 
 
 //спойлеры
 $(document).ready(function(){
-	$('.spoiler-text').hide()
+	$('.spoiler-text').hide();
 	$('.spoiler').click(function(){
 		$(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle()
-	})
+	});
 	//открываем первый спойлер
 	$(".spoiler").first().click();	
 })
