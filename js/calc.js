@@ -189,6 +189,7 @@ $('form').submit(
 
 			//качество товара
 			var ProdQual = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65);
+			console.log("Q1 "+ProdQual);
 					//шахты
 					if ( $("#ResQ", this).val() ) { 
 						ProdQual = Math.pow(tech, 0.65) * $("#ResQ", this).val() * eff; 
@@ -209,9 +210,11 @@ $('form').submit(
 			//если есть второй продукт производства
 			if ( $("#Bonus2", this).val() ) 
 			{
-				var ProdQual2 = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65)  * ( 1 + $("#Bonus2", this).val().replace('%', '') / 100 );
+				var ProdQual2 = Math.pow(IngTotalQual, 0.5) * Math.pow(tech, 0.65);
+				console.log("Q2 "+ProdQual2);
 				if (ProdQual2 > Math.pow(tech, 1.3) ) {ProdQual2 = Math.pow(tech, 1.3)}
-				if ( ProdQual2 < 1 ) { ProdQual2 = 1 }			
+				if ( ProdQual2 < 1 ) { ProdQual2 = 1 }
+				ProdQual2 = ProdQual2 * ( 1 + $("#Bonus2", this).val().replace('%', '') / 100 );			
 				$(this).find("#ProdQual2").text( ProdQual2.toFixed(2) ) ;
 			}
 			
