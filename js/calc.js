@@ -230,13 +230,10 @@ $('form').submit(
 				$("#Cost", this).text( "$" + commaSeparateNumber((exps / Prod_Quantity).toFixed(2)));
 				if ( $("#Bonus2", this).val() ) 
 				{
-					$("#Cost", this).text( "$" + commaSeparateNumber((exps / Prod_Quantity / 2).toFixed(2)));			
-					$("#Cost2", this).text( "$" + commaSeparateNumber((exps / Prod_Quantity2 / 2).toFixed(2)));
+					$("#Cost", this).text( "$" + commaSeparateNumber((exps / Prod_Quantity / 2 ).toFixed(2)));			
+					$("#Cost2", this).text( "$" + commaSeparateNumber((exps / Prod_Quantity2 / 2 ).toFixed(2)));
 				}				
 			}
-			
-			
-						
 			
 			//прибыль
 			var profit = ( Sale_Price * Prod_Quantity ) - exps;
