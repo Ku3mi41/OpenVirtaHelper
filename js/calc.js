@@ -159,7 +159,7 @@ $('form').submit(
 					}
 										
 					//фермы
-					if ( $("#ResFQ", this).text() ) 
+					if ( $("#ResFQ", this).val() ) 
 					{ 
 						Prod_Quantity2 = Prod_Quantity / 52;
 						$("#Prod_Quantity2", this).text( commaSeparateNumber( Math.round (Prod_Quantity2) ) + " ед. / нед." );
