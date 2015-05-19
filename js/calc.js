@@ -219,7 +219,6 @@ $('form').submit(
 			//себестоимость
 			var zp = work_salary * work_quant;
 			var exps = IngTotalCost + zp * 1.1 ;
-			if ($("#ResFQ", this).val()) exps*=52;
 			if (envdTax > 1) {
 				$("#Cost", this).text( "$" + commaSeparateNumber((exps / Prod_Quantity).toFixed(2)) + " ($" +commaSeparateNumber(((exps / Prod_Quantity)*envdTax).toFixed(2))+ ")" );
 				if ( $("#Bonus2", this).val() ) 
